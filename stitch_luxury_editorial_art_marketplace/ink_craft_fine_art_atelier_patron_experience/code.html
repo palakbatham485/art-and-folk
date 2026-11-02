@@ -1,0 +1,1383 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>INK &amp; CRAFT — Haute Atelier &amp; Curated Art Gallery</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration Verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#e6c27e",
+            "surface-container": "#efeeea",
+            "on-primary-fixed": "#1f1b18",
+            "surface-variant": "#e4e2de",
+            "inverse-primary": "#cec5c0",
+            "on-secondary-container": "#772f18",
+            "surface-dim": "#dbdad6",
+            "secondary": "#97472e",
+            "on-surface": "#1b1c1a",
+            "secondary-container": "#fe997a",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#30312e",
+            "on-secondary-fixed": "#3a0a00",
+            "surface-container-high": "#eae8e4",
+            "secondary-fixed-dim": "#ffb59f",
+            "on-background": "#1b1c1a",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-tertiary-fixed-variant": "#5b430a",
+            "primary": "#000000",
+            "primary-fixed": "#eae1db",
+            "on-tertiary-container": "#9e7f43",
+            "outline": "#7e756f",
+            "primary-container": "#1f1b18",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#d0c4bd",
+            "on-primary-fixed-variant": "#4b4642",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e4e2de",
+            "background": "#fbf9f5",
+            "tertiary-fixed": "#ffdea4",
+            "secondary-fixed": "#ffdbd0",
+            "tertiary-container": "#261900",
+            "tertiary": "#000000",
+            "surface": "#fbf9f5",
+            "primary-fixed-dim": "#cec5c0",
+            "on-surface-variant": "#4d4540",
+            "on-tertiary-fixed": "#261900",
+            "on-secondary-fixed-variant": "#793019",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fbf9f5",
+            "surface-container-low": "#f5f3ef",
+            "on-primary-container": "#8a827e",
+            "surface-tint": "#635d59",
+            "inverse-on-surface": "#f2f0ed"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "2rem",
+            "space-lg": "3rem",
+            "margin": "4rem",
+            "space-md": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-xl": "6rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.75rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "price-numeral": [
+              "Plus Jakarta Sans"
+            ],
+            "body-md": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg-mobile": [
+              "Playfair Display"
+            ],
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-md": [
+              "Playfair Display"
+            ],
+            "headline-lg": [
+              "Playfair Display"
+            ],
+            "title-editorial": [
+              "Playfair Display"
+            ],
+            "display-hero": [
+              "Playfair Display"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ],
+            "label-caps": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-sm": [
+              "Playfair Display"
+            ],
+            "display-hero-mobile": [
+              "Playfair Display"
+            ]
+          },
+          "fontSize": {
+            "price-numeral": [
+              "15px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "500"
+              }
+            ],
+            "body-md": [
+              "15px",
+              {
+                "lineHeight": "24px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "30px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-md": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg": [
+              "48px",
+              {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "400"
+              }
+            ],
+            "title-editorial": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero": [
+              "72px",
+              {
+                "lineHeight": "80px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-sm": [
+              "13px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "label-caps": [
+              "11px",
+              {
+                "lineHeight": "16px",
+                "letterSpacing": "0.12em",
+                "fontWeight": "600"
+              }
+            ],
+            "headline-sm": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "letterSpacing": "0em",
+                "fontWeight": "500"
+              }
+            ],
+            "display-hero-mobile": [
+              "40px",
+              {
+                "lineHeight": "48px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Material symbol font rules */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 20;
+      font-size: 19px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    
+    /* Fine-grain deckle edge and hairline rules */
+    .hairline-b { border-bottom: 1px solid #E8E2D8; }
+    .hairline-t { border-top: 1px solid #E8E2D8; }
+    .hairline-r { border-right: 1px solid #E8E2D8; }
+    .hairline-l { border-left: 1px solid #E8E2D8; }
+    .hairline-all { border: 1px solid #E8E2D8; }
+
+    /* Custom scrollbar for subtle high-end look */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D0C4BD;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7E756F;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed font-body-md text-body-md overflow-x-hidden min-h-screen">
+<!-- ========================================================================= -->
+<!-- 1. TOP ANNOUNCEMENT BAR                                                  -->
+<!-- ========================================================================= -->
+<aside class="w-full bg-surface-container-low text-on-surface-variant hairline-b text-body-sm font-body-sm py-2 px-margin z-50">
+<div class="max-w-[1680px] mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
+<!-- Patron Curatorial Note -->
+<div class="flex items-center gap-2">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-label-caps font-label-caps tracking-widest uppercase text-on-surface">Curated Edition No. 14</span>
+<span class="text-outline-variant">|</span>
+<p class="tracking-normal text-on-surface-variant">Discover Art. Celebrate Creativity. Shop Handmade. Complimentary White-Glove Curated Delivery on Orders Over ₹25,000</p>
+</div>
+<!-- Currency Switcher & Concierge -->
+<div class="flex items-center gap-6 text-label-caps font-label-caps uppercase tracking-wider">
+<button class="hover:text-primary transition-colors flex items-center gap-1 group"><span class="">INR (₹)</span><span class="text-outline-variant">/</span><span class="">EN</span><span class="material-symbols-outlined text-[14px] group-hover:translate-y-0.5 transition-transform">expand_more</span></button>
+<span class="text-outline-variant">|</span>
+<a class="hover:text-secondary transition-colors duration-150 flex items-center gap-1.5" href="#concierge">
+<span class="material-symbols-outlined text-[15px]">room_service</span>
+<span class="">Client Concierge</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- 2. LUXURY EDITORIAL HEADER (TopNavBar Shared Component)                  -->
+<!-- ========================================================================= -->
+<header class="w-full bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline px-gutter flex justify-between items-center h-20 max-w-[1680px] mx-auto sticky top-0 z-40">
+<!-- Brand Wordmark & Identity -->
+<div class="flex items-baseline gap-4">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary dark:text-inverse-primary hover:opacity-90 transition-opacity" href="#">
+        INK &amp; CRAFT
+      </a>
+<span class="hidden lg:inline-block font-label-caps text-label-caps tracking-[0.25em] text-outline text-[9px] uppercase border-l border-outline-variant pl-3">
+        Atelier &amp; Gallery
+      </span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary dark:text-inverse-primary border-b border-primary dark:border-inverse-primary pb-1 font-label-caps tracking-widest uppercase" href="#shop">
+        Shop
+      </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#original-art">
+        Original Art
+      </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#ceramics">
+        Handmade
+      </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#artists">
+        Artists
+      </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#collections">
+        Collections
+      </a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#story">
+        Our Story
+      </a>
+</nav>
+<!-- Secondary Utility Actions Cluster -->
+<div class="flex items-center gap-5">
+<!-- Search Trigger Button -->
+<button aria-label="Search Collection" class="p-2 text-primary hover:text-secondary transition-colors duration-200 flex items-center justify-center" onclick="toggleSearchModal()">
+<span class="material-symbols-outlined">search</span>
+</button>
+<!-- Wishlist with Counter -->
+<a aria-label="Wishlist" class="relative p-2 text-primary hover:text-secondary transition-colors duration-200 flex items-center justify-center group" href="#wishlist">
+<span class="material-symbols-outlined">favorite</span>
+<span class="absolute top-1 right-0 text-[9px] font-price-numeral font-bold bg-secondary text-on-secondary w-4 h-4 rounded-full flex items-center justify-center leading-none">
+          3
+        </span>
+</a>
+<!-- Account Icon -->
+<a aria-label="Patron profile account" class="hidden sm:flex p-2 text-primary hover:text-secondary transition-colors duration-200 items-center justify-center" href="#account">
+<span class="material-symbols-outlined">person</span>
+</a>
+<!-- Currency Switcher text from JSON -->
+<span class="hidden xl:inline text-label-caps font-label-caps tracking-wider text-on-surface-variant uppercase">INR (₹)</span>
+<!-- Slide-Over Shopping Bag Trigger -->
+<button class="ml-2 bg-primary hover:bg-secondary text-surface px-4 py-2.5 text-label-caps font-label-caps tracking-widest uppercase transition-colors duration-200 flex items-center gap-2.5" onclick="toggleCartDrawer()">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span class="">Bag (2)</span>
+</button></div>
+</header>
+<!-- ========================================================================= -->
+<!-- QUICK SEARCH OVERLAY DRAWER                                              -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 bg-primary/40 flex flex-col justify-start" id="searchDrawer">
+<div class="bg-surface w-full hairline-b px-margin py-8 shadow-none transition-all">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex items-center justify-between mb-6">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-outline">Search The Curated Archive</span>
+<button class="text-primary hover:text-secondary p-1" onclick="toggleSearchModal()">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="relative mb-6">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-title-editorial font-title-editorial pb-3 pt-1 text-primary placeholder:text-outline/70" placeholder="Search by artisan, medium (e.g. stoneware, wild silk), or work title..." type="text">
+<span class="absolute right-0 bottom-4 material-symbols-outlined text-outline">search</span>
+</div>
+<div class="flex items-center gap-3 text-body-sm font-body-sm text-outline">
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-primary">Trending Inquiries:</span>
+<a class="hover:text-primary underline underline-offset-4 decoration-outline-variant" href="#">Kyoto Stoneware</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary underline underline-offset-4 decoration-outline-variant" href="#">Indigo Tapestries</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary underline underline-offset-4 decoration-outline-variant" href="#">Basalt Pour-Overs</a>
+<span class="text-outline-variant">•</span>
+<a class="hover:text-primary underline underline-offset-4 decoration-outline-variant" href="#">Helena Vance Solo Collection</a>
+</div>
+</div>
+</div>
+<div class="flex-1" onclick="toggleSearchModal()"></div>
+</div>
+<!-- ========================================================================= -->
+<!-- 3. CINEMATIC EDITORIAL HERO SECTION                                      -->
+<!-- ========================================================================= -->
+<section class="relative w-full max-w-[1680px] mx-auto px-margin pt-12 pb-space-xl overflow-hidden">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<!-- Asymmetric Column Left: 5 Columns Editorial Prose -->
+<div class="col-span-12 lg:col-span-5 pr-0 lg:pr-6 z-10 flex flex-col justify-between">
+<!-- Curatorial Seasonal Badge -->
+<div class="inline-flex items-center gap-3 self-start mb-6 px-3 py-1.5 bg-surface-container-low hairline-all">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface">
+            Curator's Seasonal Selection — Spring Vernissage No. 14
+          </span>
+</div>
+<!-- Grand Serif Display Headline -->
+<h1 class="font-display-hero text-display-hero text-primary mb-6 leading-[1.08] tracking-tight">
+          Art That Makes Your Space Feel Like You.
+        </h1>
+<!-- Editorial Archival Deck -->
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
+          Discover thoughtfully crafted pieces, original artwork and extraordinary creations by independent master artists and craft ateliers worldwide.
+        </p>
+<!-- CTAs: High-Tension Contrast -->
+<div class="flex flex-wrap items-center gap-4 mb-12">
+<!-- Primary CTA Button -->
+<a class="bg-primary hover:bg-secondary text-surface px-space-md py-3.5 text-label-caps font-label-caps tracking-widest uppercase transition-colors duration-200 inline-flex items-center justify-center" href="#shop">
+            Explore The Collection
+          </a>
+<!-- Secondary Outline Button -->
+<a class="bg-transparent hover:bg-primary hover:text-surface text-primary hairline-all px-space-md py-3.5 text-label-caps font-label-caps tracking-widest uppercase transition-colors duration-200 inline-flex items-center gap-2 group" href="#artists">
+<span class="">Discover Artists</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<!-- Micro Provenance Ledger Footer -->
+<div class="hairline-t pt-4 grid grid-cols-3 gap-4">
+<div>
+<span class="block font-price-numeral text-price-numeral font-bold text-primary">₹1,54,000</span>
+<span class="block font-label-caps text-label-caps uppercase tracking-wider text-outline text-[10px]">Verified Origin</span>
+</div>
+<div>
+<span class="block font-price-numeral text-price-numeral font-bold text-primary">₹1,54,000</span>
+<span class="block font-label-caps text-label-caps uppercase tracking-wider text-outline text-[10px]">Active Guild</span>
+</div>
+<div>
+<span class="block font-price-numeral text-price-numeral font-bold text-primary">₹1,54,000</span>
+<span class="block font-label-caps text-label-caps uppercase tracking-wider text-outline text-[10px]">85% Creator Share</span>
+</div>
+</div>
+</div>
+<!-- Asymmetric Column Right: 7 Columns Atmospheric Visual Hero -->
+<div class="col-span-12 lg:col-span-7 relative">
+<div class="relative bg-surface-container hairline-all p-3">
+<div class="relative aspect-[16/11] overflow-hidden">
+<img alt="Artisan ceramicist and curated gallery wall" class="w-full h-full object-cover object-center transform hover:scale-[1.01] transition-transform duration-700 ease-out" data-alt="A sublime, sun-drenched art studio setting showing an artisan ceramicist in raw linen working next to high-end wabi-sabi stoneware vessels and a textured oil painting canvas resting against a soft cream plaster gallery wall. Soft natural morning light cascades through sheer window fabric, casting delicate shadows across warm earthen terracotta and basalt pottery. The composition is calm, luxurious, and quiet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH4BdG6XYnwOf6l-AtY_MmbtBOBqSIkkftu1qmNVwI0M5EI5GgCR4SY4ikWna2CHAylvuftCcCuu5rmmZUNdkYSl7Q5AB-vv87MqM7Y8tZbwIa5NWvy9wEUSf7qtb8iRvvquFbrq-1rgenaUOzcaH7FGZHJTm2RauWcJdtqeUIhf31xA6s_ZRx94CxAz4T7AIoJjXN8A7AvDBwW_jHBpHp1DcdcO4S_WfzP6NO26s">
+</div>
+<!-- Pinned Floating Curation Card Overlay -->
+<div class="absolute bottom-8 left-8 right-auto max-w-sm bg-surface/95 hairline-all p-5 shadow-none backdrop-blur-none">
+<div class="flex items-start justify-between gap-3 mb-2">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary text-[10px]">Vernissage Feature</span>
+<span class="font-price-numeral text-body-sm font-semibold text-primary">₹1,54,000</span>
+</div>
+<p class="font-title-editorial text-title-editorial text-primary mb-1">
+              Vessel in Ochre &amp; Pumice No. 12
+            </p>
+<p class="font-body-sm text-body-sm text-outline mb-3">
+              Thrown stoneware with wood-ash glaze by Master Kenji Sone, Kyoto.
+            </p>
+<a class="text-primary hover:text-secondary text-label-caps font-label-caps uppercase tracking-wider text-[10px] inline-flex items-center gap-1 group" href="#shop">
+<span class="">View Archival Record</span>
+<span class="material-symbols-outlined text-[13px] group-hover:translate-x-0.5 transition-transform">east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. EDITORIAL COLLECTIONS (Asymmetric Bento Grid)                         -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1680px] mx-auto px-margin py-space-xl hairline-t" id="collections">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary block mb-2">Architectural Categories</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Curated Guild Portfolios</h2>
+</div>
+<p class="text-on-surface-variant font-body-md text-body-md max-w-md mt-4 md:mt-0">
+        Each artifact belongs to an archival category of hand craftsmanship, made slowly in independent studios from Kyoto to Copenhagen.
+      </p>
+</div>
+<!-- Asymmetric 4-Block Grid -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Block 1: Large Vertical Feature (7 Columns) -->
+<article class="col-span-12 lg:col-span-7 group cursor-pointer">
+<div class="relative bg-surface-container hairline-all p-3 flex flex-col h-full">
+<div class="aspect-[4/3] w-full overflow-hidden relative mb-4">
+<img alt="Original Paintings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A close-up shot of a textured, large-scale original oil and acrylic painting on raw woven linen canvas, displaying earthy tones of umber, terracotta, chalk white, and charcoal black with tactile impasto knife strokes in a sunlit Scandinavian gallery corner. Natural warm ambient illumination highlights the organic pigments and physical depth of the paint layers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCRMWzTNAsrHJ0BX7_XBoY4TH6JhcrflDZ8qALnUqA4NclQsz3lqUa185XGdRZhNHS3yIZ41qgRmgVlj2AG56XG7iJ0jOxfcxhqiHa48QAA0crPw9EpzRrqP9IkAMlo-r2ezF1PhHhwhd0h29ufoHX4BaAMAHu2AdbYKwXkz1mqmjDDiIos7jkDDJRgkSzlM5-3s_UveZjFwav2g62IGpf_-K6gVDn8Ewg2TMsiYk">
+<span class="absolute top-4 left-4 bg-surface text-primary text-label-caps font-label-caps uppercase tracking-wider px-3 py-1 hairline-all">
+              34 Available Works
+            </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<h3 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+                Original Paintings &amp; Works on Canvas
+              </h3>
+<p class="font-body-sm text-body-sm text-outline">
+                Mixed media, natural mineral pigments, and archival ink studies.
+              </p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform duration-200">
+              arrow_forward
+            </span>
+</div>
+</div>
+</article>
+<!-- Block 2: Handmade Ceramics & Stoneware (5 Columns) -->
+<article class="col-span-12 lg:col-span-5 group cursor-pointer">
+<div class="relative bg-surface-container hairline-all p-3 flex flex-col h-full">
+<div class="aspect-[4/3] w-full overflow-hidden relative mb-4">
+<img alt="Handmade Ceramics and Stoneware" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A curated collection of three wabi-sabi sculptural stoneware vessels and teaware displayed on a smooth matte concrete slab inside an architectural art atelier. Warm morning side-light creates soft gradient shadows across the porous sand-textured surfaces and iron-spotted glazes, highlighting the raw sculptural curves of the handcrafted ceramics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbTjI_u5BM3mBtXYxMT0lI10gicVj3AqfMBdjlL60Ts_UeUr58A2SUuQvWSEx6SqQk3fFNkXWKvA00BH8qa8LYHilf6ZBLrp7n5lQoHnViKimvsYe1pJ3tR-uSMKhHQLfJFZ-5VR0IoZXhq1rCMQ9hnasfDXUj_Lknhj3xhJtoHhLyJJaWI45BJrdfpUDdnWHEDM3S6KkQzm5FEx0PnVqepJCTnJEKbdXgA9guHBU">
+<span class="absolute top-4 left-4 bg-surface text-primary text-label-caps font-label-caps uppercase tracking-wider px-3 py-1 hairline-all">
+              52 Pieces In Atelier
+            </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<h3 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+                Handmade Ceramics &amp; Stoneware
+              </h3>
+<p class="font-body-sm text-body-sm text-outline">
+                Wheel-thrown vessels, sculptural planters &amp; volcanic glazes.
+              </p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform duration-200">
+              arrow_forward
+            </span>
+</div>
+</div>
+</article>
+<!-- Block 3: Artistic Home Decor & Textiles (5 Columns) -->
+<article class="col-span-12 lg:col-span-5 group cursor-pointer">
+<div class="relative bg-surface-container hairline-all p-3 flex flex-col h-full">
+<div class="aspect-[4/3] w-full overflow-hidden relative mb-4">
+<img alt="Artistic Home Decor &amp; Textiles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A luxurious hand-loomed raw linen throw blanket and indigo wild-silk wall hanging draped gently over a minimalist blackened-oak chair, beside a patinated cast-bronze candle stand. The setting is bathed in soft gallery illumination, creating a peaceful, contemplative mood that emphasizes the rich woven textures and raw fiber authenticity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ9YA4Dfy7Kmlqyvq9MXX3pHwHE3HUXSkOca6q6l-AAP9s2yz1LQGzCSD-pvBOPHisfD5Ma1R0NZcDRGydDxX-qpGJ6-d3KMGA1Cn0wWfaQVd0UlQSJn0yIVII5M58XW2BIM-Vh9oKe-nWwSfGtSTczqwiziq3NH6jB0o6CagbvtUMH7cOe325vj5F3bOFr1VTM50hHrLznehdGQiThziiPm3bqB4I905M5UPHxXE">
+<span class="absolute top-4 left-4 bg-surface text-primary text-label-caps font-label-caps uppercase tracking-wider px-3 py-1 hairline-all">
+              28 Limited Textiles
+            </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<h3 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+                Artistic Home Decor &amp; Textiles
+              </h3>
+<p class="font-body-sm text-body-sm text-outline">
+                Hand-spun wild silk, botanical dyes &amp; sand-cast bronze objects.
+              </p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform duration-200">
+              arrow_forward
+            </span>
+</div>
+</div>
+</article>
+<!-- Block 4: Bespoke & Personalized Heirlooms (7 Columns) -->
+<article class="col-span-12 lg:col-span-7 group cursor-pointer">
+<div class="relative bg-surface-container hairline-all p-3 flex flex-col h-full">
+<div class="aspect-[4/3] w-full overflow-hidden relative mb-4">
+<img alt="Bespoke and Personalized Heirlooms" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A master artisan calligrapher working with heavy deckle-edge archival cotton paper, wooden nib pens, and dark sumi ink, surrounded by hand-carved soapstone chops and bespoke custom seals in an orderly architectural studio. Overhead warm directional task lighting illuminates the rich paper grain and crisp ink strokes with meticulous precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrdvw9ICxlWaV1CQA9Rpn0c1eCBJ-sL-O_yJRqgdTmVjdictrMGobogbQxlvqD9dz86l2cRo7rtvFY8CV5LReJOMYSTI-ltoprMGbrVBBHL1zmGflPXv1H0nX0j7WKX1O5zslUiO5YXARZ1WpU6Ul85TunOa6qOVwVtbikxhXS05rj8CE5m1iT15zkkXCmsRfmb-_MaghFaXFGEP_rJVb9xHQ-YqfRtufNZhWXcs0">
+<span class="absolute top-4 left-4 bg-surface text-primary text-label-caps font-label-caps uppercase tracking-wider px-3 py-1 hairline-all">
+              Custom Commissions Open
+            </span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<h3 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+                Bespoke &amp; Personalized Heirlooms
+              </h3>
+<p class="font-body-sm text-body-sm text-outline">
+                Archival monogram commissions, studio stationery &amp; custom wax stamps.
+              </p>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform duration-200">
+              arrow_forward
+            </span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 5. FEATURED CURATIONS / COMMERCE SHOWCASE (Editorial Product Gallery)    -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1680px] mx-auto px-margin py-space-xl hairline-t" id="shop">
+<!-- Header with Tabbed Filters -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+<div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary block mb-2">Authentic Provenance</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Curated Masterworks</h2>
+</div>
+<!-- Tabbed Category Filters -->
+<div class="flex flex-wrap items-center gap-2 border-b border-outline-variant pb-2">
+<button class="px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider text-primary border-b-2 border-primary -mb-2">
+          All Works
+        </button>
+<button class="px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider text-outline hover:text-primary transition-colors">
+          Original Oil &amp; Ink
+        </button>
+<button class="px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider text-outline hover:text-primary transition-colors">
+          Sculptural Ceramics
+        </button>
+<button class="px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider text-outline hover:text-primary transition-colors">
+          Fine Woodcraft
+        </button>
+<button class="px-4 py-2 text-label-caps font-label-caps uppercase tracking-wider text-outline hover:text-primary transition-colors">
+          Limited Editions
+        </button>
+</div>
+</div>
+<!-- 4-Column Luxury Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: Solitude No. 07 by Helena Vance -->
+<article class="group flex flex-col justify-between hairline-all p-3 bg-surface hover:bg-surface-container-low transition-colors duration-200">
+<div>
+<!-- Image Frame with Aspect 4/5 -->
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-4 hairline-b">
+<img alt="Solitude No. 07 artwork" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A minimalist contemporary abstract painting featuring deep Payne's gray, textured raw beige linen, and subtle burnt terracotta geometric gestures on an archival stretched canvas. The photograph is taken in a crisp light-flooded gallery with gentle directional light illuminating the tactile micro-textures of the paint surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-QF6hCn1AGCTuCAutyPGcztg5MKcYYrEcxUnjjNfeVqvKiWuvWgtUTcsGWfJK4auY3pY538L7oLsXmUVgEhhbfWGdPR2frQgRdughqsIK1hAqpA1V1ZN6BFA2zdw4gL-5J7UOixEabmXfTRCAHNnTmCJ8TRIugxpEuDh0BNdEhC22x48z9fo_glQlh8N9A90AzTVW_kS_ygEb_VvWo0fMh7G3ECNsXNaM8EHtFtI">
+<!-- Badge Overlay -->
+<div class="absolute top-3 left-3 flex flex-col gap-1.5">
+<span class="bg-surface text-primary text-label-caps font-label-caps uppercase tracking-widest text-[9px] px-2 py-0.5 hairline-all">
+                Unique Piece
+              </span>
+<span class="bg-surface-container-low text-secondary text-label-caps font-label-caps uppercase tracking-widest text-[9px] px-2 py-0.5 hairline-all">
+                Curator's Pick
+              </span>
+</div>
+<!-- Wishlist Trigger -->
+<button aria-label="Add Solitude No. 07 to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-none bg-surface/90 hairline-all flex items-center justify-center text-primary hover:text-secondary hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-[17px] fill">favorite</span>
+</button>
+</div>
+<!-- Provenance Meta -->
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline mb-1">
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px]">Helena Vance • Tokyo</span>
+<span class="text-secondary font-medium">1 of 1</span>
+</div>
+<!-- Artifact Title -->
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1 group-hover:text-secondary transition-colors">
+            Solitude No. 07
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Original Acrylic &amp; Gesso on Raw Cotton Canvas (120 × 90 cm)
+          </p>
+</div>
+<div>
+<div class="hairline-t pt-3 flex items-center justify-between mb-3">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹1,18,000</span>
+<span class="text-[11px] text-outline font-label-caps uppercase tracking-wider">Free White-Glove Shipping</span>
+</div>
+<!-- Quick Add Button -->
+<button class="w-full bg-primary hover:bg-secondary text-surface py-2.5 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-150 flex items-center justify-center gap-2" onclick="quickAddToBag('Solitude No. 07', '₹1,18,000')">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+</article>
+<!-- Card 2: Sculpted Dune Vessel by Studio Kanso -->
+<article class="group flex flex-col justify-between hairline-all p-3 bg-surface hover:bg-surface-container-low transition-colors duration-200">
+<div>
+<!-- Image Frame -->
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-4 hairline-b">
+<img alt="Sculpted Dune Vessel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A sculptural wabi-sabi ceramic vase with an undulating organic rim, finished in matte ash and natural sand terracotta glaze, displayed on an uncoated ivory wooden plinth. Soft diffused northern daylight sculpts its curves, revealing mineral flecks and handcrafted throwing grooves in a warm luxury ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1nKXDIh8uAffKjGbU0q9QX8c6i2mB5yYqLqug6u1DKRfkqFL396V98H7PItVQvtyVn-UB-CH7Xbm3EDNrCnUfDta_gjx4gstaZ2y4EkTmQtiXPgEmWVO0UD_Z3-7ocWudzj9tPtYpmmVUHJcA0vje0C-ccAOHflCvbBZwyNMFxocH1DVmKOpwdkVaytYyE4rVH3H6SC5AMa1vKSIyhSSEWxqYZ3ht2r5bO0UTVXA">
+<div class="absolute top-3 left-3">
+<span class="bg-surface text-primary text-label-caps font-label-caps uppercase tracking-widest text-[9px] px-2 py-0.5 hairline-all">
+                Hand-Thrown
+              </span>
+</div>
+<button aria-label="Add Sculpted Dune Vessel to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-none bg-surface/90 hairline-all flex items-center justify-center text-primary hover:text-secondary hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline mb-1">
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px]">Studio Kanso • Copenhagen</span>
+<span class="text-outline text-[11px]">Batch of 6</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1 group-hover:text-secondary transition-colors">
+            Sculpted Dune Vessel
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Hand-thrown Terracotta with Natural Wood Ash &amp; Feldspar Glaze
+          </p>
+</div>
+<div>
+<div class="hairline-t pt-3 flex items-center justify-between mb-3">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹31,500</span>
+<span class="text-[11px] text-outline font-label-caps uppercase tracking-wider">Archival Box Included</span>
+</div>
+<button class="w-full bg-primary hover:bg-secondary text-surface py-2.5 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-150 flex items-center justify-center gap-2" onclick="quickAddToBag('Sculpted Dune Vessel', '₹31,500')">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+</article>
+<!-- Card 3: Woven Daylight Tapestry by Amani Osei -->
+<article class="group flex flex-col justify-between hairline-all p-3 bg-surface hover:bg-surface-container-low transition-colors duration-200">
+<div>
+<!-- Image Frame -->
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-4 hairline-b">
+<img alt="Woven Daylight Tapestry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A hand-woven wall textile composition woven from raw undyed wild silk, deep plant-extracted indigo yarn, and unbleached cotton threads hanging on a patinated brass rod. The rich fibrous textures and subtle geometric rhythm catch the light in a serene, quiet contemporary gallery room with cream walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADLYd_LDybThJslct3Ma-ttA6HQTWNMQuKT3GTAdXqo-VfpaKWhlR26XwBVsBRxYlOYOA454XIMh8B5zPWLH1I-GlxmOqUjadfgeck6nl7GpTskI_VIscoWiCbAosuddmZDV59RwkXZam-lTp8GsCIFSpAfzjUr5HKkl0zaSk4jB-9jGYX4hLmkBjwG1_2emFk7vu2WpWdsvZRxMvS2loFa7JSBuXdM35te1fEgig">
+<div class="absolute top-3 left-3">
+<span class="bg-surface text-primary text-label-caps font-label-caps uppercase tracking-widest text-[9px] px-2 py-0.5 hairline-all">
+                Limited Edition
+              </span>
+</div>
+<button aria-label="Add Woven Daylight Tapestry to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-none bg-surface/90 hairline-all flex items-center justify-center text-primary hover:text-secondary hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-[17px] fill">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline mb-1">
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px]">Amani Osei • Accra</span>
+<span class="text-secondary font-medium">Edition of 4</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1 group-hover:text-secondary transition-colors">
+            Woven Daylight Tapestry
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Hand-spun Wild Silk, Botanical Indigo &amp; Solid Brass Hanging Rod
+          </p>
+</div>
+<div>
+<div class="hairline-t pt-3 flex items-center justify-between mb-3">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹74,000</span>
+<span class="text-[11px] text-outline font-label-caps uppercase tracking-wider">Numbered Certificate</span>
+</div>
+<button class="w-full bg-primary hover:bg-secondary text-surface py-2.5 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-150 flex items-center justify-center gap-2" onclick="quickAddToBag('Woven Daylight Tapestry', '₹74,000')">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Obsidian Pour-Over & Decanter Set by Matteo Rossi -->
+<article class="group flex flex-col justify-between hairline-all p-3 bg-surface hover:bg-surface-container-low transition-colors duration-200">
+<div>
+<!-- Image Frame -->
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-4 hairline-b">
+<img alt="Obsidian Pour-Over &amp; Decanter Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="An artisanal coffee pour-over dripper and hand-blown thermal glass decanter with a volcanic basalt black ceramic dripper cone, set against a limestone counter with steam gently rising in soft, moody morning studio lighting. The deep matte black finish contrasts with the radiant morning sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB31tuinM11G761_tBWIU-YdfMXrSbplPQhhZlYh74y09xlFsv7-OhI8peGo5WxWk3CRK6_BurHCrhr8cGWqYI5BwLbYawaTI2ZfdX7KN8in9TbLQVXvyy4ShSPnbhh_66UOEutOG9l_HJL4ee-VqKouGPO0Dr3u3kMgrpmFh4H33l1VDXsfPHQxsLSavxG9_Wj66tqqJ5TdNJG1F2YNK5Qj-3jzlVps69Vs0wKsBQ">
+<div class="absolute top-3 left-3">
+<span class="bg-surface text-primary text-label-caps font-label-caps uppercase tracking-widest text-[9px] px-2 py-0.5 hairline-all">
+                Artisan Batch
+              </span>
+</div>
+<button aria-label="Add Obsidian Pour-Over Set to wishlist" class="absolute top-3 right-3 w-8 h-8 rounded-none bg-surface/90 hairline-all flex items-center justify-center text-primary hover:text-secondary hover:bg-surface transition-colors">
+<span class="material-symbols-outlined text-[17px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline mb-1">
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px]">Matteo Rossi • Florence</span>
+<span class="text-outline text-[11px]">8 In Stock</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1 group-hover:text-secondary transition-colors">
+            Obsidian Pour-Over Set
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            Volcanic Basalt Glazed Ceramic with Hand-Blown Borosilicate Flask
+          </p>
+</div>
+<div>
+<div class="hairline-t pt-3 flex items-center justify-between mb-3">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹19,900</span>
+<span class="text-[11px] text-outline font-label-caps uppercase tracking-wider">Gift Presentation Box</span>
+</div>
+<button class="w-full bg-primary hover:bg-secondary text-surface py-2.5 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-150 flex items-center justify-center gap-2" onclick="quickAddToBag('Obsidian Pour-Over Set', '₹19,900')">
+<span class="material-symbols-outlined text-[15px]">add</span>
+<span class="">Quick Add to Bag</span>
+</button>
+</div>
+</article>
+</div>
+<!-- Curator's Note Bar -->
+<div class="mt-12 p-6 bg-surface-container hairline-all flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[26px]">verified</span>
+<p class="text-body-sm font-body-sm text-on-surface">
+<strong>The Ink &amp; Craft Authenticity Guarantee:</strong> Each artifact comes with an embossed Certificate of Provenance signed by the artisan and our Senior Curator.
+        </p>
+</div>
+<a class="text-label-caps font-label-caps uppercase tracking-wider text-primary hover:text-secondary underline underline-offset-4 flex-shrink-0" href="#curations">
+        Review Provenance Standards
+      </a>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. THE ARTIST SPOTLIGHT (Editorial Feature)                               -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1680px] mx-auto px-margin py-space-xl hairline-t" id="artists">
+<div class="grid grid-cols-12 gap-gutter items-stretch">
+<!-- Left Column: Portrait & Studio Scene (6 Columns) -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container hairline-all p-4 flex flex-col justify-between">
+<div class="relative aspect-[4/5] overflow-hidden mb-6">
+<img alt="Master ceramicist Mei Lin Takahashi in Kyoto studio" class="w-full h-full object-cover" data-alt="An atmospheric, black-and-white and muted sepia editorial portrait of master Japanese ceramicist Mei Lin Takahashi inside her traditional wooden Kyoto atelier. She is working at an old wooden potter's wheel with clay-dusted hands, surrounded by drying earthenware vessels on slatted pine shelves with soft misty garden light filtering through rice paper shoji screens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0dkKY56sZ_wwckkwhzlkItOHul23W7iYOkiPdhW-QcY3hZsPLxtmv_Me8AZp_4MasGm1uiM3w71ESkMKQC3Azwxrbe0-xJBru1ll_paz-3bdtxuAUZKz3szefVL9xOgK9cmW_mahIUWvQASh11wkrF4WavJD9hX1OPI-zyk1dBHNrjUzYulfNfKZ7bHCTJSGfOF4XxzzSj5M3Jekim816Umkhh7fVfnw7t79Ip_0">
+<!-- Verified Stamp -->
+<div class="absolute top-4 right-4 bg-surface/95 px-3 py-1.5 hairline-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[14px]">verified</span>
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-[10px]">Verified Guild Master</span>
+</div>
+</div>
+<!-- Studio Coordinates -->
+<div class="flex items-center justify-between text-body-sm font-body-sm text-outline px-2">
+<span class="">Studio Coordinates: 35.0116° N, 135.7681° E</span>
+<span class="">Kyoto Prefectural Ceramic Heritage</span>
+</div>
+</div>
+<!-- Right Column: Editorial Essay & Catalog Teaser (6 Columns) -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container-low hairline-all p-8 lg:p-12 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary">Master In Residence</span>
+<span class="text-outline-variant">•</span>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-outline">Kyoto, Japan</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">
+            Mei Lin Takahashi
+          </h2>
+<!-- Quote Callout -->
+<blockquote class="font-headline-sm text-headline-sm italic text-on-surface mb-8 border-l-2 border-secondary pl-5 py-1">
+            "Craft is the silent dialogue between human hands and organic matter."
+          </blockquote>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+            Spanning over three decades of mastery, Takahashi’s creations bridge the tactile wabi-sabi ethos with modern architectural silhouettes. Utilizing clay sourced exclusively from the Shigaraki hills and fired in wood-fueled anagama kilns for 96 continuous hours, no two pieces emerge with identical mineral crystallization.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+            Her works have been permanently acquired by the National Museum of Modern Art Tokyo and private collections across Zurich, Seoul, and Manhattan.
+          </p>
+</div>
+<!-- Available Works Thumbnail Strip -->
+<div class="hairline-t pt-8">
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-primary">
+              Currently Available (14 Works)
+            </span>
+<a class="text-label-caps font-label-caps uppercase tracking-wider text-secondary hover:text-primary transition-colors flex items-center gap-1 group" href="#shop">
+<span class="">View All</span>
+<span class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+<!-- Micro Thumbnails -->
+<div class="grid grid-cols-4 gap-3 mb-6">
+<div class="aspect-square bg-surface hairline-all p-1 group cursor-pointer">
+<img alt="Chawan bowl" class="w-full h-full object-cover" data-alt="Small thumbnail of an irregular, hand-sculpted chawan tea bowl with iron glaze speckles on ivory ceramic base in natural gallery light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoqbfgmlErVt7E3H4kIroYWmyD8eNgvjUd4XRImh7MMrsZvWwlj2-PPC3N4ddNXJYNBcwNnuwRshIYsOlxAOq0eoJFxnwLg_EVQyw4k4cnZwiOLLtS4JatnQOP67NbmZRdCPbSiE-yXtLrL_dGhKXK8dlQVayXTsS02Cew9Dyn0pgU4I9XchuZwC7XDzwXB9FJqfRK0SgLY7OlISXEXckCzY1ZYz87PfPuzJDxPR0">
+</div>
+<div class="aspect-square bg-surface hairline-all p-1 group cursor-pointer">
+<img alt="Tall bud vase" class="w-full h-full object-cover" data-alt="Small thumbnail of a tall, narrow bud vase with charred wood-ash finish sitting against minimalist linen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDij9PqQP75owj7cKw3DaElMaWHFbSP-hLBaWvJKBkulkrRHZ7BikcQDOj8XFOKl5NH1RnGcmID80-igUEBxCxdxouJ9V_WFeBmLW_AfALSADEtWTERcYePe_jaDFq3mVadfj4Xsa7e_vXxIPNHtiOlERjaQcmJT2h909qP5p0MPRLfFj06TMzVJ_g9ZiiMehxHjMtvwifLfB6ZDKjXL7WcwRGLvvaJpgW2L2a5UdI">
+</div>
+<div class="aspect-square bg-surface hairline-all p-1 group cursor-pointer">
+<img alt="Volcanic rim bowl" class="w-full h-full object-cover" data-alt="Small thumbnail of a wide sculptural stoneware fruit bowl with tactile volcanic rim detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM17SACH5Z-lnzNWcQA800dtcQsyBeSAvE_77AH038MZ7lWHB9ZPo0utJ6RBZWvGnogTOr1ftdVrB6t7yCd4358SldYFjw1SvoUtsuOvx8azlI6cdh86jpXRjK3fbU_Plt3aw2IFImZKDu_JGrLDHJyfG_xQ4cIYKthGKkGYzYCbUl8zJz0Dadq3_tYoHuumR6T6DJuCPFUEzpactyo--wCShXiy_1HyKFAlXiyGY">
+</div>
+<div class="aspect-square bg-surface hairline-all p-1 group cursor-pointer flex items-center justify-center bg-surface-container hover:bg-surface-variant transition-colors">
+<span class="text-label-caps font-label-caps text-secondary text-[11px] font-bold">+11 More</span>
+</div>
+</div>
+<!-- CTA to Explore Artist Profile -->
+<a class="bg-primary hover:bg-secondary text-surface w-full py-3.5 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-200 flex items-center justify-center gap-2" href="#artists">
+<span class="">Explore Mei's 14 Available Works</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. CURATED EDITORIAL EDITS (High-Velocity Marketplace Rows)               -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1680px] mx-auto px-margin py-space-xl hairline-t bg-surface-container-low">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+<div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary block mb-1">Lookbook Edits</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Curated Edits</h2>
+</div>
+<div class="flex items-center gap-2 mt-4 md:mt-0">
+<button aria-label="Previous edit" class="w-10 h-10 hairline-all bg-surface hover:bg-surface-variant flex items-center justify-center text-primary transition-colors" onclick="scrollEditRow('left')">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button aria-label="Next edit" class="w-10 h-10 hairline-all bg-surface hover:bg-surface-variant flex items-center justify-center text-primary transition-colors" onclick="scrollEditRow('right')">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Fast-Scroll Showcase Container -->
+<div class="flex gap-gutter overflow-x-auto pb-6 scroll-smooth scrollbar-none" id="editsRow">
+<!-- Edit 1: The Minimalist Edit -->
+<div class="min-w-[340px] max-w-[340px] flex-shrink-0 bg-surface hairline-all p-4 flex flex-col justify-between">
+<div>
+<div class="aspect-square bg-surface-container overflow-hidden mb-4 hairline-b relative">
+<img alt="The Minimalist Edit" class="w-full h-full object-cover" data-alt="A curated flatlay of minimalist interior design objects: a raw cast bronze incense burner, an architectural matte white stoneware saucer, and a charcoal sketching on handmade rag paper, shot from above in calm, bright diffused daylight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDbBcivi75AZ3FqeqjoA6_Yqk8Y84mIfxMP6NKjf0ZStM-f1w06O-FEfZONeiQStgYQDoLmCIcDGh-CKvmAw0z33bvp159F1eVux7S0V_wZcwt3ARjHMf5Ymv5c4lurLErBMmSd4WGfa2fCKAb_Nsx9w_11cXjgSWD4tNdWvrY617Q3MSr8IrDmNm3h9A5FHGres-t5-5vCh6Fg8vvAKq6aD14z7UzHVnZq7DTgAE">
+<span class="absolute top-2 right-2 bg-primary text-surface text-[10px] font-label-caps uppercase tracking-wider px-2 py-0.5">
+              Only 2 Available
+            </span>
+</div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary text-[10px]">Capsule No. 01</span>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">The Minimalist Edit</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">Pure unornamented form for tranquil residential architecture.</p>
+</div>
+<div class="hairline-t pt-3 flex items-center justify-between">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">From ₹15,800</span>
+<button class="text-label-caps font-label-caps uppercase tracking-wider text-primary hover:text-secondary underline underline-offset-4" onclick="quickAddToBag('Minimalist Vessel', 190)">
+            Express Bag
+          </button>
+</div>
+</div>
+<!-- Edit 2: Art for Modern Living -->
+<div class="min-w-[340px] max-w-[340px] flex-shrink-0 bg-surface hairline-all p-4 flex flex-col justify-between">
+<div>
+<div class="aspect-square bg-surface-container overflow-hidden mb-4 hairline-b relative">
+<img alt="Art for Modern Living" class="w-full h-full object-cover" data-alt="A sunlit living room setting with an architectural walnut low credenza showcasing framed botanical intaglio prints and a carved volcanic stone sphere in high-end editorial clarity with warm cream wall tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApKzVfxP36BovBYYTcGzlLqejb02YqRLpKVogoflXq7fxFW01XTEPgD0PohWP9nKsvVV4EQJEshrjplYakKZMO732Y-rOcspV3zb6MpSedDcc4Zo06lwwNmRR9nUsVhh7APOxD5iZthcrF8yWtL0HVGUYObgD0EzB1lOXkozWWV8_M_Sqo51ncfIfr51tkbT8Q7n9lnpWCVnMMY6p0Kb5vN3ZuVJz4aDTwft1gTbc">
+<span class="absolute top-2 right-2 bg-surface text-primary hairline-all text-[10px] font-label-caps uppercase tracking-wider px-2 py-0.5">
+              Curator Verified
+            </span>
+</div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary text-[10px]">Capsule No. 02</span>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">Art for Modern Living</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">Original oil and mixed-media works intended for living areas.</p>
+</div>
+<div class="hairline-t pt-3 flex items-center justify-between">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">From ₹38,200</span>
+<button class="text-label-caps font-label-caps uppercase tracking-wider text-primary hover:text-secondary underline underline-offset-4" onclick="quickAddToBag('Modern Living Artwork', 460)">
+            Express Bag
+          </button>
+</div>
+</div>
+<!-- Edit 3: Handmade with Love -->
+<div class="min-w-[340px] max-w-[340px] flex-shrink-0 bg-surface hairline-all p-4 flex flex-col justify-between">
+<div>
+<div class="aspect-square bg-surface-container overflow-hidden mb-4 hairline-b relative">
+<img alt="Handmade with Love" class="w-full h-full object-cover" data-alt="Hands of an artisan weaving golden wild tussar silk on a wooden countermarch loom in a bright studio surrounded by raw skeins and woven swatches of earthen rust, mustard, and deep indigo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbBNAKmvhTFGkq-4tfoNThFZICLUmaZg6KKLguOk6MBqr_mfisYisY-Hl7VZUUNL-UhoEQlMYkZM_lhe33ZAISTcE4otJhViI3OS0PeMeWc2fZ_Lro-iXQiW3eOpWcRGa5iYW-5Mxww1-OA350OWSDBk-Z-5-ymvoW0-MKzwWjyE4kB51XbwCCnir6KVRPpP3v5ifWjXEkm45IBT6n-Fs_kLLF_2aQyB6vtdWMhrg">
+<span class="absolute top-2 right-2 bg-secondary text-surface text-[10px] font-label-caps uppercase tracking-wider px-2 py-0.5">
+              Only 1 Left
+            </span>
+</div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary text-[10px]">Capsule No. 03</span>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">Handmade with Love</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">Intimate tabletop stoneware and hand-dyed natural fiber textiles.</p>
+</div>
+<div class="hairline-t pt-3 flex items-center justify-between">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">From ₹9,200</span>
+<button class="text-label-caps font-label-caps uppercase tracking-wider text-primary hover:text-secondary underline underline-offset-4" onclick="quickAddToBag('Handwoven Silk Throw', 110)">
+            Express Bag
+          </button>
+</div>
+</div>
+<!-- Edit 4: The Architectural Collection -->
+<div class="min-w-[340px] max-w-[340px] flex-shrink-0 bg-surface hairline-all p-4 flex flex-col justify-between">
+<div>
+<div class="aspect-square bg-surface-container overflow-hidden mb-4 hairline-b relative">
+<img alt="The Architectural Collection" class="w-full h-full object-cover" data-alt="Sculptural brutalist cast-iron candle vessels and architectural limestone pedestals resting upon an unpolished raw slate surface in crisp, clean architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3ycEPuQgCIO-CtSk54eVENzC29p7QDt5Q_QTXSGBPuhK4R4VeJFjuJZp9XfjZqroY9RYTBKMhLRy6aGC12kv_hlLtEW6-go6IgRDVwfwu7IWaSDnrFqKqFri-2sskfkHW_7urxL7eFbVU2XV66s-P5xK3m73t3EPFu19Fth4vEKPdpiPSgY9iiJtNn1Fj3u4dU60qQllAE2OEk42BCLOGBtoLmeSpasHXZoPNiSk">
+<span class="absolute top-2 right-2 bg-surface text-primary hairline-all text-[10px] font-label-caps uppercase tracking-wider px-2 py-0.5">
+              Guild Exclusive
+            </span>
+</div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary text-[10px]">Capsule No. 04</span>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">The Architectural Collection</h3>
+<p class="font-body-sm text-body-sm text-outline mb-4">Heavyweight stone, solid cast iron, and monolithic geometries.</p>
+</div>
+<div class="hairline-t pt-3 flex items-center justify-between">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">From ₹26,500</span>
+<button class="text-label-caps font-label-caps uppercase tracking-wider text-primary hover:text-secondary underline underline-offset-4" onclick="quickAddToBag('Brutalist Iron Vessel', 320)">
+            Express Bag
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 8. BRAND STORY & CRAFTSMANSHIP JOURNAL                                  -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1680px] mx-auto px-margin py-space-xl hairline-t" id="story">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary block mb-3">Our Manifesto &amp; Ethos</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Every Creation Has a Story.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+        We reject mass-produced uniformity in favor of singular provenance, honoring centuries-old techniques refined by today's master practitioners.
+      </p>
+</div>
+<!-- Editorial Workshop Imagery Triad -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-16">
+<!-- Scene 1: Chisel & Timber -->
+<div class="bg-surface-container hairline-all p-3">
+<div class="aspect-[3/4] overflow-hidden mb-4">
+<img alt="Wood craftsman carving solid walnut" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="An extreme close-up of a woodworker's hand guiding an antique Japanese hand-plane over solid walnut timber, producing paper-thin translucent wood ribbons in a warm sunlit woodworking atelier with dust particles floating gently." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnwsBA38ezKgNiiXqgRFLBizaqxFjIrTs7H-kRsqn-musbzzcKdwRP57yAPrSjcfdOF8Xmia0jBSq55_mwLGqWLt5lwV3esI1zDg7UR1uOpSVitBW7H6vMEzYi3EyVGSLcsnsJ_FUrjg1Tcpq1UsJEbSxLyE0SWLp4hgiDsDz-qwaPcW_NZV-aYfqBtFOqcuXLEyFBjGi3XEh6makwukv0iLBqr10ivtOicvPxqWE">
+</div>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">I. The Sculptor’s Hand</h3>
+<p class="font-body-sm text-body-sm text-outline">
+          Every contour shaped with manual hand tools and instinctive patience.
+        </p>
+</div>
+<!-- Scene 2: Ceramic Wheel -->
+<div class="bg-surface-container hairline-all p-3">
+<div class="aspect-[3/4] overflow-hidden mb-4">
+<img alt="Ceramicist throwing pottery on wheel" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Hands centering wild riverbed clay on a traditional kick-wheel, with droplets of water and slurry flying softly in an authentic pottery studio with unglazed vessels lining the background shelves under soft diffused lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEd35KsPMhPzO_09nKi0H_VqHYvmryG0uQ6akkBDa2_Nue6apTtfZ43IzuCFE_cv0iwgSOfGeGVU78lv80td2lf_mQLpVji-QmaGgRoOPlAXuVJg1Rrp5t-pk5PXhtoLnQ1KE9kSIs0F3DzguxOujt8e5hsqpEhPfentfIvDeX7FINRhjKtiZ0icaQmN3ZmSF2kfF4RLHxlpUu_-EAftbLQ8TGXIPCU0oQXz2Z8us">
+</div>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">II. Earth &amp; Element</h3>
+<p class="font-body-sm text-body-sm text-outline">
+          Mineral-rich unrefined clays fired in wood kilns to capture nature's unpredictability.
+        </p>
+</div>
+<!-- Scene 3: Natural Dye Baths -->
+<div class="bg-surface-container hairline-all p-3">
+<div class="aspect-[3/4] overflow-hidden mb-4">
+<img alt="Natural indigo dye baths and raw silk" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A large copper dye vat filled with fermenting natural indigo dye, with raw silk fabric being slowly lifted by hand, dripping deep midnight blue droplets into the vat in a sunlit outdoor dye atelier." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClP_UtT_2BS0jLs-kha9pr4TElcR6Sqq80PPP7r9BBR_2_PO__fSHMN5INid3RwIjF07VZwAAF7UgH9bEuzeJoFVtjd5dX0YPEq368rlG5EOR70W1QyOxM9B1BtzBEu3VursWsbgQHI14BPam_-ivW-83mXXjPcP5pkpee13wbCRu850h_VgozlReluRXeiFKIrTZES-Cysubu5Rq5Y1LIsISbXyQcid103ytPUZk">
+</div>
+<h3 class="font-title-editorial text-title-editorial text-primary mb-1">III. Botanical Alchemy</h3>
+<p class="font-body-sm text-body-sm text-outline">
+          Roots, madder, marigolds, and indigo leaf pigments fermented slowly without harsh chemicals.
+        </p>
+</div>
+</div>
+<!-- Pillars of the Atelier: 3 Columns -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter hairline-t pt-12">
+<div class="border-l border-outline-variant pl-6">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">verified</span>
+<h4 class="font-title-editorial text-title-editorial text-primary mb-2">Certified Authenticity &amp; Provenance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Every piece is permanently recorded in our private registry ledger, accompanied by a numbered wax-sealed provenance certificate.
+        </p>
+</div>
+<div class="border-l border-outline-variant pl-6">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">handshake</span>
+<h4 class="font-title-editorial text-title-editorial text-primary mb-2">Direct-to-Artisan Fair Trade</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Eighty-five percent of each transaction is directly channeled to the creating artisan, ensuring traditional heritage guilds thrive sustainably.
+        </p>
+</div>
+<div class="border-l border-outline-variant pl-6">
+<span class="material-symbols-outlined text-secondary text-[32px] mb-3">auto_awesome</span>
+<h4 class="font-title-editorial text-title-editorial text-primary mb-2">Museum-Grade Archival Materials</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          We mandate non-acidic cotton rag papers, lightfast pigments, and sustainably gathered timbers built to gracefully endure for generations.
+        </p>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 9. CLIENT CONCIERGE & TESTIMONIALS                                       -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1680px] mx-auto px-margin py-space-xl hairline-t bg-surface-container-low" id="concierge">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary block mb-2">Collector Reflections</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Voices of the Patrons</h2>
+</div>
+<div class="mt-4 md:mt-0">
+<a class="bg-transparent hover:bg-primary hover:text-surface text-primary hairline-all px-4 py-2.5 text-label-caps font-label-caps tracking-widest uppercase transition-colors duration-150 inline-flex items-center gap-2" href="#concierge">
+<span class="">Schedule Art Advisory Call</span>
+<span class="material-symbols-outlined text-[15px]">calendar_today</span>
+</a>
+</div>
+</div>
+<!-- 3 Typographic Quote Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="bg-surface hairline-all p-8 flex flex-col justify-between">
+<div>
+<div class="flex text-tertiary-fixed-dim gap-1 mb-4">
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mb-6 leading-snug">
+            "The arrival of Vance’s canvas transformed our Manhattan residence completely. The white-glove uncrating service felt like opening a private museum acquisition."
+          </p>
+</div>
+<div class="hairline-t pt-4">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Eleanor Sterling</p>
+<p class="font-body-sm text-body-sm text-outline">Private Collector • New York, NY</p>
+<p class="text-[11px] text-secondary font-medium mt-1">Acquired: "Solitude No. 03" (2024)</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface hairline-all p-8 flex flex-col justify-between">
+<div>
+<div class="flex text-tertiary-fixed-dim gap-1 mb-4">
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mb-6 leading-snug">
+            "Holding Takahashi's stoneware tea vessels in hand reminds you why synthetic speed will never replace the patience of genuine hand throwing."
+          </p>
+</div>
+<div class="hairline-t pt-4">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Dr. Julien Moreau</p>
+<p class="font-body-sm text-body-sm text-outline">Architect &amp; Patron • Paris, France</p>
+<p class="text-[11px] text-secondary font-medium mt-1">Acquired: "Kyoto Chawan Set No. 4"</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface hairline-all p-8 flex flex-col justify-between">
+<div>
+<div class="flex text-tertiary-fixed-dim gap-1 mb-4">
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+<span class="material-symbols-outlined text-[18px] fill">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-primary mb-6 leading-snug">
+            "The direct connection to the artisan through their provenance registry gives every heirloom in our chalet a soul and a living story."
+          </p>
+</div>
+<div class="hairline-t pt-4">
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Beatrix von Bern</p>
+<p class="font-body-sm text-body-sm text-outline">Curator • Zurich, Switzerland</p>
+<p class="text-[11px] text-secondary font-medium mt-1">Acquired: "Woven Daylight Tapestry No. 2"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 10. INTERACTIVE LUXURY CART SLIDE-OVER DRAWER (Visible Slide Component)  -->
+<!-- ========================================================================= -->
+<div class="hidden fixed inset-0 z-50 overflow-hidden" id="cartDrawer">
+<!-- Backdrop curtain -->
+<div class="absolute inset-0 bg-[#1C1815]/40 transition-opacity duration-300" onclick="toggleCartDrawer()"></div>
+<div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+<aside class="w-screen max-w-md bg-[#FBF9F5] hairline-l flex flex-col justify-between shadow-none">
+<!-- Header -->
+<div class="p-6 hairline-b flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-title-editorial text-title-editorial text-primary uppercase tracking-widest">Your Atelier Bag</span>
+<span class="text-label-caps font-label-caps bg-surface-container px-2 py-0.5 text-secondary text-[11px]">₹4,200 away from free custom framing</span>
+</div>
+<button class="text-primary hover:text-secondary p-1" onclick="toggleCartDrawer()"><span class="">INR (₹)</span><span class="text-outline-variant">/</span><span class="">EN</span><span class="material-symbols-outlined text-[14px] group-hover:translate-y-0.5 transition-transform">expand_more</span></button>
+</div>
+<!-- Complimentary Progress Meter -->
+<div class="px-6 py-3.5 bg-surface-container hairline-b">
+<div class="flex items-center justify-between text-body-sm font-body-sm mb-1.5">
+<span class="text-label-caps font-label-caps uppercase tracking-wider text-on-surface">Curated Delivery Status</span>
+<span class="font-bold text-secondary text-[11px]">₹4,200 away from free custom framing</span>
+</div>
+<div class="w-full h-1.5 bg-outline-variant overflow-hidden">
+<div class="h-full bg-secondary" style="width: 86%;"></div>
+</div>
+</div>
+<!-- Bag Items List -->
+<div class="flex-1 overflow-y-auto p-6 space-y-6">
+<!-- Item 1 -->
+<div class="flex gap-4 hairline-b pb-6">
+<div class="w-20 h-24 bg-surface-container flex-shrink-0 hairline-all overflow-hidden">
+<img alt="Solitude No. 07" class="w-full h-full object-cover" data-alt="Small thumbnail of the minimalist Solitude No. 07 painting on stretched linen canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRkk56K2Q5lk2VBs7iDKgZQEnaGwFTmIuZylMxO1nl2AjqADEAyQzJYJPAymnCtGNO7tEFQL0bUf68xJY-rgjINdfclOQygLJ8lVyjj5giWwuSanblEVBukZZ-xparDEpWN68bKogWfn5AEJBPlg-yV_YTg3Gu7g24hwLg0WBjjuQEYTb7_EY0WgfVak5I1k_tKwew2dZdduYA5WL_odh33tcv_-cdNmxVX9nr_98">
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<h4 class="font-title-editorial text-[17px] text-primary">Solitude No. 07</h4>
+<button class="text-outline hover:text-error transition-colors"><span class="">INR (₹)</span><span class="text-outline-variant">/</span><span class="">EN</span><span class="material-symbols-outlined text-[14px] group-hover:translate-y-0.5 transition-transform">expand_more</span></button>
+</div>
+<p class="font-body-sm text-body-sm text-outline">By Helena Vance • Tokyo</p>
+<span class="inline-block text-[10px] text-secondary font-label-caps uppercase tracking-wider">Original Acrylic</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹1,18,000</span>
+<span class="text-body-sm font-body-sm text-outline">Qty: 1 (Unique)</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4 hairline-b pb-6">
+<div class="w-20 h-24 bg-surface-container flex-shrink-0 hairline-all overflow-hidden">
+<img alt="Sculpted Dune Vessel" class="w-full h-full object-cover" data-alt="Small thumbnail of Sculpted Dune Vessel showing textured terracotta and ash glaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBee2lYjNmOPCzm54J5zgBuOrKjM8Y15LaLBJNrsyKSRyGK12tT9H6fr7WKYSXngVBZ8bgdjv0inIpv4PIZBSvPyxj7d4OuasVmCpBRMR4IQRkQLUrSvMf9ZvssysGajKiqss9PLoK_58BHFJAWD8GKBz1Z-sJkWvTKom5D8QJZvhjia1fSY3pbuah6OfkF8rEksUBz65FTfE6g6Z_bXQ9rJli8Ht3rRWrLsM2IqqA">
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<h4 class="font-title-editorial text-[17px] text-primary">Sculpted Dune Vessel</h4>
+<button class="text-outline hover:text-error transition-colors"><span class="">INR (₹)</span><span class="text-outline-variant">/</span><span class="">EN</span><span class="material-symbols-outlined text-[14px] group-hover:translate-y-0.5 transition-transform">expand_more</span></button>
+</div>
+<p class="font-body-sm text-body-sm text-outline">By Studio Kanso • Copenhagen</p>
+<span class="inline-block text-[10px] text-secondary font-label-caps uppercase tracking-wider">Ash Terracotta</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹31,500</span>
+<span class="text-body-sm font-body-sm text-outline">Qty: 1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Checkout Summary Tray -->
+<div class="p-6 bg-surface hairline-t">
+<div class="flex items-center justify-between mb-2">
+<span class="font-body-sm text-body-sm text-outline">Subtotal</span>
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹1,49,500</span>
+</div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-body-sm text-body-sm text-outline">Insured Archival Courier</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary">Complimentary</span>
+</div>
+<!-- Checkout CTA -->
+<button class="w-full bg-primary hover:bg-secondary text-surface py-4 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-200 flex items-center justify-center gap-2 mb-3"><span class="">INR (₹)</span><span class="text-outline-variant">/</span><span class="">EN</span><span class="material-symbols-outlined text-[14px] group-hover:translate-y-0.5 transition-transform">expand_more</span></button>
+<div class="flex items-center justify-center gap-4 text-outline text-[11px] font-label-caps uppercase tracking-wider">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified_user</span>
+              Provenance Guaranteed
+            </span>
+<span class="">•</span>
+<span class="">30-Day Gallery Return</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Toast Notification Widget for Quick Add -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-surface px-5 py-3 hairline-all shadow-none hidden items-center gap-3" id="quickToast">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<div>
+<p class="text-label-caps font-label-caps uppercase tracking-widest text-[11px]" id="toastMessage">Artifact Added To Atelier Bag</p>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- 11. NEWSLETTER & FOOTER (Footer Shared Component)                         -->
+<!-- ========================================================================= -->
+<!-- Newsletter Ribbon Section -->
+<section class="w-full bg-surface-container hairline-t px-margin py-16">
+<div class="max-w-[1680px] mx-auto grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-6">
+<span class="text-label-caps font-label-caps uppercase tracking-widest text-secondary block mb-2">Private Vernissage Invitations</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-3">Stay Inspired By Masterworks.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg">
+          Receive confidential notices for private exhibitions, new artist residency drops, and limited edition releases prior to public vernissage.
+        </p>
+</div>
+<div class="col-span-12 lg:col-span-6">
+<form class="flex flex-col sm:flex-row items-baseline gap-4" onsubmit="event.preventDefault(); alert('Thank you for subscribing to the Ink &amp; Craft Gazette.');">
+<div class="relative flex-1 w-full">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-body-md font-body-md pb-3 pt-2 text-primary placeholder:text-outline/70" placeholder="Enter patron email address..." required="" type="email">
+</div>
+<button class="bg-primary hover:bg-secondary text-surface px-6 py-3.5 text-label-caps font-label-caps uppercase tracking-widest transition-colors duration-200 whitespace-nowrap" type="submit">
+            Request Invitations
+          </button>
+</form>
+<p class="text-[11px] text-outline font-body-sm mt-3">We honor your privacy with total discretion. No spam; only certified archival notices.</p>
+</div>
+</div>
+</section>
+<!-- Architectural Editorial Footer -->
+<footer class="w-full border-t border-outline-variant dark:border-outline px-margin py-space-xl max-w-[1680px] mx-auto grid grid-cols-12 gap-gutter bg-surface-container-low dark:bg-surface-container text-primary dark:text-inverse-primary">
+<!-- Col 1: Brand Anchor (4 cols) -->
+<div class="col-span-12 lg:col-span-4 pr-0 lg:pr-8">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary dark:text-inverse-primary block mb-3" href="#">
+        INK &amp; CRAFT
+      </a>
+<p class="font-label-caps uppercase tracking-wider text-outline text-[10px] mb-6">
+        Atelier, Guild &amp; Contemporary Gallery
+      </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-inverse-on-surface mb-8 leading-relaxed max-w-sm">
+        An international cultural sanctuary connecting visionary contemporary artisans with discerning patrons who treasure slow, deliberate craft and undeniable provenance.
+      </p>
+<div class="flex items-center gap-4 text-primary">
+<a aria-label="Instagram" class="hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">
+<span class="text-label-caps font-label-caps uppercase tracking-wider">Instagram</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a aria-label="Journal" class="hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">
+<span class="text-label-caps font-label-caps uppercase tracking-wider">Journal</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a aria-label="Archive" class="hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">
+<span class="text-label-caps font-label-caps uppercase tracking-wider">Archive</span>
+</a>
+</div>
+</div>
+<!-- Col 2: Curations & Works (3 cols) -->
+<div class="col-span-6 sm:col-span-3 lg:col-span-3">
+<h4 class="font-label-caps uppercase tracking-wider text-primary dark:text-inverse-primary text-label-caps mb-4">
+        Guild Portfolios
+      </h4>
+<ul class="space-y-3">
+<li class="">
+<a class="text-primary dark:text-inverse-primary font-body-sm underline underline-offset-4" href="#collections">Curations</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#shop">Original Art Works</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#artists">Master Artisans</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#story">Archival Materials</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#concierge">Provenance Registry</a>
+</li>
+</ul>
+</div>
+<!-- Col 3: Atelier Concierge (3 cols) -->
+<div class="col-span-6 sm:col-span-3 lg:col-span-3">
+<h4 class="font-label-caps uppercase tracking-wider text-primary dark:text-inverse-primary text-label-caps mb-4">
+        Client Concierge
+      </h4>
+<ul class="space-y-3">
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#concierge">Studio Journal</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#concierge">Client Concierge</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#concierge">Bespoke Commissions</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#concierge">Terms of Provenance</a>
+</li>
+<li class="">
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#concierge">Privacy Policy</a>
+</li>
+</ul>
+</div>
+<!-- Col 4: Archival Registry Seal (2 cols) -->
+<div class="col-span-12 sm:col-span-6 lg:col-span-2 flex flex-col justify-between">
+<div class="p-4 bg-surface dark:bg-surface-container hairline-all">
+<span class="material-symbols-outlined text-secondary text-[28px] mb-2">shield_with_heart</span>
+<span class="block font-label-caps text-label-caps uppercase tracking-wider text-primary mb-1">Authentic Guild</span>
+<span class="block font-body-sm text-body-sm text-outline text-[11px]">Certified Master Craftsmanship Registry No. 892-IK</span>
+</div>
+<div class="mt-6">
+<span class="block text-label-caps font-label-caps uppercase tracking-wider text-outline text-[10px] mb-1">Headquarters</span>
+<address class="not-italic font-body-sm text-body-sm text-on-surface-variant">
+          42 Rue de Turenne, Marais<br>
+          75003 Paris, France
+        </address>
+</div>
+</div>
+<!-- Bottom Full-Width Copyright Strip -->
+<div class="col-span-12 hairline-t pt-8 mt-4 flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-outline gap-4">
+<p class="">© 2025 INK &amp; CRAFT Atelier &amp; Gallery. All rights reserved. Handcrafted authenticity certified.</p>
+<div class="flex items-center gap-6">
+<span class="">Curated with dignity across global heritage guilds</span>
+<button class="hover:text-primary transition-colors flex items-center gap-1 group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<span class="text-label-caps font-label-caps uppercase tracking-wider">Top of Gallery</span>
+<span class="material-symbols-outlined text-[14px] group-hover:-translate-y-0.5 transition-transform">arrow_upward</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- ========================================================================= -->
+<!-- LIGHTWEIGHT INTERACTIVITY SCRIPT                                         -->
+<!-- ========================================================================= -->
+<script>
+    // Search Drawer Toggle
+    function toggleSearchModal() {
+      const searchDrawer = document.getElementById('searchDrawer');
+      if (searchDrawer.classList.contains('hidden')) {
+        searchDrawer.classList.remove('hidden');
+        searchDrawer.querySelector('input')?.focus();
+      } else {
+        searchDrawer.classList.add('hidden');
+      }
+    }
+
+    // Cart Slide-Over Toggle
+    function toggleCartDrawer() {
+      const cartDrawer = document.getElementById('cartDrawer');
+      if (cartDrawer.classList.contains('hidden')) {
+        cartDrawer.classList.remove('hidden');
+      } else {
+        cartDrawer.classList.add('hidden');
+      }
+    }
+
+    // Quick Add to Bag Toast Notification
+    function quickAddToBag(artifactName, price) {
+      const toast = document.getElementById('quickToast');
+      const message = document.getElementById('toastMessage');
+      message.textContent = `Added "${artifactName}" ($${price}) to Bag`;
+      
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 3200);
+    }
+
+    // Horizontal Row Scroll Controls
+    function scrollEditRow(direction) {
+      const row = document.getElementById('editsRow');
+      const scrollAmount = 360;
+      if (direction === 'left') {
+        row.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      } else {
+        row.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    }
+
+    // Escape Key Listener to Close Modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('searchDrawer').classList.add('hidden');
+        document.getElementById('cartDrawer').classList.add('hidden');
+      }
+    });
+  </script>
+
+
+</body></html>

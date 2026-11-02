@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INK &amp; CRAFT — Handmade &amp; Rare Craft Disciplines</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Verbatim Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#e4e2de",
+            "surface": "#fbf9f5",
+            "on-tertiary-fixed-variant": "#5b430a",
+            "surface-container-highest": "#e4e2de",
+            "outline": "#7e756f",
+            "on-primary-fixed": "#1f1b18",
+            "surface-bright": "#fbf9f5",
+            "secondary": "#97472e",
+            "inverse-primary": "#cec5c0",
+            "on-secondary-fixed": "#3a0a00",
+            "surface-tint": "#635d59",
+            "surface-container-high": "#eae8e4",
+            "inverse-surface": "#30312e",
+            "on-primary-fixed-variant": "#4b4642",
+            "background": "#fbf9f5",
+            "on-secondary": "#ffffff",
+            "on-surface": "#1b1c1a",
+            "on-primary-container": "#8a827e",
+            "surface-container-low": "#f5f3ef",
+            "on-secondary-fixed-variant": "#793019",
+            "secondary-fixed": "#ffdbd0",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#cec5c0",
+            "tertiary-container": "#261900",
+            "surface-container": "#efeeea",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#e6c27e",
+            "on-tertiary-container": "#9e7f43",
+            "secondary-fixed-dim": "#ffb59f",
+            "primary": "#000000",
+            "surface-dim": "#dbdad6",
+            "on-background": "#1b1c1a",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "inverse-on-surface": "#f2f0ed",
+            "on-error": "#ffffff",
+            "on-surface-variant": "#4d4540",
+            "primary-container": "#1f1b18",
+            "on-secondary-container": "#772f18",
+            "tertiary-fixed": "#ffdea4",
+            "on-tertiary-fixed": "#261900",
+            "on-primary": "#ffffff",
+            "secondary-container": "#fe997a",
+            "tertiary": "#000000",
+            "outline-variant": "#d0c4bd",
+            "primary-fixed": "#eae1db",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "4rem",
+            "gutter-sm": "1rem",
+            "space-xl": "6rem",
+            "gutter": "2rem",
+            "space-lg": "3rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-md": "1.5rem",
+            "space-sm": "0.75rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": [
+              "Playfair Display"
+            ],
+            "body-md": [
+              "Plus Jakarta Sans"
+            ],
+            "display-hero-mobile": [
+              "Playfair Display"
+            ],
+            "title-editorial": [
+              "Playfair Display"
+            ],
+            "headline-sm": [
+              "Playfair Display"
+            ],
+            "label-caps": [
+              "Plus Jakarta Sans"
+            ],
+            "body-lg": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-md": [
+              "Playfair Display"
+            ],
+            "display-hero": [
+              "Playfair Display"
+            ],
+            "price-numeral": [
+              "Plus Jakarta Sans"
+            ],
+            "headline-lg": [
+              "Playfair Display"
+            ],
+            "body-sm": [
+              "Plus Jakarta Sans"
+            ]
+          },
+          "fontSize": {
+            "headline-lg-mobile": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-md": [
+              "15px",
+              {
+                "lineHeight": "24px",
+                "letterSpacing": "0em",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero-mobile": [
+              "40px",
+              {
+                "lineHeight": "48px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "title-editorial": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-sm": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "letterSpacing": "0em",
+                "fontWeight": "500"
+              }
+            ],
+            "label-caps": [
+              "11px",
+              {
+                "lineHeight": "16px",
+                "letterSpacing": "0.12em",
+                "fontWeight": "600"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "30px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-md": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "letterSpacing": "-0.01em",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero": [
+              "72px",
+              {
+                "lineHeight": "80px",
+                "letterSpacing": "-0.02em",
+                "fontWeight": "400"
+              }
+            ],
+            "price-numeral": [
+              "15px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "500"
+              }
+            ],
+            "headline-lg": [
+              "48px",
+              {
+                "lineHeight": "56px",
+                "letterSpacing": "-0.015em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-sm": [
+              "13px",
+              {
+                "lineHeight": "20px",
+                "letterSpacing": "0.01em",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 2px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #efeeea;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #7e756f;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md selection:bg-secondary selection:text-on-secondary min-h-screen flex flex-col">
+<!-- ========================================================================= -->
+<!-- 1. EDITORIAL TOP APP BAR (Shared TopNavBar Component Execution)          -->
+<!-- ========================================================================= -->
+<header class="sticky top-0 z-50 bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline">
+<div class="w-full px-4 md:px-margin flex justify-between items-center h-20 max-w-[1680px] mx-auto">
+<!-- Brand Logo Anchor -->
+<div class="flex items-center gap-6">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary dark:text-inverse-primary hover:text-secondary transition-colors duration-150" href="#">
+          INK &amp; CRAFT
+        </a>
+<span class="hidden lg:inline-block font-label-caps text-label-caps text-on-surface-variant tracking-widest pl-4 border-l border-outline-variant">
+          ATELIER &amp; LIVING PROVENANCE
+        </span>
+</div>
+<!-- Navigation Links (Active state precisely resolved to 'Handmade') -->
+<nav class="hidden md:flex items-center gap-8 lg:gap-10">
+<!-- Shop -->
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Shop
+        </a>
+<!-- Original Art -->
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Original Art
+        </a>
+<!-- Handmade (ACTIVE MAPPING) -->
+<a class="text-primary dark:text-inverse-primary border-b border-primary dark:border-inverse-primary pb-1 font-label-caps tracking-widest uppercase" href="#">
+          Handmade
+        </a>
+<!-- Artists -->
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Artists
+        </a>
+<!-- Collections -->
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Collections
+        </a>
+<!-- Our Story -->
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Our Story
+        </a>
+</nav>
+<!-- Trailing Currency, Icons & Bag Actions -->
+<div class="flex items-center gap-5 md:gap-7">
+<!-- Currency Selector -->
+<div class="relative group cursor-pointer hidden sm:flex items-center gap-1.5 font-label-caps text-label-caps tracking-widest uppercase text-on-surface hover:text-secondary transition-colors">
+<span>INR (₹)</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+<!-- Trailing Icon Actions -->
+<button aria-label="Search Collection" class="p-1 text-primary hover:text-secondary transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]" data-icon="search">search</span>
+</button>
+<button aria-label="Archival Wishlist" class="p-1 text-primary hover:text-secondary transition-colors duration-150 relative">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+<span class="absolute top-0 right-0 w-1.5 h-1.5 bg-secondary rounded-full"></span>
+</button>
+<!-- Primary Cart Trigger -->
+<a class="flex items-center gap-2 pl-3 border-l border-outline-variant font-label-caps text-label-caps tracking-widest uppercase text-primary hover:text-secondary transition-colors duration-150" href="#bag">
+<span>Bag (0)</span>
+</a>
+<!-- Mobile Drawer Toggle -->
+<button class="md:hidden text-primary p-1" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Drawer Sub-Navigation -->
+<div class="hidden md:hidden border-t border-outline-variant bg-surface px-6 py-6 space-y-4" id="mobile-nav">
+<div class="flex flex-col space-y-3">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#">Shop</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#">Original Art</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-bold border-l-2 border-primary pl-2 py-2" href="#">Handmade</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#">Artists</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#">Collections</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#">Our Story</a>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- 2. CURATORIAL MANIFESTO HERO SECTION                                      -->
+<!-- ========================================================================= -->
+<section class="border-b border-outline-variant bg-surface-bright">
+<div class="max-w-[1680px] mx-auto px-4 md:px-margin pt-12 pb-16 lg:py-space-lg">
+<!-- Super-title & Metadata Grid -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-8 mb-10 border-b border-outline-variant gap-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="font-label-caps text-label-caps tracking-[0.2em] uppercase text-secondary font-semibold">
+            CURATORIAL DISPATCH • VOL. 18 / THE TACTILE GUILDS
+          </span>
+</div>
+<div class="flex items-center gap-6 font-label-caps text-label-caps text-on-surface-variant tracking-wider uppercase">
+<span>SALON ISSUE: Q1 2025</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span>CURATED FROM 11 WORKSHOPS GLOBALLY</span>
+</div>
+</div>
+<!-- Asymmetrical 12-Column Hero Structure -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left 7 Columns: Poetic Manifesto & Provenance Overview -->
+<div class="lg:col-span-7 pr-0 lg:pr-8">
+<h1 class="font-display-hero text-[38px] md:text-headline-lg lg:text-display-hero leading-[1.08] tracking-tight text-on-surface mb-8">
+            The Tactile Guilds: <br class="hidden sm:inline"/>
+<span class="italic font-normal">Living Mastercraft</span> &amp; Rare Techniques
+          </h1>
+<div class="space-y-6 max-w-2xl text-on-surface-variant">
+<p class="font-body-lg text-body-lg leading-relaxed text-on-surface">
+              We stand against the hurried churn of mechanical duplication. Every physical manifestation presented within this guild register has been formed slowly through hand, wood ember, and natural resin.
+            </p>
+<p class="font-body-md text-body-md leading-relaxed">
+              From continuous 96-hour reduction firings in the ancient clay hills of Shigaraki to 14-cycle wild indigo vat immersion in Jaipur, each object captures the unpredictable grace of slow geology and generational devotion. These are not ornamental accessories; they are tactile documents of human time, sealed with indelible cryptographic provenance.
+            </p>
+</div>
+<!-- Physical Trust Protocol Badges -->
+<div class="mt-10 pt-8 border-t border-outline-variant flex flex-wrap items-center gap-6">
+<div class="flex items-center gap-3 bg-surface-container-low border border-outline-variant px-4 py-3">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="verified" data-weight="fill">verified</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-semibold">Physical Tamper-Proof NFC</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Embedded micro-ceramic encrypted seal</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low border border-outline-variant px-4 py-3">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="local_fire_department">local_fire_department</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-semibold">1,320°C Wood Reduction</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Certified natural red-pine wood ash vitrification</p>
+</div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low border border-outline-variant px-4 py-3">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="handshake">handshake</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface font-semibold">85% Direct Guild Share</p>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Fair heritage honorarium returned to masters</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 5 Columns: Visual Master Artisan Studio Frame -->
+<div class="lg:col-span-5 relative mt-6 lg:mt-0">
+<div class="relative bg-surface-container-low border border-outline-variant p-3">
+<div class="relative aspect-[4/5] overflow-hidden bg-surface-container">
+<img alt="Master Artisan in studio" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An intimate documentary photograph of a master ceramicist shaping a heavy stoneware vessel on a manual wheel inside a rustic, sunlit Kyoto studio. Warm morning light spills across rough wooden worktables coated in dry clay dust and aged tools. Deep earthy terracotta tones, soft ivory glazes, and soot blacks harmonize in an ultra-luxurious, calm editorial mood inspired by high-end Japanese architectural journals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4RCfvjcZdYNE_zerZm3Q6iqpnAhp91j3vPR3ngMWhEmh8fpKpdLneUJ0GLcRrcppSnOEUSPchvaoR8OuR5zwRlJf0QH_CuECEqaPuz12_t7VDq5j-IcnHp9RvgNDcAHwsS1YZLoUICtbTAwhKcqn69vw6hQsFbFPf-K-AtHAPdK4WGxc9FBLzFcrQZCHhnqU8ScSzFTWiWxyfQqyPM5ru7k4YqYUlxx6vhTgOEd4"/>
+<!-- Floating Live Kiln Telemetry Overlay Tag -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface/95 border border-outline-variant backdrop-blur-none p-4">
+<div class="flex items-center justify-between text-on-surface mb-1">
+<span class="font-label-caps text-label-caps tracking-widest uppercase font-semibold text-secondary">STUDIO IN RESIDENCE</span>
+<span class="font-price-numeral text-label-caps text-on-surface-variant font-mono">KYOTO • SHIGARAKI</span>
+</div>
+<p class="font-title-editorial text-title-editorial text-on-surface leading-snug">
+                  Master Mei Lin Takahashi &amp; Studio Kamoshika
+                </p>
+<div class="mt-2 pt-2 border-t border-outline-variant/60 flex items-center justify-between font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase">
+<span>Batch: #2025-SK-04</span>
+<span class="text-secondary font-medium">96-Hour Anagama Kiln Run</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Archival Note Callout -->
+<div class="mt-3 flex items-center justify-between px-2 text-on-surface-variant font-body-sm text-[12px]">
+<span>Archival Register: INK-HA-2025-089</span>
+<span class="underline hover:text-secondary cursor-pointer">Inspect Atelier Ledger →</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 3. INTERACTIVE DISCIPLINE TAXONOMY RIBBON (Guild Filter)                 -->
+<!-- ========================================================================= -->
+<section class="border-b border-outline-variant bg-surface sticky top-20 z-40">
+<div class="max-w-[1680px] mx-auto px-4 md:px-margin py-4">
+<div class="flex items-center justify-between gap-4">
+<!-- Filter Label -->
+<div class="hidden xl:flex items-center gap-2 pr-6 border-r border-outline-variant text-on-surface whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase font-semibold">TAXONOMY:</span>
+</div>
+<!-- Horizontal Scrollable Guild Chips -->
+<div class="flex items-center gap-3 overflow-x-auto custom-scroll pb-1 w-full text-nowrap">
+<!-- Chip: All Guilds (Active) -->
+<button class="px-4 py-2 bg-primary text-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-primary transition-colors">
+<span>All Guilds</span>
+<span class="bg-surface/20 text-surface text-[10px] px-1.5 py-0.5 rounded-full">24</span>
+</button>
+<!-- Chip: Wheel-Thrown Ceramics -->
+<button class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-outline-variant transition-colors">
+<span>Wheel-Thrown Ceramics &amp; Anagama Stoneware</span>
+<span class="text-on-surface-variant text-[10px]">(8)</span>
+</button>
+<!-- Chip: Hand-Loomed Rare Textiles -->
+<button class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-outline-variant transition-colors">
+<span>Hand-Loomed Rare Textiles &amp; Natural Dyes</span>
+<span class="text-on-surface-variant text-[10px]">(5)</span>
+</button>
+<!-- Chip: Sculptural Joinery -->
+<button class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-outline-variant transition-colors">
+<span>Sculptural Joinery &amp; Smoked Timber</span>
+<span class="text-on-surface-variant text-[10px]">(3)</span>
+</button>
+<!-- Chip: Urushi Lacquer -->
+<button class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-outline-variant transition-colors">
+<span>Urushi &amp; 24k Maki-e Lacquer</span>
+<span class="text-on-surface-variant text-[10px]">(3)</span>
+</button>
+<!-- Chip: Hand-Blown Art Glass -->
+<button class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-outline-variant transition-colors">
+<span>Hand-Blown Art Glass</span>
+<span class="text-on-surface-variant text-[10px]">(3)</span>
+</button>
+<!-- Chip: Chiseled Stone -->
+<button class="px-4 py-2 bg-surface hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center gap-2 border border-outline-variant transition-colors">
+<span>Chiseled Stone &amp; Mineral Carving</span>
+<span class="text-on-surface-variant text-[10px]">(2)</span>
+</button>
+</div>
+<!-- Curatorial View Mode Toggle -->
+<div class="hidden sm:flex items-center gap-2 pl-4 border-l border-outline-variant text-on-surface-variant">
+<button class="p-1 hover:text-primary" title="Grid Display"><span class="material-symbols-outlined text-[20px]">grid_view</span></button>
+<button class="p-1 hover:text-primary" title="Editorial Index"><span class="material-symbols-outlined text-[20px]">view_agenda</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 4. LIVING KILN & WORKSHOP SPOTLIGHT                                       -->
+<!-- ========================================================================= -->
+<section class="border-b border-outline-variant bg-surface-container-low py-16 lg:py-space-xl">
+<div class="max-w-[1680px] mx-auto px-4 md:px-margin">
+<!-- Section Header -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-12 border-b border-outline-variant">
+<div class="lg:col-span-8">
+<div class="flex items-center gap-3 mb-3">
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary font-bold">ATELIER SPOTLIGHT</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant">4-DAY CONTINUOUS WOOD REDUCTION</span>
+</div>
+<h2 class="font-headline-lg text-[32px] md:text-headline-lg leading-tight text-on-surface">
+            Studio Kamoshika &amp; The 96-Hour Flame
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 max-w-2xl">
+            Kiln Master Mei Lin Takahashi tended this single subterranean anagama tunnel with split aged red-pine cordwood. The fly ash vitrified in flight, creating an unpredictable emerald and burnt-sienna glass mantle without artificial glazes.
+          </p>
+</div>
+<!-- Telemetry Spec Card -->
+<div class="lg:col-span-4 bg-surface border border-outline-variant p-6 space-y-3">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">KILN CHAMBER</span>
+<span class="font-price-numeral text-label-caps font-semibold text-primary">ANAGAMA #3 (SHIGARAKI)</span>
+</div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">PEAK TEMPERATURE</span>
+<span class="font-price-numeral text-label-caps font-semibold text-secondary">1,328°C (CONE 11 DOWN)</span>
+</div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">FUEL SUSTENANCE</span>
+<span class="font-price-numeral text-label-caps font-semibold text-primary">12 CORDS SPLIT RED PINE</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">YIELD SURVIVAL</span>
+<span class="font-price-numeral text-label-caps font-semibold text-primary">14 OF 38 PIECES CERTIFIED</span>
+</div>
+</div>
+</div>
+<!-- Spotlight Showcase 3 Singular Pieces -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mt-12">
+<!-- Piece 1 -->
+<div class="group bg-surface border border-outline-variant flex flex-col justify-between p-6 hover:border-on-surface transition-colors duration-300">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6 border border-outline-variant/60">
+<img alt="Anagama Chawan No. 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A museum-quality macro photograph of a heavy wood-fired stoneware tea bowl, featuring rough cratered textures and streaks of natural ash glaze ranging from celadon green to smoky graphite. Set against a warm linen gallery pedestal under dramatic soft rim lighting that emphasizes its tactile organic fissures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRy_xA4npvrLvcTKybYbOuaK5MhHtXVuEMQD1a2cnq8rTm4iQII4fxennk3IFWDOgPKINkj9Wc-bMv16FyxUZm-kCtO0-PiqYg0iQwabDXs83cimdMFwACPib2MtgICag-tFimH_ZPfthQ_-cYj4JP7hA15fvtRaMx2kotGzW_tWhGUeSukV9_fL_fQbvA8ZxFj4VkH-l3TvRhzcyt0b2Gk-QJTDi1DQGF9Svio8U"/>
+<span class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                1 OF 1 UNIQUE
+              </span>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest uppercase text-secondary mb-1">WOOD-FIRED STONEWARE</p>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2 group-hover:text-secondary transition-colors">
+              Chawan ‘Ash Embrace’ No. 04
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">
+              Direct firebox position with cascading pine wood ash drizzle and natural iron blooms across Shigaraki feldspathic clay.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹31,500</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant">INC. ALL TAXES</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Or 3 installments of <strong class="text-on-surface">₹10,500/mo</strong> with No-Cost EMI
+            </p>
+<button class="w-full bg-primary hover:bg-secondary text-surface py-3.5 px-space-md font-label-caps text-label-caps tracking-widest uppercase transition-colors duration-200">
+              Acquire Masterwork
+            </button>
+</div>
+</div>
+<!-- Piece 2 -->
+<div class="group bg-surface border border-outline-variant flex flex-col justify-between p-6 hover:border-on-surface transition-colors duration-300">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6 border border-outline-variant/60">
+<img alt="Monumental Anagama Vase" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An imposing sculptural stoneware vase with a narrow neck and dramatic volcanic ash run-off dripping down its unglazed raw earthen clay body. Shot against warm ivory architectural planes with high-contrast shadows highlighting the rough mineral inclusions in the fired clay." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDatOIPVltepm7EF-QEok0p96Su5s1bwlZcK30ceBUp_n84flI55jRwzIQfQ1C6C0VbJKhymR17TpVZ4q5ejzahwf1yvmuC-brax0VZ-_BPHmOcPTQJ7f2MR-zmttbznpowl_hLgYRXzxEL56Ie5mwGoS4xt4zGcySIqRKRyfszYgjWMaINSlE9BioDXCIoPJPK3a8YPvePJ4WmD_wXzg2rcZGCfQJC8CqT7z0YDPM"/>
+<span class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                MUSEUM PIECE
+              </span>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest uppercase text-secondary mb-1">FLAME-DEPOSITED MINERAL</p>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2 group-hover:text-secondary transition-colors">
+              Tsubo ‘Singed Horizon’ Vase
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">
+              Surviving 96 hours adjacent to the stoke mouth; heavy scorch markings, molten glass droplets, 4.2 kg dry weight.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹48,000</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant">INC. ALL TAXES</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Or 6 installments of <strong class="text-on-surface">₹8,000/mo</strong> with No-Cost EMI
+            </p>
+<button class="w-full bg-primary hover:bg-secondary text-surface py-3.5 px-space-md font-label-caps text-label-caps tracking-widest uppercase transition-colors duration-200">
+              Acquire Masterwork
+            </button>
+</div>
+</div>
+<!-- Piece 3 -->
+<div class="group bg-surface border border-outline-variant flex flex-col justify-between p-6 hover:border-on-surface transition-colors duration-300">
+<div>
+<div class="relative aspect-square overflow-hidden bg-surface-container mb-6 border border-outline-variant/60">
+<img alt="Kohiki Slip Plate" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A shallow sculptural ceramic offering plate with crackled white kohiki slip and deep charcoal scorch gradients across its asymmetric rim. Displayed upon an untreated raw timber table under gentle gallery downlighting, with warm earth tones and refined tactile textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZU271-pMXaY_Fx7oE_tEG9mmjsY0dMh-mxic_xn9caRkWzgq8FDtHqfPTBaTIEHN57wV1qnx8uju3PZSMRJniTw89W9emhU_Ausk_JqpT4YS-aiodcofAEJOtdi_DhdqHDjvvZk517f3jprNoViDDfhGr19HyOT6nTClOT_wSayiwAO91eXopDQdkNMsdnF0CXZ0YcfufkhmPr4x78QIYJC3Y543NK-kSNXEywyM"/>
+<span class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                REGISTERED BATCH
+              </span>
+</div>
+<p class="font-label-caps text-label-caps tracking-widest uppercase text-secondary mb-1">KOHIKI &amp; RAW SLIP</p>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2 group-hover:text-secondary transition-colors">
+              Platter ‘Shigaraki Dawn’
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">
+              White slip applied by horsehair brush over coarse iron-rich mountain clay; subtle red reduction blush across outer rim.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹19,900</span>
+<span class="font-label-caps text-[11px] text-on-surface-variant">INC. ALL TAXES</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Or 3 installments of <strong class="text-on-surface">₹6,633/mo</strong> with No-Cost EMI
+            </p>
+<button class="w-full bg-primary hover:bg-secondary text-surface py-3.5 px-space-md font-label-caps text-label-caps tracking-widest uppercase transition-colors duration-200">
+              Acquire Masterwork
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 5. CURATED HANDMADE GALLERY GRID (3-Column Editorial Layout)             -->
+<!-- ========================================================================= -->
+<section class="py-16 lg:py-space-xl bg-surface border-b border-outline-variant">
+<div class="max-w-[1680px] mx-auto px-4 md:px-margin">
+<!-- Section Introductory Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-outline-variant gap-4">
+<div>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary font-bold">
+            AUTHENTICATED CATALOGUE • 2025 SALON
+          </span>
+<h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface mt-2">
+            Singular Works from Generational Guilds
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Every physical piece ships with an unalterable micro-ceramic NFC registry certificate and an archival provenance dossier personally inscribed by the creator.
+        </p>
+</div>
+<!-- 6-Item Architectural Bento / 3-Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Work 1: Woven Daylight Tapestry -->
+<article class="flex flex-col justify-between border border-outline-variant bg-surface p-6 hover:border-on-surface transition-colors duration-200">
+<div>
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-6 border border-outline-variant">
+<img alt="Woven Daylight Tapestry" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An exquisite high-detail photograph of a hand-loomed wall hanging textile made of wild silk, raw linen, and Arctic lichen fibers with subtle open-weave relief. Natural ambient daylight illuminates the ivory, bone, and soft umber yarn textures suspended in an open gallery setting with zero clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVJlM8gz3QgPYAum9BymWfVLkXXA4V7v1XfndvLE_C4XklJZXVE86PW28iaUTjpng5e-DjxZD1wGZWJ9zWqq3gjqdVgXUHNTIO_uG3-XwlSP2mcBJ3JY1Ef7iQ0HkUmSezv5abSILNBxCzN4ExiwpB_MEKwcXyz0zKKcOMJkyI7-UIiCFb6KPHfQTaa8OxS7YbdBRC2FyXcNRMG4KI12KH5qo9QUk4IFaLsYHFLqg"/>
+<div class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                1 OF 1 UNIQUE
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface/95 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] text-on-surface">
+                SWEDEN • GOTLAND
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-1">
+<span>NATURAL FIBER WEAVING</span>
+<span class="text-on-surface-variant">92 × 140 CM</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2">
+              Woven Daylight Tapestry
+            </h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Gotland Atelier • Hand-spun raw wild silk and wild Arctic lichen gathered by Master Weaver Sigrid Vallin. Woven on a 19th-century countermarch loom over 180 hours.
+            </p>
+<!-- Metrics Matrix -->
+<div class="bg-surface-container-low border border-outline-variant p-3 space-y-1.5 font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mb-6">
+<div class="flex justify-between">
+<span>Materiality:</span>
+<span class="text-on-surface font-semibold">100% Wild Arctic Lichen &amp; Wild Silk</span>
+</div>
+<div class="flex justify-between">
+<span>Tax &amp; Compliance:</span>
+<span class="text-on-surface font-semibold">GSTIN Tax Invoice Provided</span>
+</div>
+<div class="flex justify-between">
+<span>Weight:</span>
+<span class="text-on-surface font-semibold">1.8 kg (Framed in raw spruce)</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹74,000</span>
+<span class="font-label-caps text-[11px] text-secondary font-bold">1 AVAILABLE</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              EMI from <strong class="text-on-surface">₹12,333/mo</strong> (6 Months No-Cost)
+            </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary hover:bg-secondary text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Acquire
+              </button>
+<button class="border border-primary text-primary hover:bg-primary hover:text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Dossier
+              </button>
+</div>
+</div>
+</article>
+<!-- Work 2: Indigo Moon Archival Textile -->
+<article class="flex flex-col justify-between border border-outline-variant bg-surface p-6 hover:border-on-surface transition-colors duration-200">
+<div>
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-6 border border-outline-variant">
+<img alt="Indigo Moon Archival Textile" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An artisanal photograph of an intricate geometric resist-dyed indigo textile, showing deep midnight blue gradations and pure white hand-carved block prints. Photographed flat on an antique sandstone patio under warm raking sunlight, revealing the authentic irregularities of natural botanical dyes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrc069w-b0EEYLaPStjEcERL21ILz0fDIsYG4Op9O4cP-F9LddYXgLyXnNWYHfCS8sxtt0-nlQNR0qVkuBdSOptQu8WstnPzxV64E_2ylM5QOGKSzIVFFg3LgclJBRxMi3T17_gNynKemjgcb9gdcI6uJBuAFLXAEi9TwupQQ9de0a0ciKjGkIAbgHgTVBriu0OdXv-5h_LC-am_PWgOv6cL9n2oKP5_qyzoo8Wzo"/>
+<div class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                EDITION OF 4
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface/95 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] text-on-surface">
+                JAIPUR • RAJASTHAN
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-1">
+<span>FERMENTED VAT DYES</span>
+<span class="text-on-surface-variant">110 × 210 CM</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2">
+              Indigo Moon Archival Textile
+            </h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Jaipur Heritage Guild • Created by Ramesh Chitrakar using hand-carved teak woodblocks and 14 successive immersions in an organic 8-year-old living indigo pit.
+            </p>
+<!-- Metrics Matrix -->
+<div class="bg-surface-container-low border border-outline-variant p-3 space-y-1.5 font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mb-6">
+<div class="flex justify-between">
+<span>Materiality:</span>
+<span class="text-on-surface font-semibold">Hand-Spun Khadi Cotton &amp; Botanical Indigo</span>
+</div>
+<div class="flex justify-between">
+<span>Tax &amp; Compliance:</span>
+<span class="text-on-surface font-semibold">GSTIN Tax Invoice Provided</span>
+</div>
+<div class="flex justify-between">
+<span>Weight:</span>
+<span class="text-on-surface font-semibold">820 grams</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹28,500</span>
+<span class="font-label-caps text-[11px] text-secondary font-bold">2 OF 4 REMAINING</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              EMI from <strong class="text-on-surface">₹9,500/mo</strong> (3 Months No-Cost)
+            </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary hover:bg-secondary text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Acquire
+              </button>
+<button class="border border-primary text-primary hover:bg-primary hover:text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Dossier
+              </button>
+</div>
+</div>
+</article>
+<!-- Work 3: Kyoto Pine Smoked Bench -->
+<article class="flex flex-col justify-between border border-outline-variant bg-surface p-6 hover:border-on-surface transition-colors duration-200">
+<div>
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-6 border border-outline-variant">
+<img alt="Kyoto Pine Smoked Bench" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="An architectural photography feature of an ultra-minimalist Japanese bench made of dark smoked hinoki cypress with intricate exposed wooden joinery and no hardware. Positioned gracefully in an austere concrete and white plaster gallery, with delicate warm shadows falling across its silk-smooth hand-planed surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH8DoseW2wkSDDW3qf4Ziyvf-joV510ZUiPtICKeL6wNwfEZANkHh4hW115BiFNTm1TnY5aHSw7ZFJgHeI70eAB9YBNItTfCOlgcaU4VtfUn9Yg7diRgwlGaBAZcEAvUe-Ov4Mu4g_K89PdmUN6c5obzybgvCybvNKfdaCLm5CT1Mr8KOhColhxQHBCmDoum4NXG3siAsPYwmWtvd11FTG9Ak-x9bkY9dqYcDuYoE"/>
+<div class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                COMMISSION / LIMITED
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface/95 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] text-on-surface">
+                KYOTO SASHIMONO
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-1">
+<span>SASHIMONO JOINERY</span>
+<span class="text-on-surface-variant">160 × 42 × 45 CM</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2">
+              Kyoto Pine Smoked Bench
+            </h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Constructed by 4th-generation woodworker Hiroshi Tanaka using 80-year salvaged Yoshino Hinoki. Assembled completely without metal fasteners using complex blind mortise locks.
+            </p>
+<!-- Metrics Matrix -->
+<div class="bg-surface-container-low border border-outline-variant p-3 space-y-1.5 font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mb-6">
+<div class="flex justify-between">
+<span>Materiality:</span>
+<span class="text-on-surface font-semibold">Yoshino Hinoki Cypress &amp; Walnut Dowels</span>
+</div>
+<div class="flex justify-between">
+<span>Tax &amp; Compliance:</span>
+<span class="text-on-surface font-semibold">Crated Freight &amp; GSTIN Invoice</span>
+</div>
+<div class="flex justify-between">
+<span>Weight:</span>
+<span class="text-on-surface font-semibold">14.5 kg</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹1,25,000</span>
+<span class="font-label-caps text-[11px] text-secondary font-bold">MADE TO ORDER</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              EMI from <strong class="text-on-surface">₹20,833/mo</strong> (6 Months No-Cost)
+            </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary hover:bg-secondary text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Commission
+              </button>
+<button class="border border-primary text-primary hover:bg-primary hover:text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Dossier
+              </button>
+</div>
+</div>
+</article>
+<!-- Work 4: Kuroshio Casket (Urushi) -->
+<article class="flex flex-col justify-between border border-outline-variant bg-surface p-6 hover:border-on-surface transition-colors duration-200">
+<div>
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-6 border border-outline-variant">
+<img alt="Kuroshio Casket" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A museum-grade still life of an obsidian black urushi lacquer tea casket, adorned with faint, delicate 24k gold leaf dust maki-e waves shimmering under a precise spotlight. The ultra-glossy mirror-like black lacquer surface captures quiet reflections of pristine gallery walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9JBQemDzuTB5jvrtUbn-oAW9YWeAJJXr3U6FcjSpCraJC7tObjGpGWvGvTEEDLY7UbW1Pb0a8C4hwOW3QKZ-mHz1Ebbb4T6-rSIK3oK9wTsKIsNrAqnPl33-vuTejNjZ-bVUR4b8yOQG76r_dc7JNd0lIFJVzrrqUlXfdngIToMmadWCrxvrGMdoE6HXn1w5ezt0OMb1ZCD-PKf63aQE0P_xD67dbxy0tj0GrJ_o"/>
+<div class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                1 OF 1 MUSEUM PIECE
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface/95 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] text-on-surface">
+                WAJIMA • ISHIKAWA
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-1">
+<span>URUSHI &amp; 24K MAKI-E</span>
+<span class="text-on-surface-variant">24 × 18 × 12 CM</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2">
+              Kuroshio Lacquer Casket
+            </h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Wajima Guild • Master Kenzo Shibata. Built upon wild keyaki wood through 120 successive coatings of toxic raw tree sap, cured in humid subterranean vaults over 14 months.
+            </p>
+<!-- Metrics Matrix -->
+<div class="bg-surface-container-low border border-outline-variant p-3 space-y-1.5 font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mb-6">
+<div class="flex justify-between">
+<span>Materiality:</span>
+<span class="text-on-surface font-semibold">120-Coat Natural Urushi, 24k Gold Powder</span>
+</div>
+<div class="flex justify-between">
+<span>Tax &amp; Compliance:</span>
+<span class="text-on-surface font-semibold">Armed Courier &amp; GSTIN Invoice</span>
+</div>
+<div class="flex justify-between">
+<span>Weight:</span>
+<span class="text-on-surface font-semibold">1.1 kg</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹2,80,000</span>
+<span class="font-label-caps text-[11px] text-secondary font-bold">1 OF 1 REGISTERED</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Concierge acquisition with insured custody transit
+            </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary hover:bg-secondary text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Inquire
+              </button>
+<button class="border border-primary text-primary hover:bg-primary hover:text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Dossier
+              </button>
+</div>
+</div>
+</article>
+<!-- Work 5: Ethereal Decanter & Chime -->
+<article class="flex flex-col justify-between border border-outline-variant bg-surface p-6 hover:border-on-surface transition-colors duration-200">
+<div>
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-6 border border-outline-variant">
+<img alt="Ethereal Decanter and Chime" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A clean, luminous editorial shot of a hand-blown artisanal glass decanter with subtle smoky champagne tints, paired with an architectural sand-cast bronze acoustic stopper. The glass catches bright crystalline sunlight refracting clean geometric patterns onto a calm, light ivory background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsm2V8iIvotZMQXVKVUhC7fJvyD241tpcimTEG84HsT02g4cOHLA_C9GJXj3Iyu2N3oxtLAR8-uQrfgkN0HuVSaKeGHDkpVvTJahxRaFpjX085nD8MTkWRYV6hXeO0kgiePzEP3laVxKZVH7XYtNviytg-jWMjb7U2JavnJADqm7kPiV7h9zLDF0ya6dcVrIf4g0Omo6ZdfwpuqDn37yfw9y2z4e4cqspFZTwJAAo"/>
+<div class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                BATCH OF 8
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface/95 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] text-on-surface">
+                SMÅLAND • SWEDEN
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-1">
+<span>MOUTH-BLOWN ART GLASS</span>
+<span class="text-on-surface-variant">32 × 16 CM (1.2L)</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2">
+              Ethereal Decanter &amp; Chime
+            </h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Småland Glass Guild • Blown by Astrid Lindqvist using Swedish silica sand without chemical bleaching. Capped with a turned acoustic bronze stopper tuned to resonate at 528 Hz.
+            </p>
+<!-- Metrics Matrix -->
+<div class="bg-surface-container-low border border-outline-variant p-3 space-y-1.5 font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mb-6">
+<div class="flex justify-between">
+<span>Materiality:</span>
+<span class="text-on-surface font-semibold">Lead-Free Forest Glass &amp; Bell Bronze</span>
+</div>
+<div class="flex justify-between">
+<span>Tax &amp; Compliance:</span>
+<span class="text-on-surface font-semibold">Custom Wooden Box &amp; GSTIN</span>
+</div>
+<div class="flex justify-between">
+<span>Weight:</span>
+<span class="text-on-surface font-semibold">2.3 kg</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹68,000</span>
+<span class="font-label-caps text-[11px] text-secondary font-bold">3 REMAINING</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              EMI from <strong class="text-on-surface">₹11,333/mo</strong> (6 Months No-Cost)
+            </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary hover:bg-secondary text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Acquire
+              </button>
+<button class="border border-primary text-primary hover:bg-primary hover:text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Dossier
+              </button>
+</div>
+</div>
+</article>
+<!-- Work 6: Monolith Vessel IV -->
+<article class="flex flex-col justify-between border border-outline-variant bg-surface p-6 hover:border-on-surface transition-colors duration-200">
+<div>
+<div class="relative aspect-[4/5] bg-surface-container overflow-hidden mb-6 border border-outline-variant">
+<img alt="Monolith Vessel IV" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A striking minimalist photograph of a monumental vessel hand-chiseled from a singular block of porous Roman travertine stone, displaying rough raw edges contrasted with a satiny honed inner bowl. Set on a warm museum pedestal with soft directional lighting creating sculptural tactile shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS30FKaqEsgU1hNVlc9isNXaxZCb2WiL2kREUvWn5m_MJA8qF4Ho6XlqIiYblpcVliHSfh9z71DAyjznNp0FE93SS5GoI7DVEWCbNXsFirCjtkpTlZUnejEk6ptm9tbURh-xOyF37At3E2J13KjebaZou8Weq_KbaBapwgnCDmQbrchmag5J4-Oz_Ik1lxt53SlYVoWFOWs16R8ga8htm5EnbgYhvrzgd8rGaBiLg"/>
+<div class="absolute top-3 left-3 bg-surface/90 border border-outline-variant px-2.5 py-1 font-label-caps text-[10px] tracking-wider uppercase text-on-surface">
+                1 OF 1 MONUMENTAL
+              </div>
+<div class="absolute bottom-3 right-3 bg-surface/95 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] text-on-surface">
+                TIVOLI • ITALY
+              </div>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-caps text-label-caps tracking-widest uppercase mb-1">
+<span>CHISELED TRAVERTINE</span>
+<span class="text-on-surface-variant">48 × 34 × 28 CM</span>
+</div>
+<h3 class="font-title-editorial text-title-editorial text-on-surface mb-2">
+              Monolith Vessel IV
+            </h3>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              Tivoli Stone Guild • Sculptor Mateo Rossi excavated and hand-hollowed this raw block from Roman geothermal travertine strata. Hand-finished with beeswax and pumice stone.
+            </p>
+<!-- Metrics Matrix -->
+<div class="bg-surface-container-low border border-outline-variant p-3 space-y-1.5 font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase mb-6">
+<div class="flex justify-between">
+<span>Materiality:</span>
+<span class="text-on-surface font-semibold">Quarried Roman Travertine &amp; Raw Beeswax</span>
+</div>
+<div class="flex justify-between">
+<span>Tax &amp; Compliance:</span>
+<span class="text-on-surface font-semibold">Freight Delivery &amp; GSTIN Invoice</span>
+</div>
+<div class="flex justify-between">
+<span>Weight:</span>
+<span class="text-on-surface font-semibold">18.4 kg</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="flex items-baseline justify-between mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">₹1,45,000</span>
+<span class="font-label-caps text-[11px] text-secondary font-bold">1 OF 1 REGISTERED</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mb-4">
+              EMI from <strong class="text-on-surface">₹24,166/mo</strong> (6 Months No-Cost)
+            </p>
+<div class="grid grid-cols-2 gap-2">
+<button class="bg-primary hover:bg-secondary text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Acquire
+              </button>
+<button class="border border-primary text-primary hover:bg-primary hover:text-surface py-3 font-label-caps text-label-caps tracking-widest uppercase transition-colors">
+                Dossier
+              </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 6. THE FOUR PILLARS OF THE HANDMADE CHARTER                               -->
+<!-- ========================================================================= -->
+<section class="py-16 lg:py-space-xl bg-surface-container-low border-b border-outline-variant">
+<div class="max-w-[1680px] mx-auto px-4 md:px-margin">
+<!-- Section Superheader -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps tracking-[0.2em] uppercase text-secondary font-bold">
+          CONSTITUTION OF THE LIVING WORKSHOP
+        </span>
+<h2 class="font-headline-lg text-[32px] md:text-headline-lg text-on-surface mt-2">
+          The Four Pillars of the Handmade Charter
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+          Every guild affiliated with INK &amp; CRAFT adheres to non-negotiable standards of environmental extraction, generational remuneration, and physical authenticity.
+        </p>
+</div>
+<!-- Architectural 4-Column Panel -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Pillar 1 -->
+<div class="border border-outline-variant bg-surface p-8 flex flex-col justify-between">
+<div>
+<span class="font-headline-lg text-[40px] text-outline-variant font-light block mb-6">01</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Slow Materiality</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Strict prohibition of petroleum-derived polymers and synthetic dyes. Only organic fibers, botanical colorants, naturally fallen mountain timber, and geologically sourced clays may be utilized.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/60 flex items-center gap-2 font-label-caps text-[11px] text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">eco</span>
+<span>100% Biodegradable Base</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="border border-outline-variant bg-surface p-8 flex flex-col justify-between">
+<div>
+<span class="font-headline-lg text-[40px] text-outline-variant font-light block mb-6">02</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Physical NFC Ledger</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every work features an invisible, kiln-fired or resin-sealed micro-ceramic NFC tag. Tapping the object reveals its chronological kiln firing logs, workshop coordinates, and signed provenance certificate.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/60 flex items-center gap-2 font-label-caps text-[11px] text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">nfc</span>
+<span>Unalterable Chip Registry</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="border border-outline-variant bg-surface p-8 flex flex-col justify-between">
+<div>
+<span class="font-headline-lg text-[40px] text-outline-variant font-light block mb-6">03</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">85% Direct Guild Share</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              We reject predatory wholesale margins. 85% of net proceeds go directly to the artisan workshop to fund raw materials, apprentice stipends, and the preservation of rare generational craft disciplines.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/60 flex items-center gap-2 font-label-caps text-[11px] text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">savings</span>
+<span>Patronage Direct To Guild</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="border border-outline-variant bg-surface p-8 flex flex-col justify-between">
+<div>
+<span class="font-headline-lg text-[40px] text-outline-variant font-light block mb-6">04</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Bespoke Commissions</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Patrons collaborate directly with master artisans for residential installations, custom dining tables, and monumental vessels, complete with weekly studio photo dispatches and material samples.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-outline-variant/60 flex items-center gap-2 font-label-caps text-[11px] text-secondary tracking-widest uppercase">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Custom Architecture Briefs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 7. BESPOKE ARTISAN CONCIERGE BANNER                                       -->
+<!-- ========================================================================= -->
+<section class="py-16 lg:py-space-lg bg-surface border-b border-outline-variant">
+<div class="max-w-[1680px] mx-auto px-4 md:px-margin">
+<div class="bg-surface-container-high border border-outline-variant grid grid-cols-1 lg:grid-cols-12 p-8 lg:p-12 items-center gap-8">
+<!-- Narrative Context -->
+<div class="lg:col-span-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary font-bold">
+              PATRON CONCIERGE &amp; PRIVATE ARCHITECTURE
+            </span>
+</div>
+<h2 class="font-headline-md text-[28px] md:text-headline-md text-on-surface">
+            Commission a Singular Guild Artifact for Your Space
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Whether shaping a bespoke 12-person dining table in smoked Yoshino cedar or requesting custom natural-dyed wall tapestries woven to architectural proportions, our atelier concierge coordinates directly between patrons and master guilds.
+          </p>
+</div>
+<!-- Action Panel -->
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4">
+<button class="w-full bg-primary hover:bg-secondary text-surface py-4 px-6 font-label-caps text-label-caps tracking-widest uppercase transition-colors text-center">
+            Initiate Bespoke Brief
+          </button>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-surface py-4 px-6 font-label-caps text-label-caps tracking-widest uppercase transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Guild Catalog (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 8. ARCHITECTURAL ATELIER FOOTER (Shared Component Footer Execution)       -->
+<!-- ========================================================================= -->
+<footer class="bg-surface-container-low dark:bg-surface-container border-t border-outline-variant dark:border-outline">
+<div class="w-full px-4 md:px-margin py-space-xl max-w-[1680px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Brand & Mission Column (Col 1-4) -->
+<div class="md:col-span-4 space-y-6">
+<div>
+<span class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary dark:text-inverse-primary block">
+            INK &amp; CRAFT
+          </span>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase block mt-1">
+            HAUTE ATELIER &amp; HISTORIC GUILDS
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-inverse-on-surface max-w-sm leading-relaxed">
+          An independent cultural repository and publishing salon dedicated to documenting, safeguarding, and curating rare slow craft masterworks. Certified hand-made authenticity with cryptographic provenance.
+        </p>
+<!-- Compliance & Payment Architecture Details -->
+<div class="pt-4 border-t border-outline-variant space-y-2 text-[11px] font-label-caps tracking-wider text-on-surface-variant">
+<p><strong class="text-on-surface">REGISTERED OFFICE:</strong> INK &amp; CRAFT ATELIER LLP, Bandra Kurla Complex, Mumbai, MH 400051</p>
+<p><strong class="text-on-surface">GSTIN TAX REGISTRY:</strong> 27AAACI8821P1ZQ • Certified Cultural Works Exemption Node</p>
+<div class="flex items-center gap-3 pt-2 text-[10px] text-secondary">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>RAZORPAY LUXURY ENCRYPTED PAYMENTS (UPI • NET BANKING • NO-COST EMI)</span>
+</div>
+</div>
+</div>
+<!-- Links Column 1: Curations & Arts (Col 5-7) -->
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary dark:text-inverse-primary font-bold">
+          ARCHIVAL REPOSITORY
+        </h4>
+<ul class="space-y-2.5">
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Curations
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Original Art Works
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Master Artisans
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Archival Materials
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Provenance Registry
+            </a>
+</li>
+</ul>
+</div>
+<!-- Links Column 2: Studio & Client Concierge (Col 8-10) -->
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary dark:text-inverse-primary font-bold">
+          PATRON SERVICES
+        </h4>
+<ul class="space-y-2.5">
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Studio Journal
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Client Concierge
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Bespoke Commissions
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Terms of Provenance
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200" href="#">
+              Privacy Policy
+            </a>
+</li>
+</ul>
+</div>
+<!-- Salon Newsletter Registration (Col 11-12) -->
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-caps text-label-caps uppercase tracking-wider text-primary dark:text-inverse-primary font-bold">
+          DISPATCH
+        </h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+          Receive quarterly notices of kiln unloadings and rare atelier drops.
+        </p>
+<div class="space-y-2">
+<input class="w-full bg-transparent border-0 border-b border-outline text-body-sm py-2 px-0 focus:ring-0 focus:border-primary placeholder:text-on-surface-variant/60" placeholder="curator@patron.com" type="email"/>
+<button class="w-full mt-2 bg-primary hover:bg-secondary text-surface py-2.5 font-label-caps text-[10px] tracking-widest uppercase transition-colors">
+            Subscribe
+          </button>
+</div>
+</div>
+<!-- Bottom Full Width Copyright Span -->
+<div class="col-span-1 md:col-span-12 pt-10 mt-6 border-t border-outline-variant flex flex-col md:flex-row items-center justify-between text-on-surface-variant font-body-sm text-[12px] gap-4">
+<p>© 2025 INK &amp; CRAFT Atelier &amp; Gallery. All rights reserved. Handcrafted authenticity certified.</p>
+<div class="flex items-center gap-6 font-label-caps text-[10px] tracking-widest uppercase">
+<span class="text-secondary font-medium">CURATORIAL EDITIONS IN MUMBAI • TOKYO • PARIS • STOCKHOLM</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

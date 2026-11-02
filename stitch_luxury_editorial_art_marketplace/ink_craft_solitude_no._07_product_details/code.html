@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Solitude No. 07 by Helena Vance — INK &amp; CRAFT</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config verbatim matching Atelier Curatorial / INK & CRAFT tokens -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#cec5c0",
+            "tertiary-container": "#261900",
+            "tertiary": "#000000",
+            "on-tertiary-fixed": "#261900",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#4b4642",
+            "surface-container-low": "#f5f3ef",
+            "secondary-container": "#fe997a",
+            "secondary": "#97472e",
+            "on-secondary-fixed-variant": "#793019",
+            "surface-container-high": "#eae8e4",
+            "tertiary-fixed-dim": "#e6c27e",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#cec5c0",
+            "surface-dim": "#dbdad6",
+            "background": "#fbf9f5",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#793019",
+            "inverse-on-surface": "#f2f0ed",
+            "error": "#ba1a1a",
+            "primary-container": "#1f1b18",
+            "on-surface": "#1b1c1a",
+            "primary-fixed": "#eae1db",
+            "on-primary-container": "#8a827e",
+            "outline": "#7e756f",
+            "on-primary-fixed": "#1f1b18",
+            "tertiary-fixed": "#ffdea4",
+            "on-surface-variant": "#4d4540",
+            "surface-variant": "#e4e2de",
+            "on-secondary-fixed": "#3a0a00",
+            "surface-bright": "#fbf9f5",
+            "secondary-fixed": "#ffdbd0",
+            "inverse-surface": "#30312e",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#fbf9f5",
+            "secondary-fixed-dim": "#ffb59f",
+            "outline-variant": "#d0c4bd",
+            "surface-tint": "#635d59",
+            "on-tertiary-container": "#9e7f43",
+            "on-primary": "#ffffff",
+            "on-background": "#1b1c1a",
+            "surface-container": "#efeeea",
+            "on-secondary-container": "#772f18",
+            "primary": "#000000",
+            "surface-container-highest": "#e4e2de"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1.5rem",
+            "space-lg": "3rem",
+            "gutter-sm": "1rem",
+            "margin": "4rem",
+            "gutter": "2rem",
+            "space-sm": "0.75rem",
+            "space-xs": "0.25rem",
+            "space-xl": "6rem",
+            "margin-mobile": "1.25rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "title-editorial": ["Playfair Display"],
+            "display-hero-mobile": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "price-numeral": ["Plus Jakarta Sans"],
+            "display-hero": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "title-editorial": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "price-numeral": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Hairline aesthetic scrollbars */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: #fbf9f5; }
+    ::-webkit-scrollbar-thumb { background: #d0c4bd; }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col justify-between">
+<!-- TOP NAVIGATION BAR (Shared Component JSON Mapping) -->
+<header class="w-full border-b border-outline-variant dark:border-outline bg-surface sticky top-0 z-40 transition-colors duration-150 ease-out">
+<div class="w-full px-gutter flex justify-between items-center h-20 max-w-[1680px] mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center gap-space-md">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary dark:text-inverse-primary font-medium hover:text-secondary transition-colors duration-200" href="#">
+          INK &amp; CRAFT
+        </a>
+<span class="hidden lg:inline-block w-px h-4 bg-outline-variant"></span>
+<span class="hidden lg:inline-block font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant">Atelier &amp; Gallery</span>
+</div>
+<!-- Center Navigation Links (Exact Shared Component Array) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Shop</a>
+<a class="text-primary dark:text-inverse-primary border-b border-primary dark:border-inverse-primary pb-1 font-label-caps tracking-widest uppercase" href="#">Original Art</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Handmade</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Artists</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Collections</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Our Story</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center space-x-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-caps text-label-caps uppercase tracking-wider" title="Currency selector">
+<span>INR (₹)</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200" title="Search catalog">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors duration-200 relative" title="Curated Wishlist">
+<span class="material-symbols-outlined">favorite</span>
+<span class="absolute -top-1 -right-1 w-1.5 h-1.5 bg-secondary rounded-full"></span>
+</button>
+<button class="font-label-caps text-label-caps tracking-widest uppercase text-primary border border-outline-variant px-3 py-2 hover:bg-primary hover:text-surface transition-colors duration-150">
+          Bag (0)
+        </button>
+</div>
+</div>
+</header>
+<!-- MAIN EDITORIAL CANVASES -->
+<main class="w-full max-w-[1680px] mx-auto px-margin-mobile md:px-margin pt-8 pb-space-xl flex-grow">
+<!-- BREADCRUMBS & CURATORIAL PROVENANCE STRIP -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-outline-variant gap-4">
+<nav class="flex items-center space-x-2 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Original Art</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Works on Canvas</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-medium">Solitude No. 07</span>
+</nav>
+<div class="flex items-center gap-3">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-low border border-outline-variant font-label-caps text-label-caps uppercase tracking-wider text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Unique Original Work (1 of 1)
+        </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container-low border border-outline-variant font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Verified Guild Certified
+        </div>
+</div>
+</div>
+<!-- MAIN PRODUCT ARCHITECTURE (ASIGNIFICANT ASYMMETRICAL 7/5 GRID) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter pt-8">
+<!-- LEFT COLUMN: MULTI-ANGLE EDITORIAL GALLERY (7 COLUMNS) -->
+<section class="lg:col-span-7 flex flex-col space-y-6">
+<!-- Main Artwork Frame Viewport -->
+<div class="relative bg-surface-container-low border border-outline-variant overflow-hidden group">
+<!-- Main Hero Image View -->
+<div class="w-full aspect-[4/5] overflow-hidden flex items-center justify-center p-6 md:p-10 relative">
+<img class="w-full h-full object-contain object-center transition-transform duration-700 ease-out group-hover:scale-105" data-alt="An austere masterwork painting titled Solitude No 07 by Helena Vance resting in soft gallery daylight. The canvas reveals heavy Japanese sumi ink washes, tactile mineral pigments, and rich textured gesso in deep charcoal, warm ivory, and earthy umber on raw Belgian linen. The composition is calm, minimal, and museum quality." id="mainGalleryImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxae3H4YzBIlkammlgu0UZ01YpPSfiHEI08C1k8SpTpQlLN7ujcuxjZerBzanS1eIOpCQNatp3kxSQaEGTxaqNxzVW_XH5SxpglfUmYnEX4kCckIRxbBMBr31afqXkMXe4WNJs3DXhwvJMdlW8kKwsC5GraKw6HHPvAEe_QqMBfqOChAx8e_oq9dtldJ4HE6Rm2QYCjU2neg-xKRsd7DnrjwkKOn4_w6YEfREt6EU"/>
+<!-- Quick Architectural Badges on Canvas -->
+<div class="absolute bottom-6 left-6 flex items-center gap-2">
+<span class="px-2.5 py-1 bg-surface/90 border border-outline-variant font-label-caps text-label-caps uppercase tracking-widest text-on-surface backdrop-blur-none">
+                120 × 90 CM
+              </span>
+<span class="px-2.5 py-1 bg-surface/90 border border-outline-variant font-label-caps text-label-caps uppercase tracking-widest text-on-surface backdrop-blur-none">
+                Belgian Raw Linen
+              </span>
+</div>
+<!-- Interaction Buttons: AR & Zoom -->
+<div class="absolute top-6 right-6 flex flex-col space-y-2">
+<button class="p-3 bg-surface border border-outline-variant text-primary hover:bg-primary hover:text-surface transition-colors duration-150 flex items-center justify-center shadow-none" onclick="openModal('arModal')" title="View 360° AR in your room">
+<span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+</button>
+<button class="p-3 bg-surface border border-outline-variant text-primary hover:bg-primary hover:text-surface transition-colors duration-150 flex items-center justify-center shadow-none" onclick="toggleZoom()" title="Expand Fullscreen High-Res">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Gallery Perspective Selector Thumbnails (4-angles) -->
+<div class="grid grid-cols-4 gap-4">
+<!-- Thumbnail 1: Master Frontal -->
+<button class="thumb-btn border-2 border-primary bg-surface-container-low p-1.5 transition-all text-left" onclick="switchView(0)">
+<div class="aspect-square w-full overflow-hidden bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="Full frontal perspective of a minimalist monochrome oil and ink masterwork with deep black circular strokes and tactile impasto accents against an unbleached linen ground under soft museum diffused light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZHT0oTUHigFn4bTehmnrOk-3DyeNNV0-jIhzwwKYxPe4nbSI261XtFsZaC98NzteTCDMlmFTj7MicosoNQlhq9znFA5usXGNh6_gHeNK29l9JTEqv_alvnGEH4AST0ojGqvpKaXebVTflGSsuv-SQgRQqYgjTkEuuKAzd-ZLbuBWnq-o0IMcY0mLoK3XVculQhMBffrALKdybPtSNdWbCDX6joeSz3IBt1QbXCA"/>
+</div>
+<p class="mt-2 font-label-caps text-[10px] uppercase tracking-wider text-primary truncate">1. Master Work</p>
+</button>
+<!-- Thumbnail 2: Heavy Impasto Texture Close-up -->
+<button class="thumb-btn border border-outline-variant bg-surface-container-low p-1.5 hover:border-primary transition-all text-left" onclick="switchView(1)">
+<div class="aspect-square w-full overflow-hidden bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="Extreme macro close-up photograph highlighting tactile thick impasto gesso ridges, charcoal fissures, and hand-applied mineral pigment grain on heavy Belgian raw linen canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEm_dCEHu-M8pjFzcvakoIKaseVjRd2laW5zHY-mEf_4-HsK1_TCwX5iiBDxL5V0QMEt_yfI9VTrD6bNMnvKo7u6X2zbpT3apMYV03PwpoupqJD6mZk-y37C6TJpSbyDnvQSharTAfUsFcv8lCCq7sRXAmfRxckApPSV0gkbAnqHwJE-b-948aK3UUB54--dKr7bqg-_Rbkrk0nAW4Nv9elnZQP1vM2DCR05y83y0"/>
+</div>
+<p class="mt-2 font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant truncate">2. Texture Detail</p>
+</button>
+<!-- Thumbnail 3: In-Situ Architectural Mockup -->
+<button class="thumb-btn border border-outline-variant bg-surface-container-low p-1.5 hover:border-primary transition-all text-left" onclick="switchView(2)">
+<div class="aspect-square w-full overflow-hidden bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="Interior architectural scene of a high-end luxury brutalist living space with polished concrete floors and linen sofa, featuring the artwork Solitude No 07 gracefully mounted on an off-white limestone gallery wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpjX-ZSaRxv4CSlrd2InYBrUg8Y013-tGiTj005IdQnNU-3l33EvIT9kP2EhaB-PQobB868K2CO14CcZgyvGT544itJkWSf963jlnZ02EiR9w8klnkJ5qtR4NJn0fTqaP3m7qeAxA565YZHd0_x6AyS9bw9KzKIZsrghiuHTOZsaODSCxTRUhyn2mmzJdItJMOiqTAXfOhj9FQs5kuosDS-XkcLGdDTGCEg1GsNeM"/>
+</div>
+<p class="mt-2 font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant truncate">3. In-Situ Living</p>
+</button>
+<!-- Thumbnail 4: Verso Provenance & Signature -->
+<button class="thumb-btn border border-outline-variant bg-surface-container-low p-1.5 hover:border-primary transition-all text-left" onclick="switchView(3)">
+<div class="aspect-square w-full overflow-hidden bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="Reverse verso of the artist wooden stretcher showing the hand-scribed signature of Helena Vance in archival graphite, guild verification stamp, and serial wax seal authentication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKl6niSYQ5MSr3mxoVme6mFGl85FatteRfGOVptA8TwC21yhtMGGR_6UuJC-PiS-WyhFKp-aiOD4f-DjkmEOZPSEFy08Y10ioK5NH5M7RJ6Ky-ITqUPryJihvIa3ihB8uJGfCmHDKdyUpS0dUecR9Ysv_qUQT4ZUsj1ghh4aNQU5J4PeD9YrgTCTkIfmH4M-us8SfIWdPbiBsknCCjK5Fr0VRulE6Gub19sGRx2-U"/>
+</div>
+<p class="mt-2 font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant truncate">4. Verso &amp; Seal</p>
+</button>
+</div>
+<!-- Archival Crate & Transit Assurance Box -->
+<div class="border border-outline-variant p-6 bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 flex-shrink-0 bg-surface border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">package_2</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] leading-tight text-primary">Archival Wooden Crate Packaging</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Custom fumigated pine crate with acid-free Tyvek wrap &amp; shock-dampening foam cushions.</p>
+</div>
+</div>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary flex-shrink-0">Included with Acquisition</span>
+</div>
+</section>
+<!-- RIGHT COLUMN: STICKY EDITORIAL PURCHASE PANEL (5 COLUMNS) -->
+<section class="lg:col-span-5 relative">
+<div class="sticky top-28 space-y-6">
+<!-- Title, Artist & Provenance Tag -->
+<div class="space-y-2 border-b border-outline-variant pb-6">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Tokyo Atelier Residency, 2024</span>
+<span class="text-on-surface-variant font-label-caps text-[11px] uppercase tracking-widest">Inventory #IK-88219</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-none pt-1">
+              Solitude No. 07
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant pt-1">
+              By <a class="text-primary hover:text-secondary underline underline-offset-4 font-medium transition-colors" href="#artist-profile">Helena Vance</a>
+<span class="mx-2 text-outline-variant">·</span>
+<span class="italic">Original on Belgian Canvas</span>
+</p>
+</div>
+<!-- Price & EMI Module (INR Specifics) -->
+<div class="space-y-3 pb-6 border-b border-outline-variant">
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline space-x-2">
+<span class="font-headline-md text-headline-md text-primary font-medium tracking-tight" id="activePriceDisplay">₹1,18,000</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant uppercase tracking-wider">(Incl. all Luxury Taxes &amp; Duties)</span>
+</div>
+<span class="font-label-caps text-label-caps bg-surface-container-high border border-outline-variant px-2.5 py-1 uppercase text-primary">Original 1 of 1</span>
+</div>
+<!-- Luxury No-Cost EMI Strip with Trigger -->
+<div class="bg-surface-container p-4 border border-outline-variant flex items-center justify-between">
+<div class="space-y-0.5">
+<div class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">credit_card</span>
+<p class="font-price-numeral text-price-numeral text-primary font-medium">Or ₹9,833/month with 12 mo. No-Cost EMI</p>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Available on HDFC, ICICI, Axis Bank &amp; American Express</p>
+</div>
+<button class="font-label-caps text-label-caps uppercase tracking-wider text-secondary underline underline-offset-4 hover:text-primary transition-colors flex-shrink-0" onclick="openModal('emiModal')">
+                View Plans
+              </button>
+</div>
+</div>
+<!-- Framing Selector Module -->
+<div class="space-y-3 pb-6 border-b border-outline-variant">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-semibold">Curated Framing Selection</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant" id="selectedFramingText">Raw Linen Stretcher</span>
+</div>
+<div class="space-y-2">
+<!-- Frame Option 1 -->
+<label class="flex items-center justify-between p-3.5 border border-primary bg-surface-container-low cursor-pointer transition-colors frame-option">
+<div class="flex items-center space-x-3">
+<input checked="" class="w-4 h-4 text-primary border-primary focus:ring-0" name="framing" onchange="updateFraming(0, 'Unframed Raw Linen Stretcher')" type="radio" value="0"/>
+<div class="space-y-0.5">
+<p class="font-body-md text-body-md text-primary font-medium">Unframed Raw Linen Stretcher</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Archival deep gallery bars with exposed raw selvedge edge.</p>
+</div>
+</div>
+<span class="font-price-numeral text-price-numeral text-primary">Included</span>
+</label>
+<!-- Frame Option 2 -->
+<label class="flex items-center justify-between p-3.5 border border-outline-variant hover:border-primary bg-surface transition-colors cursor-pointer frame-option">
+<div class="flex items-center space-x-3">
+<input class="w-4 h-4 text-primary border-primary focus:ring-0" name="framing" onchange="updateFraming(14500, 'Custom Smoked Oak Floating Frame')" type="radio" value="14500"/>
+<div class="space-y-0.5">
+<p class="font-body-md text-body-md text-primary font-medium">Custom Smoked Oak Floating Frame</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Hand-milled Japanese white oak with matte smoked wax finish.</p>
+</div>
+</div>
+<span class="font-price-numeral text-price-numeral text-primary">+₹14,500</span>
+</label>
+<!-- Frame Option 3 -->
+<label class="flex items-center justify-between p-3.5 border border-outline-variant hover:border-primary bg-surface transition-colors cursor-pointer frame-option">
+<div class="flex items-center space-x-3">
+<input class="w-4 h-4 text-primary border-primary focus:ring-0" name="framing" onchange="updateFraming(22000, 'Museum Antique Gilded Walnut')" type="radio" value="22000"/>
+<div class="space-y-0.5">
+<p class="font-body-md text-body-md text-primary font-medium">Museum Antique Gilded Walnut</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Deep-profile black walnut featuring subtle brushed 18k leaf lining.</p>
+</div>
+</div>
+<span class="font-price-numeral text-price-numeral text-primary">+₹22,000</span>
+</label>
+</div>
+</div>
+<!-- GST Business Purchase / Input Tax Credit (ITC) Section -->
+<div class="border border-outline-variant p-4 bg-surface-container-low space-y-3">
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2.5 cursor-pointer">
+<input class="w-4 h-4 border-outline rounded-none text-primary focus:ring-0" id="gstToggle" onchange="toggleGstInput()" type="checkbox"/>
+<span class="font-body-md text-[14px] text-primary font-medium">Purchase with Business GSTIN</span>
+</label>
+<span class="font-label-caps text-[10px] text-secondary bg-surface border border-outline-variant px-2 py-0.5 uppercase tracking-wider">Save up to 18% ITC</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+              Claim up to ₹18,000+ as Input Tax Credit with a compliant GST invoice issued directly to your corporate or studio entity.
+            </p>
+<!-- Collapsible GST Input Fields -->
+<div class="hidden pt-3 border-t border-outline-variant space-y-3" id="gstFormPanel">
+<div>
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant block mb-1">Company Registered Legal Name</label>
+<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-primary text-body-sm py-1.5 px-0 placeholder:text-outline focus:ring-0 transition-colors" placeholder="e.g. Vance Architecture &amp; Design LLP" type="text"/>
+</div>
+<div class="flex gap-3">
+<div class="flex-grow">
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant block mb-1">GSTIN Number (15 Digits)</label>
+<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-primary text-body-sm py-1.5 px-0 placeholder:text-outline uppercase tracking-wider focus:ring-0 transition-colors" placeholder="27AAAAA0000A1Z5" type="text"/>
+</div>
+<button class="self-end px-3 py-1.5 border border-primary text-primary font-label-caps text-[10px] uppercase tracking-wider hover:bg-primary hover:text-surface transition-colors" type="button">
+                  Validate
+                </button>
+</div>
+</div>
+</div>
+<!-- White-Glove Transit Pin-Code Estimator -->
+<div class="space-y-2 border-b border-outline-variant pb-6">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-semibold">White-Glove Insured Delivery Across India</span>
+<span class="text-secondary font-medium">Complimentary</span>
+</div>
+<div class="flex items-center space-x-2 pt-1">
+<div class="relative flex-grow">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant text-body-sm py-1.5 px-0 focus:border-primary focus:ring-0" id="pincodeInput" placeholder="Enter Pincode (e.g. 110001, 560001)" type="text" value="400001"/>
+<span class="absolute right-0 top-2 font-label-caps text-[11px] uppercase text-on-surface-variant">Mumbai, MH</span>
+</div>
+<button class="px-4 py-1.5 border border-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary hover:text-surface transition-colors" onclick="checkDelivery()">
+                Check
+              </button>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant pt-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">local_shipping</span>
+              Guaranteed delivery by <span class="font-medium text-primary" id="deliveryDate">November 2, 2024</span> with climate-controlled art courier.
+            </p>
+</div>
+<!-- CTA Acquisition Actions -->
+<div class="space-y-3 pt-2">
+<div class="grid grid-cols-1 gap-3">
+<!-- Primary CTA -->
+<button class="w-full bg-primary-container text-surface hover:bg-secondary font-label-caps text-label-caps tracking-widest uppercase py-4 transition-colors duration-200 flex items-center justify-center space-x-3">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Add to Curated Bag</span>
+</button>
+<!-- Express Acquire Button -->
+<button class="w-full bg-transparent border border-primary text-primary hover:bg-primary hover:text-surface font-label-caps text-label-caps tracking-widest uppercase py-3.5 transition-colors duration-200">
+                Acquire Now / Express Checkout
+              </button>
+</div>
+<!-- Inquire Art Advisor / Concierge -->
+<button class="w-full text-center py-2 text-on-surface-variant hover:text-secondary font-label-caps text-label-caps uppercase tracking-widest transition-colors flex items-center justify-center gap-2" onclick="openModal('conciergeModal')">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+              Inquire with Private Art Advisory &amp; Private Viewing
+            </button>
+</div>
+<!-- Physical Authenticity Proof Checklist -->
+<div class="p-4 bg-surface-container-high border border-outline-variant space-y-2.5">
+<p class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">Museum &amp; Provenance Safeguards</p>
+<ul class="space-y-2 font-body-sm text-[12px] text-on-surface-variant">
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">verified_user</span>
+<span>Physical Certificate of Authenticity signed by Helena Vance &amp; sealed by Atelier Curator.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">nfc</span>
+<span>Tamper-evident archival NFC tag embedded directly on canvas stretcher.</span>
+</li>
+<li class="flex items-start space-x-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5">inventory</span>
+<span>Permanent ledger inscription in the INK &amp; CRAFT Global Provenance Registry.</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<!-- DEEP CURATORIAL STORY & SPECIFICATIONS TABS -->
+<section class="mt-space-xl pt-12 border-t border-outline-variant">
+<!-- Nav Tabs -->
+<div class="flex flex-wrap items-center gap-8 border-b border-outline-variant pb-4 font-label-caps text-label-caps uppercase tracking-widest" id="specTabs">
+<button class="spec-tab-btn text-primary border-b-2 border-primary pb-4 font-semibold" onclick="switchTab('overview')">Artwork Narrative &amp; Overview</button>
+<button class="spec-tab-btn text-on-surface-variant hover:text-primary pb-4" onclick="switchTab('materials')">Materials &amp; Archival Dimensions</button>
+<button class="spec-tab-btn text-on-surface-variant hover:text-primary pb-4" onclick="switchTab('artist')">Meet Helena Vance</button>
+<button class="spec-tab-btn text-on-surface-variant hover:text-primary pb-4" onclick="switchTab('logistics')">Provenance &amp; Logistics</button>
+</div>
+<!-- Tab Content 1: Overview -->
+<div class="tab-pane py-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter" id="tab-overview">
+<div class="lg:col-span-4 space-y-4">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Curatorial Essay</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">The Weight of Stillness in Modern Expression</h3>
+<p class="font-body-md text-body-md text-on-surface-variant italic">"A meditation on empty spaces, painted during the fourth week of cold winter rain in Vance's Yanaka atelier."</p>
+</div>
+<div class="lg:col-span-8 space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+            In <span class="text-primary font-medium">Solitude No. 07</span>, Helena Vance strips compositional balance down to fundamental emotional gravity. Created during her celebrated 2024 residency in Tokyo's historic Yanaka district, Vance dialogues directly with the Japanese aesthetic of <em class="text-primary">Ma</em> (negative space) while maintaining the vigorous, raw energy of post-war action abstraction.
+          </p>
+<p>
+            The physical ground of the canvas is prepared through seven successive coats of warm animal-glue gesso, textured by hand with coarse pumice before any ink touches the weave. Vance then pours pure Kyoto pine-soot sumi ink directly onto the inclined linen, guiding its descent with rhythmic sweeps of a broad Japanese goat-hair brush.
+          </p>
+<div class="p-6 bg-surface-container-low border border-outline-variant my-6">
+<blockquote class="font-headline-sm text-headline-sm italic text-primary leading-snug">
+              "True silence is not an absence of sound; it is the physical density of presence. This canvas was created to serve as an anchor in a distracted room."
+            </blockquote>
+<p class="mt-3 font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">— Helena Vance, Tokyo Studio Journal, October 2024</p>
+</div>
+</div>
+</div>
+<!-- Tab Content 2: Materials & Specs -->
+<div class="tab-pane hidden py-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter" id="tab-materials">
+<div class="lg:col-span-4 space-y-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Archival Integrity</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">Technical Specifications</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Preservation parameters guaranteed for a century of museum display.</p>
+</div>
+<div class="lg:col-span-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
+<div class="bg-surface p-6 space-y-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Dimensions</span>
+<p class="font-body-lg text-body-lg text-primary font-medium">120 cm (H) × 90 cm (W) × 4.5 cm (D)</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">47.2 × 35.4 × 1.8 inches</p>
+</div>
+<div class="bg-surface p-6 space-y-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Support Material</span>
+<p class="font-body-lg text-body-lg text-primary font-medium">450 gsm Heavy Belgian Linen</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Unbleached raw weave, cross-braced tulipwood chassis</p>
+</div>
+<div class="bg-surface p-6 space-y-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Medium &amp; Pigment</span>
+<p class="font-body-lg text-body-lg text-primary font-medium">Kyoto Pine-Soot Sumi Ink &amp; Mineral Gesso</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Ground raw lapis, burnt umber earth, egg-oil emulsion</p>
+</div>
+<div class="bg-surface p-6 space-y-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Varnish &amp; Protection</span>
+<p class="font-body-lg text-body-lg text-primary font-medium">Archival UV-Filtering Matte Damar</p>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Zero-glare natural resin; non-yellowing rating: 100+ yrs</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab Content 3: Meet Artist Profile -->
+<div class="tab-pane hidden py-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center" id="artist-profile">
+<div class="lg:col-span-5 bg-surface-container-low border border-outline-variant p-4">
+<div class="aspect-[4/5] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Intimate portrait of artist Helena Vance working inside her sunlit Tokyo artist studio. She is standing beside an oversized linen canvas in an artist apron, her brush dipped in dark sumi ink, surrounded by traditional wooden tools and natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtkK-M3aEQuPzFhlnSawiXFD4oNmjZ4gs4umt6bNBIHZPs-EgnhPzL7KF2Vx09ImsPemdASa5RSdVhNVvDlQDa0GHblVU_t6IVGDQLu1TErGpydJvR-t1H8i3_5536vbasB0Cfa-BBiCzXAHOxOyEBscHumc0gny20NvdKZbuH3so7RKJl8EdYVoNLNEphv2j-sV08F_c2W0rQKUGew0wGyfY7Y5JQLA-Hm4aQ1Gg"/>
+</div>
+</div>
+<div class="lg:col-span-7 space-y-6 lg:pl-6">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Master Artisan Spotlight</span>
+<h3 class="font-headline-lg text-headline-lg text-primary leading-tight">Helena Vance</h3>
+<p class="font-body-md text-[14px] text-on-surface uppercase tracking-wider">Born 1986, Edinburgh · Based in London &amp; Tokyo</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Helena Vance’s studio practice occupies the intersection between European tactile material painting and Far Eastern calligraphic meditation. A graduate of the Royal College of Art, her solo exhibitions have been mounted at Kyoto Municipal Museum of Art and the Whitechapel Gallery. Vance produces no more than twelve masterworks each year.
+          </p>
+<div class="flex items-center space-x-4 pt-2">
+<button class="px-6 py-3 bg-primary text-surface font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors">
+              View 14 Available Works
+            </button>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary underline underline-offset-4 hover:text-secondary" href="#">
+              Read Artist Monograph
+            </a>
+</div>
+</div>
+</div>
+<!-- Tab Content 4: Logistics & Returns -->
+<div class="tab-pane hidden py-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter" id="tab-logistics">
+<div class="lg:col-span-4 space-y-3">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Transit &amp; Assurance</span>
+<h3 class="font-headline-md text-headline-md text-primary leading-tight">White-Glove Protocols</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Door-to-door transit conducted under direct temperature and impact telemetry.</p>
+</div>
+<div class="lg:col-span-8 space-y-6">
+<div class="border border-outline-variant p-6 bg-surface-container-low space-y-4">
+<h4 class="font-headline-sm text-[20px] text-primary">Domestic India White-Glove Handover</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Upon booking, the artwork is unpinned, hand-varnished for final transit seal, and placed into our proprietary custom pine crate. We partner with specialized art handlers who deliver inside your home, uncrate the masterwork, and remove all packaging materials.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="border-t border-outline-variant pt-3">
+<span class="font-label-caps text-[11px] uppercase text-primary font-semibold">Insured Transit</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">100% full declared value policy via Lloyd's of London syndicate.</p>
+</div>
+<div class="border-t border-outline-variant pt-3">
+<span class="font-label-caps text-[11px] uppercase text-primary font-semibold">14-Day Home Trial</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Experience the masterwork in your own illumination with zero-friction reverse logistics.</p>
+</div>
+<div class="border-t border-outline-variant pt-3">
+<span class="font-label-caps text-[11px] uppercase text-primary font-semibold">Installation Advisory</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1">Complimentary hanging and art bracket recommendation by our engineering staff.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CURATED TO ACCOMPANY / COMPLETE THE ROOM BENTO -->
+<section class="mt-space-xl pt-16 border-t border-outline-variant">
+<div class="flex flex-col md:flex-row md:items-end justify-between pb-8">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Spatial Harmony</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-1">Curated to Accompany</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2 md:mt-0">
+          Hand-selected by our senior curator to harmonize with the tonality and texture of Vance’s canvas.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Companion Item 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low border border-outline-variant overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Sculpted Dune Vessel handcrafted from coarse Japanese stoneware, resting on an unadorned gallery pedestal with gentle side lighting highlighting subtle beige sandy grooves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaM8CQJPXOPhkOZAfioHdoeq4Y5vCpPvT6qNgxObMEAANlUXjiI15Ggw51ejKmG7BRYBgyINqX6zKOXgtQCF6Bz4Jo4b67REupkCKsJCJKfyPtFPC-MfMTp_WYd7Iu_4Hm4i4A1QFfSOQ9xqR__Etg9fWTRSk58HRVBRc37KJEccWDPjRiGFfG4xRWGhvHwI0IeXzrj9WMu4V0g9vZbti7aKbm_Z5KztmEZciMcRE"/>
+<span class="absolute top-4 left-4 bg-surface px-2.5 py-1 border border-outline-variant font-label-caps text-[10px] uppercase tracking-wider text-primary">Sculpture</span>
+</div>
+<div class="pt-4 space-y-1">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Studio Kamoshika · Shigaraki</span>
+<h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">Sculpted Dune Vessel No. 04</h4>
+<p class="font-price-numeral text-price-numeral text-primary font-medium">₹31,500</p>
+</div>
+</article>
+<!-- Companion Item 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low border border-outline-variant overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist obsidian pour over brewing set carved from dark basalt stone with satin brass dripper insert, displayed on a clean beige linen cloth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoB4JF8-wfQLkPFRZTrUboNCd4JMmEKLbXzbtVHu76NpCCpcx4z1GgJ9VHZjFUr49NsLCt9LQKu8UVTdla9Zq1eBfn8Yd2DISGs_2M9LKF5Rm2oBNobpmn-5D78iQPXZGiU0GlXMRMHYwq1y5gMP3jL9INKkAMZXbIck1qoZZM-s87cDpm_Esps9hzhYsWTm0bz_-ja75IfUjbdtzDiq1c7l5qXL_-v_eCDcVKjB0"/>
+<span class="absolute top-4 left-4 bg-surface px-2.5 py-1 border border-outline-variant font-label-caps text-[10px] uppercase tracking-wider text-primary">Object</span>
+</div>
+<div class="pt-4 space-y-1">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Onyx Craft Guild · Kyoto</span>
+<h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">Obsidian Pour-Over Set</h4>
+<p class="font-price-numeral text-price-numeral text-primary font-medium">₹19,900</p>
+</div>
+</article>
+<!-- Companion Item 3 -->
+<article class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-low border border-outline-variant overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Large woven daylight textile wall hanging made with raw unbleached wool and natural jute fibers, featuring soft organic geometric bands in quiet earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeaMsOxI2pM-lL7_VsbHHuCxnzq5x7fyzAO0i_OnN00ym0G2Iwtl-FmUZdAlRl91lkytYVFabU-JvMrXIf-1Si7qvn0EZSSmtOkGxDhe3g71RWGuvLU7bj0NVAy8GzuH8n3FXSh51WMlscouGHFCG6b3yHUlVjhB3eiPXicJmCuPaZF16GMxzf91-A47dqq61wAs8lCDieBBnV3rMeFw-bthe2KhDxbruh5DCBb4I"/>
+<span class="absolute top-4 left-4 bg-surface px-2.5 py-1 border border-outline-variant font-label-caps text-[10px] uppercase tracking-wider text-primary">Textile</span>
+</div>
+<div class="pt-4 space-y-1">
+<span class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Atelier Alva · Gotland</span>
+<h4 class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">Woven Daylight Tapestry</h4>
+<p class="font-price-numeral text-price-numeral text-primary font-medium">₹74,000</p>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- MODAL: EMI BREAKDOWN (DRAWER / DIALOG) -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" id="emiModal">
+<!-- Sharp planar backdrop -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-none transition-opacity" onclick="closeModal('emiModal')"></div>
+<div class="relative bg-surface border border-outline-variant w-full max-w-2xl p-8 z-10 space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant pb-4">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary">Financing Options</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Luxury No-Cost &amp; Low-Cost EMI Plans</h3>
+</div>
+<button class="text-primary hover:text-secondary" onclick="closeModal('emiModal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Acquire <strong class="text-primary">Solitude No. 07</strong> with flexible monthly tenure via premier Indian issuing banks. No hidden transaction charges.
+      </p>
+<div class="space-y-4">
+<div class="border border-outline-variant overflow-hidden">
+<table class="w-full text-left font-body-sm text-[13px]">
+<thead class="bg-surface-container-high border-b border-outline-variant font-label-caps uppercase tracking-wider text-primary">
+<tr>
+<th class="p-3">Bank Partner</th>
+<th class="p-3">Tenure</th>
+<th class="p-3">Monthly EMI</th>
+<th class="p-3">Overall Interest</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr>
+<td class="p-3 font-medium text-primary">HDFC Bank</td>
+<td class="p-3">12 Months (No-Cost)</td>
+<td class="p-3 font-price-numeral font-semibold text-primary">₹9,833 / mo</td>
+<td class="p-3 text-secondary font-medium">₹0 (Atelier Subsidized)</td>
+</tr>
+<tr>
+<td class="p-3 font-medium text-primary">ICICI Bank</td>
+<td class="p-3">6 Months (No-Cost)</td>
+<td class="p-3 font-price-numeral font-semibold text-primary">₹19,666 / mo</td>
+<td class="p-3 text-secondary font-medium">₹0 (Atelier Subsidized)</td>
+</tr>
+<tr>
+<td class="p-3 font-medium text-primary">Axis Bank</td>
+<td class="p-3">12 Months (No-Cost)</td>
+<td class="p-3 font-price-numeral font-semibold text-primary">₹9,833 / mo</td>
+<td class="p-3 text-secondary font-medium">₹0 (Atelier Subsidized)</td>
+</tr>
+<tr>
+<td class="p-3 font-medium text-primary">American Express</td>
+<td class="p-3">24 Months</td>
+<td class="p-3 font-price-numeral font-semibold text-primary">₹5,620 / mo</td>
+<td class="p-3 text-on-surface-variant">13.5% Standard Bank Rate</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="flex justify-end pt-2">
+<button class="px-6 py-2.5 bg-primary text-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors" onclick="closeModal('emiModal')">
+          Proceed to Checkout
+        </button>
+</div>
+</div>
+</div>
+<!-- MODAL: 360 AR IN-ROOM PREVIEW -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" id="arModal">
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-none transition-opacity" onclick="closeModal('arModal')"></div>
+<div class="relative bg-surface border border-outline-variant w-full max-w-xl p-8 z-10 space-y-6 text-center">
+<div class="flex justify-between items-center border-b border-outline-variant pb-4 text-left">
+<h3 class="font-headline-sm text-headline-sm text-primary">Spatial AR Projection</h3>
+<button class="text-primary hover:text-secondary" onclick="closeModal('arModal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<div class="py-6 flex flex-col items-center justify-center space-y-4">
+<div class="w-48 h-48 border border-primary p-2 bg-surface flex items-center justify-center">
+<div class="w-full h-full border border-dashed border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-primary">qr_code_2</span>
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant mt-1">Scan via iOS / Android</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Point your smartphone camera at your gallery wall to cast <em class="text-primary font-medium">Solitude No. 07</em> at exact 1:1 architectural scale (120 × 90 cm).
+        </p>
+</div>
+<button class="w-full py-3 bg-primary text-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors" onclick="closeModal('arModal')">
+        Close Preview
+      </button>
+</div>
+</div>
+<!-- MODAL: CONCIERGE ADVISORY INQUIRY -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4" id="conciergeModal">
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-none transition-opacity" onclick="closeModal('conciergeModal')"></div>
+<div class="relative bg-surface border border-outline-variant w-full max-w-lg p-8 z-10 space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant pb-3">
+<h3 class="font-headline-sm text-headline-sm text-primary">Private Art Concierge</h3>
+<button class="text-primary hover:text-secondary" onclick="closeModal('conciergeModal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Our chief advisory curator will arrange a private video walk-through, physical lighting tests, or private Mumbai/Delhi viewing salon appointment.
+      </p>
+<form class="space-y-3 pt-2" onsubmit="event.preventDefault(); alert('Inquiry recorded. A senior advisor will reach out within 2 hours.'); closeModal('conciergeModal');">
+<div>
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant">Patron Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary text-body-sm py-1.5 px-0" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant">Direct Phone / WhatsApp</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary text-body-sm py-1.5 px-0" placeholder="+91 98200 00000" required="" type="tel"/>
+</div>
+<div>
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant">Collector Notes</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary text-body-sm py-1.5 px-0" placeholder="e.g. Inquiring on behalf of penthouse project in Bandra West..." rows="2"></textarea>
+</div>
+<button class="w-full py-3 bg-primary text-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-secondary transition-colors mt-4" type="submit">
+          Request Private Consultation
+        </button>
+</form>
+</div>
+</div>
+<!-- FOOTER (Shared Component JSON Mapping) -->
+<footer class="w-full border-t border-outline-variant dark:border-outline bg-surface-container-low dark:bg-surface-container transition-colors duration-200 ease-in-out">
+<div class="w-full max-w-[1680px] mx-auto px-margin-mobile md:px-margin py-space-xl grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Col 1: Brand & Atelier Narrative (4 Cols) -->
+<div class="md:col-span-4 space-y-4">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary dark:text-inverse-primary block" href="#">
+          INK &amp; CRAFT
+        </a>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-inverse-on-surface max-w-sm leading-relaxed">
+          An internationally certified atelier and archival gallery representing master craftsmen, contemporary minimalists, and rare original canvases. Every piece carries registered provenance.
+        </p>
+<p class="font-label-caps text-[10px] uppercase tracking-wider text-outline pt-2">
+          New Delhi · Mumbai · Tokyo · London
+        </p>
+</div>
+<!-- Col 2: Curations & Artworks (3 Cols) -->
+<div class="md:col-span-3 space-y-3">
+<h5 class="font-headline-sm text-[16px] text-primary dark:text-inverse-primary font-medium">Curations &amp; Works</h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Original Art Works</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Curations</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Master Artisans</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Archival Materials</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Provenance Registry</a></li>
+</ul>
+</div>
+<!-- Col 3: Client Services & Concierge (3 Cols) -->
+<div class="md:col-span-3 space-y-3">
+<h5 class="font-headline-sm text-[16px] text-primary dark:text-inverse-primary font-medium">Client Concierge</h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Client Concierge</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Bespoke Commissions</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Studio Journal</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Terms of Provenance</a></li>
+<li><a class="text-on-surface-variant dark:text-inverse-on-surface font-body-sm hover:text-primary dark:hover:text-inverse-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Col 4: Newsletter & Inscription (2 Cols) -->
+<div class="md:col-span-2 space-y-3">
+<h5 class="font-headline-sm text-[16px] text-primary dark:text-inverse-primary font-medium">Collector Gazette</h5>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Private invitations to seasonal atelier drops.</p>
+<div class="space-y-2">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary text-body-sm py-1 px-0 placeholder:text-outline focus:ring-0" placeholder="patron@domain.com" type="email"/>
+<button class="w-full py-2 border border-primary text-primary font-label-caps text-[10px] uppercase tracking-wider hover:bg-primary hover:text-surface transition-colors">
+            Subscribe
+          </button>
+</div>
+</div>
+<!-- Bottom Full Row Copyright (Shared Component text) -->
+<div class="col-span-1 md:col-span-12 pt-8 mt-4 border-t border-outline-variant flex flex-col md:flex-row items-center justify-between text-body-sm text-[12px] text-on-surface-variant">
+<p>© 2025 INK &amp; CRAFT Atelier &amp; Gallery. All rights reserved. Handcrafted authenticity certified.</p>
+<div class="flex items-center space-x-6 mt-4 md:mt-0 font-label-caps text-[11px] uppercase tracking-wider">
+<span>INR Authorized Clearing</span>
+<span>Secured by Razorpay Luxury Node</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- SCRIPT: PDP DYNAMICS & CALCULATIONS -->
+<script>
+    const baseArtPrice = 118000;
+    let currentFrameAddon = 0;
+
+    // Gallery switching
+    function switchView(index) {
+      const thumbs = document.querySelectorAll('.thumb-btn');
+      thumbs.forEach((t, i) => {
+        if(i === index) {
+          t.classList.remove('border-outline-variant');
+          t.classList.add('border-primary');
+        } else {
+          t.classList.remove('border-primary');
+          t.classList.add('border-outline-variant');
+        }
+      });
+    }
+
+    // Toggle Framing & Price recalculation
+    function updateFraming(addonPrice, frameLabel) {
+      currentFrameAddon = addonPrice;
+      const total = baseArtPrice + currentFrameAddon;
+      document.getElementById('activePriceDisplay').innerText = '₹' + total.toLocaleString('en-IN');
+      document.getElementById('selectedFramingText').innerText = frameLabel;
+    }
+
+    // Toggle GST Panel
+    function toggleGstInput() {
+      const checkbox = document.getElementById('gstToggle');
+      const panel = document.getElementById('gstFormPanel');
+      if (checkbox.checked) {
+        panel.classList.remove('hidden');
+      } else {
+        panel.classList.add('hidden');
+      }
+    }
+
+    // White glove delivery pin calculation
+    function checkDelivery() {
+      const pin = document.getElementById('pincodeInput').value.trim();
+      const dateEl = document.getElementById('deliveryDate');
+      if (pin.length === 6) {
+        dateEl.innerText = "November 4, 2024";
+        alert("Pincode " + pin + " verified for Direct White-Glove Handover with Wooden Crate.");
+      } else {
+        alert("Please enter a valid 6-digit Indian PIN code.");
+      }
+    }
+
+    // Spec Tab switcher
+    function switchTab(tabId) {
+      const tabs = ['overview', 'materials', 'artist', 'logistics'];
+      const buttons = document.querySelectorAll('.spec-tab-btn');
+      
+      tabs.forEach((t, index) => {
+        const pane = document.getElementById('tab-' + t);
+        if (t === tabId) {
+          pane.classList.remove('hidden');
+          buttons[index].classList.add('text-primary', 'border-b-2', 'border-primary', 'font-semibold');
+          buttons[index].classList.remove('text-on-surface-variant');
+        } else {
+          pane.classList.add('hidden');
+          buttons[index].classList.remove('text-primary', 'border-b-2', 'border-primary', 'font-semibold');
+          buttons[index].classList.add('text-on-surface-variant');
+        }
+      });
+    }
+
+    // Modal Handlers
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    // Simple zoom toggle alert for simulation
+    function toggleZoom() {
+      alert("High-Resolution Zoom: Displaying uncompressed 8K surface capture.");
+    }
+  </script>
+</body></html>

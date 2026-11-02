@@ -1,0 +1,68 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "tertiary-fixed-dim": "#e6c27e",
+        "surface-container": "#efeeea",
+        "on-primary-fixed": "#1f1b18",
+        "surface-variant": "#e4e2de",
+        "inverse-primary": "#cec5c0",
+        "on-secondary-container": "#772f18",
+        "surface-dim": "#dbdad6",
+        "secondary": "#97472e",
+        "on-surface": "#1b1c1a",
+        "secondary-container": "#fe997a",
+        "on-tertiary": "#ffffff",
+        "inverse-surface": "#30312e",
+        "on-secondary-fixed": "#3a0a00",
+        "surface-container-high": "#eae8e4",
+        "secondary-fixed-dim": "#ffb59f",
+        "on-background": "#1b1c1a",
+        "on-error": "#ffffff",
+        "on-secondary": "#ffffff",
+        "error": "#ba1a1a",
+        "on-tertiary-fixed-variant": "#5b430a",
+        "primary": "#000000",
+        "primary-fixed": "#eae1db",
+        "on-tertiary-container": "#9e7f43",
+        "outline": "#7e756f",
+        "primary-container": "#1f1b18",
+        "surface-container-lowest": "#ffffff",
+        "outline-variant": "#d0c4bd",
+        "on-primary-fixed-variant": "#4b4642",
+        "on-primary": "#ffffff",
+        "on-error-container": "#93000a",
+        "surface-container-highest": "#e4e2de",
+        "background": "#fbf9f5",
+        "tertiary-fixed": "#ffdea4",
+        "secondary-fixed": "#ffdbd0",
+        "tertiary-container": "#261900",
+        "tertiary": "#000000",
+        "surface": "#fbf9f5",
+        "primary-fixed-dim": "#cec5c0",
+        "on-surface-variant": "#4d4540",
+        "on-tertiary-fixed": "#261900",
+        "surface-bright": "#fbf9f5",
+        "surface-tint": "#635d59",
+        "error-container": "#ffdad6",
+        "on-secondary-fixed-variant": "#793019",
+        "surface-container-low": "#f5f3ef"
+      },
+      fontFamily: {
+        headline: ["'Playfair Display'", "serif"],
+        body: ["'Plus Jakarta Sans'", "sans-serif"],
+        label: ["'Plus Jakarta Sans'", "sans-serif"],
+        serif: ["'Playfair Display'", "serif"],
+        sans: ["'Plus Jakarta Sans'", "sans-serif"]
+      }
+    },
+  },
+  plugins: [],
+}
+

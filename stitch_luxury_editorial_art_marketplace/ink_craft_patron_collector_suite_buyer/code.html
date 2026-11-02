@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INK &amp; CRAFT — Patron Suite | Eleanor Sterling</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#f5f3ef",
+            "surface-dim": "#dbdad6",
+            "secondary-fixed": "#ffdbd0",
+            "on-secondary-fixed-variant": "#793019",
+            "on-primary": "#ffffff",
+            "surface-tint": "#635d59",
+            "on-error-container": "#93000a",
+            "on-surface": "#1b1c1a",
+            "tertiary-fixed": "#ffdea4",
+            "secondary-fixed-dim": "#ffb59f",
+            "outline": "#7e756f",
+            "surface-container": "#efeeea",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#cec5c0",
+            "primary-fixed": "#eae1db",
+            "tertiary": "#000000",
+            "surface-container-high": "#eae8e4",
+            "inverse-on-surface": "#f2f0ed",
+            "on-primary-fixed-variant": "#4b4642",
+            "on-primary-container": "#8a827e",
+            "surface-variant": "#e4e2de",
+            "on-secondary-container": "#772f18",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#261900",
+            "tertiary-fixed-dim": "#e6c27e",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#1f1b18",
+            "inverse-surface": "#30312e",
+            "on-background": "#1b1c1a",
+            "primary": "#000000",
+            "on-tertiary-fixed-variant": "#5b430a",
+            "secondary-container": "#fe997a",
+            "surface-container-highest": "#e4e2de",
+            "primary-container": "#1f1b18",
+            "surface-bright": "#fbf9f5",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#d0c4bd",
+            "secondary": "#97472e",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#cec5c0",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed": "#3a0a00",
+            "on-tertiary-container": "#9e7f43",
+            "surface": "#fbf9f5",
+            "on-tertiary-fixed": "#261900",
+            "on-surface-variant": "#4d4540",
+            "background": "#fbf9f5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.75rem",
+            "space-md": "1.5rem",
+            "gutter": "2rem",
+            "gutter-sm": "1rem",
+            "space-xl": "6rem",
+            "space-xs": "0.25rem",
+            "margin-mobile": "1.25rem",
+            "margin": "4rem",
+            "space-lg": "3rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "display-hero-mobile": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "price-numeral": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "display-hero": ["Playfair Display"],
+            "title-editorial": ["Playfair Display"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "price-numeral": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "title-editorial": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .deckle-border {
+      border-color: #e8e2d8;
+    }
+    .paper-texture {
+      background-color: #fbf9f5;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-body-md selection:bg-secondary selection:text-white">
+<!-- ==================== TOP NAVIGATION BAR ==================== -->
+<!-- Conforms strictly to Shared Component: TopNavBar with active 'Patron Suite' -->
+<header class="w-full border-b border-outline-variant bg-surface sticky top-0 z-50 transition-colors duration-150 ease-out">
+<div class="w-full px-gutter flex justify-between items-center h-20 max-w-[1680px] mx-auto">
+<!-- Brand Logo Wordmark -->
+<div class="flex items-center gap-space-md">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary" href="#">
+          INK &amp; CRAFT
+        </a>
+<span class="hidden xl:inline-block h-3 w-px bg-outline-variant"></span>
+<span class="hidden xl:inline-flex items-center gap-1 font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span> Atelier &amp; Curatorial House
+        </span>
+</div>
+<!-- Navigation Links (Desk) -->
+<nav class="hidden lg:flex items-center gap-space-lg">
+<a class="text-primary border-b border-primary pb-1 font-label-caps tracking-widest uppercase" href="#">
+          Patron Suite
+        </a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Guild Atelier
+        </a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Original Works
+        </a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Curations
+        </a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Provenance
+        </a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">
+          Journal
+        </a>
+</nav>
+<!-- Trailing Patron Meta & Utilities -->
+<div class="flex items-center gap-space-md">
+<!-- Currency Display -->
+<span class="hidden sm:inline-block font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant border border-outline-variant px-2 py-1">
+          INR (₹)
+        </span>
+<!-- Search Icon Action -->
+<button class="p-1 text-on-surface hover:text-secondary transition-colors duration-200" title="Search Archival Index">
+<span class="material-symbols-outlined text-[20px]" data-icon="search">search</span>
+</button>
+<!-- Patron Identity Badge -->
+<div class="flex items-center gap-2 pl-2 border-l border-outline-variant">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary border border-outline-variant">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_circle">account_circle</span>
+</div>
+<div class="hidden md:flex flex-col text-left">
+<span class="font-label-caps text-label-caps font-semibold text-primary uppercase tracking-wider">Eleanor Sterling</span>
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Patron #8841 • Tier 1</span>
+</div>
+</div>
+<!-- Trailing Primary Action -->
+<a class="hidden sm:flex items-center gap-1.5 font-label-caps text-label-caps text-primary border border-primary px-3 py-1.5 uppercase tracking-widest hover:bg-primary hover:text-surface transition-colors duration-200" href="#vault">
+<span>Bag (0)</span>
+</a>
+</div>
+</div>
+</header>
+<!-- ==================== SUB-HEADER CONTEXT BAR ==================== -->
+<aside aria-label="Suite Announcement" class="bg-surface-container-low border-b border-outline-variant">
+<div class="max-w-[1680px] mx-auto px-gutter py-2 flex flex-wrap justify-between items-center text-on-surface-variant">
+<div class="flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface">Curatorial Desk: Masterworks In-Vault Authentication Active</span>
+</div>
+<div class="flex items-center gap-space-md font-label-caps text-label-caps tracking-widest uppercase">
+<span class="text-on-surface-variant">Private Art Concierge: <strong class="text-primary font-semibold">+91 (22) 8904-CRAFT</strong></span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="hidden md:inline text-on-surface-variant">Direct Settlement: <strong class="text-primary font-semibold">Tier-1 Cleared</strong></span>
+</div>
+</div>
+</aside>
+<main class="max-w-[1680px] mx-auto px-gutter py-space-lg">
+<!-- ==================== 1. EDITORIAL WELCOME HERO ==================== -->
+<section class="mb-space-xl border-b border-outline-variant pb-space-lg">
+<div class="grid grid-cols-12 gap-gutter items-end">
+<div class="col-span-12 lg:col-span-8">
+<div class="flex items-center gap-2 mb-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">Buyer Window • Private Chambre</span>
+<span class="h-px w-8 bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Protocol EST. 2019</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-primary tracking-tight mb-space-md">
+            The Patron Private Suite
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Curated collection, provenance certificates, and white-glove acquisitions reserved exclusively for patron <span class="text-primary font-medium">Eleanor Sterling</span>.
+          </p>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col items-start lg:items-end justify-between self-stretch pt-4 lg:pt-0">
+<div class="inline-flex items-center gap-2 bg-surface-container border border-outline-variant px-3 py-1.5 mb-4">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container" data-icon="verified_user">verified_user</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary">Certified Sovereign Patron</span>
+</div>
+<div class="text-left lg:text-right border-l lg:border-l-0 lg:border-r border-outline-variant pl-4 lg:pl-0 lg:pr-4">
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">Designated Curator</div>
+<div class="font-title-editorial text-title-editorial text-primary">Julian Moreau-Sloan</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Geneva &amp; New Delhi Bureau</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 2. COLLECTOR VAULT METRICS (Bento Grid) ==================== -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Patron Custody Summary</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Collector Vault Metrics</h2>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]" data-icon="sync_saved_locally">sync_saved_locally</span>
+<span>Ledger Synced 4m Ago</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-outline-variant bg-surface-container-lowest">
+<!-- Metric 1: Total Acquired Value -->
+<div class="p-space-md border-b md:border-b-0 md:border-r border-outline-variant relative">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Total Acquired Value</span>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight mb-2">
+            ₹6,42,000
+          </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Allocated across 5 physical masterworks</span>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/50 flex justify-between items-center font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
+<span>Portfolio Liquidity: Prime</span>
+<span class="text-secondary font-semibold">+18.4% YoY Valuation</span>
+</div>
+</div>
+<!-- Metric 2: Vault Certificates -->
+<div class="p-space-md border-b md:border-b-0 lg:border-r border-outline-variant">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Cryptographic Provenance</span>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="fingerprint">fingerprint</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight mb-2">
+            5 Records
+          </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Tamper-evident physical NFC tag linked</span>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/50 flex justify-between items-center font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
+<span>Ledger: Ethereum L2 Archival</span>
+<span class="text-primary font-semibold">100% Cryptographic Lock</span>
+</div>
+</div>
+<!-- Metric 3: Active Transits -->
+<div class="p-space-md border-b md:border-b-0 md:border-r border-outline-variant bg-surface-container-low/50">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Active White-Glove Transits</span>
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="local_shipping">local_shipping</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-secondary tracking-tight mb-2 flex items-baseline gap-2">
+            1 Consignment
+          </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span>Climate-Controlled Sealed Cask #BVC-EXP-9921</span>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/50 flex justify-between items-center font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
+<span>Temp: 21.4°C • Hum: 48%</span>
+<span class="text-secondary font-semibold">Arriving Nov 2</span>
+</div>
+</div>
+<!-- Metric 4: Advisory Tier -->
+<div class="p-space-md">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Private Art Advisory</span>
+<span class="material-symbols-outlined text-outline text-[20px]" data-icon="stars">stars</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-primary tracking-tight mb-2">
+            Tier 1
+          </div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>Master Patron • Concierge Priority Access</span>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant/50 flex justify-between items-center font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
+<span>Privileges: 48h Vernissage</span>
+<span class="text-primary font-semibold">Direct Artist Access</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 3. ACQUIRED MASTERWORK GALLERY & DIGITAL VAULT ==================== -->
+<section class="mb-space-xl" id="vault">
+<div class="border-b border-outline-variant pb-space-sm mb-space-lg flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Vault Holdings (5)</span>
+<h2 class="font-headline-md text-headline-md text-primary">Masterwork Holdings &amp; Custody Records</h2>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-label-caps text-label-caps uppercase tracking-wider text-primary border-b border-primary pb-0.5">All Media</button>
+<button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors">Ceramics</button>
+<button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors">Textiles</button>
+<button class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors">Prints</button>
+</div>
+</div>
+<div class="space-y-space-md">
+<!-- Card 1: Solitude No. 07 (In Transit Highlight) -->
+<article class="border border-outline-variant bg-surface-container-lowest grid grid-cols-12 gap-0 group">
+<!-- Artwork Image -->
+<div class="col-span-12 lg:col-span-4 border-b lg:border-b-0 lg:border-r border-outline-variant relative overflow-hidden bg-surface-container">
+<img class="w-full h-80 lg:h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" data-alt="Monochromatic Japanese Sumi ink wash abstract painting titled Solitude No 07 on handmade deckle-edge washi paper. Elegant textured brush strokes framed under non-reflective museum glass in a natural white gallery space with subtle soft daylighting and luxury minimalist mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8w1IzwkMmDQ_lAv7hpZYgp1tZiHpMreOwHSWwTfsu8-mC0wfz-v8uykKkcz9LgqnAMn2hQ2WwqgmcWzvh8sGKwVnBlRSr-C0dF7XCKGNIesw97IOcm1LLcW_J63jOpbiiGNYySthTBJp44BsuKgoXSYzPlmWny_zcTy_Wvqvj5lcf47pQTRfXH5gAWPzfIxSrm2znNhEc5jdHOOZk-Mhpj_MobS4If2EMt-dIgMI"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-surface px-2.5 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+                Transit: Secure Cask
+              </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface/90 backdrop-blur-none border border-outline-variant p-2 flex justify-between items-center text-primary font-label-caps text-[10px] uppercase tracking-wider">
+<span>Sensor: Sealed &amp; Upright</span>
+<span class="text-secondary font-bold">Live GPS Lock</span>
+</div>
+</div>
+<!-- Metadata & Story -->
+<div class="col-span-12 lg:col-span-8 p-space-md lg:p-space-lg flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap justify-between items-baseline gap-2 mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Edition 01 of 03 • Sumi Ink on Washi</span>
+<span class="font-price-numeral text-price-numeral font-semibold text-primary">Acquired ₹1,18,000</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Solitude No. 07
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                By <strong class="text-primary font-medium">Helena Vance</strong> (Tokyo Atelier) • Commissioned July 2024
+              </p>
+<!-- Archival Notes & Tax Specification -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-space-sm bg-surface-container-low border border-outline-variant mb-6">
+<div>
+<div class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">Tax &amp; Compliance Node</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">GST Invoice: #GST-IC-2025-091</div>
+<div class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">18% GST ITC Claimed (₹18,000)</div>
+</div>
+<div>
+<div class="font-label-caps text-[10px] uppercase tracking-wider text-on-surface-variant">White-Glove Courier</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">BVC Logistics Special Cargo</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">WAYBILL: #BVC-EXP-9921 • ETA Nov 2</div>
+</div>
+</div>
+</div>
+<!-- Interaction Bar -->
+<div class="pt-4 border-t border-outline-variant flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant">NFC Tag: #NFC-TOKYO-09881-HEX</span>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<button class="bg-primary text-surface px-space-md py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-200" onclick="document.getElementById('provenanceModal').classList.remove('hidden')">
+                  View NFC Provenance Certificate
+                </button>
+<a class="border border-primary text-primary px-space-md py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary hover:text-surface transition-colors duration-200" href="#download-tax">
+                  Download GST Tax Invoice
+                </a>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 & 3: Two Column Layout for Previous Acquisitions -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Card 2: Obsidian Pour-Over Set -->
+<article class="border border-outline-variant bg-surface-container-lowest flex flex-col justify-between">
+<div class="relative h-64 border-b border-outline-variant overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Dramatic studio photograph of a raw volcanic obsidian ceramic pour-over coffee apparatus with hand-chiseled basalt dripper sitting on an unpolished sandstone plinth. Warm directional gallery spotlighting, dark moody organic shadows, and luxurious architectural materiality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvqIzk5YRgznZTjaZDHy84KAnFHV4XyplrxdGMepQnLKgfdfjqjEcwIVmZjPfAWQ0KadubknnXgAFfcW0gY88cgQhZUF4p_xWO7YDhMb0e75-V1c_jS5A7sQG7hxmckwaHDni0yGOqCnaoPQ6R0WmaJoRk3CR-U_KQU39z9CpN3oYHQnFRj6UxkM_Dpsx1Doj_D-Upl1mMXeCVv_CdDyC1aDaFoR_kyzEnWjjOEHY"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-bright/95 text-on-surface border border-outline-variant px-2.5 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+                  Delivered &amp; Verified
+                </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Stoneware Guild Release</span>
+<span class="font-price-numeral text-price-numeral font-semibold text-primary">₹19,900</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                  Obsidian Pour-Over Set
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                  Onyx Craft Guild (Nagano) • Fired in subterranean anagama kiln. Hand-numbered #14/20.
+                </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between font-label-caps text-label-caps uppercase">
+<span class="text-on-surface-variant tracking-wider">Vault ID: #CRAFT-OB-014</span>
+<button class="text-primary hover:text-secondary underline underline-offset-4 tracking-widest" onclick="document.getElementById('provenanceModal').classList.remove('hidden')">
+                  Examine Provenance →
+                </button>
+</div>
+</div>
+</article>
+<!-- Card 3: Woven Daylight Tapestry -->
+<article class="border border-outline-variant bg-surface-container-lowest flex flex-col justify-between">
+<div class="relative h-64 border-b border-outline-variant overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial lookbook photograph of a hand-loomed natural linen and raw silk tapestry with architectural geometric stitching in unbleached cream and warm terracotta. Hung on a tactile lime-washed ivory gallery wall with calm, tranquil natural sunlight streaming in." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4-bIvNWMdZoo9w3xz9k1we7R01V3yrOGSR6JDXc6NkV7bpwbtcCsup80BIy5y3x-eqbJPgfRrhYQutlyiEnOpt9pX4EYYlRkhRZ8WbHfVISESYu8rdmyVjMr0GqUnBSq5-9F-aejTDLSeAurjKfDNVFMBwKk5hy4mZkksWu-vHQ4iZEollZ9LYDyjVycDloefSgNOItCTBsxF7evRVbus3AUU9HEvpGHD65CoCjE"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-bright/95 text-on-surface border border-outline-variant px-2.5 py-1 font-label-caps text-label-caps uppercase tracking-widest">
+                  Insured on Wall in NYC
+                </span>
+</div>
+</div>
+<div class="p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Natural Raw Loom</span>
+<span class="font-price-numeral text-price-numeral font-semibold text-primary">₹74,000</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                  Woven Daylight Tapestry
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                  Atelier Alva (Reykjavik) • Hand-dyed with arctic lichens. Certificate registered with Lloyd's fine art policy.
+                </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between font-label-caps text-label-caps uppercase">
+<span class="text-on-surface-variant tracking-wider">Vault ID: #TEXT-ALV-77</span>
+<button class="text-primary hover:text-secondary underline underline-offset-4 tracking-widest" onclick="document.getElementById('provenanceModal').classList.remove('hidden')">
+                  Examine Provenance →
+                </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ==================== 4. DIGITAL PROVENANCE CERTIFICATE INTERACTIVE ARCHIVE ==================== -->
+<section class="mb-space-xl border border-outline-variant bg-surface-container-low p-space-md lg:p-space-lg">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-space-md">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Tamper-Evident Ledger Integrity</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-1">Official Provenance Certificate Format</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-xl mx-auto">
+            Each acquired masterwork carries a physical Cryptographic NFC Seal integrated directly into the chassis or canvas stretcher, permanently mirrored to the INK &amp; CRAFT Immutable Provenance Register.
+          </p>
+</div>
+<!-- Archival Certificate Parchment Card -->
+<div class="border-2 border-outline-variant bg-surface p-space-md sm:p-space-lg relative shadow-none">
+<!-- Ornamental Deckle Corner Marks -->
+<div class="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-primary"></div>
+<div class="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-primary"></div>
+<div class="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-primary"></div>
+<div class="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-primary"></div>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-outline-variant pb-4 mb-6">
+<div>
+<span class="font-title-editorial text-title-editorial uppercase tracking-[0.2em] text-primary">INK &amp; CRAFT</span>
+<div class="font-label-caps text-[9px] uppercase tracking-widest text-on-surface-variant">Guild Certification Council • Geneve &amp; Bombay</div>
+</div>
+<div class="mt-2 sm:mt-0 text-left sm:text-right">
+<span class="inline-block px-2 py-0.5 border border-tertiary-fixed-dim bg-tertiary-fixed/10 font-label-caps text-[10px] text-on-tertiary-container uppercase tracking-wider font-semibold">
+                NFC CRYPTO HARDWARE LINKED
+              </span>
+<div class="font-body-sm text-[11px] text-on-surface-variant mt-1 font-mono">UID: 04:A2:9B:F1:6C:88:91</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-on-surface">
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Artwork Title</div>
+<div class="font-headline-sm text-headline-sm text-primary mt-1">Solitude No. 07</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sumi ink on raw mulberry paper</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Certified Patron</div>
+<div class="font-headline-sm text-headline-sm text-primary mt-1">Eleanor Sterling</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Member ID: #8841 (Custody Cleared)</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Cryptographic Hash</div>
+<div class="font-body-sm text-body-sm font-mono text-primary mt-1 break-all bg-surface-container p-2 border border-outline-variant">
+                0x7F982C...B330EA84
+              </div>
+</div>
+</div>
+<!-- Curator & Artist Seal Sign-off Section -->
+<div class="border-t border-outline-variant pt-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4">
+<!-- Artist Wax Seal Graphic -->
+<div class="w-14 h-14 rounded-full border-2 border-secondary flex items-center justify-center bg-secondary/10 text-secondary text-center p-1">
+<span class="font-title-editorial text-[10px] uppercase font-bold leading-tight">ATELIER<br/>SEAL</span>
+</div>
+<div>
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Helena Vance (Atelier Tokyo)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant italic">Artist Signature Ratified in Kyoto Clay</div>
+</div>
+</div>
+<div class="flex items-center gap-6 text-left sm:text-right">
+<div>
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Julian Moreau-Sloan</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Senior Curator of Records</div>
+</div>
+<div class="w-14 h-14 border border-outline-variant flex items-center justify-center bg-surface-container">
+<span class="material-symbols-outlined text-[28px] text-primary" data-icon="history_edu">history_edu</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex justify-between items-center text-[10px] text-on-surface-variant font-label-caps uppercase tracking-wider">
+<span>ISO 27001 Physical Art Custody Certified</span>
+<span>Tamper Alarm: Intact (Zero Microfracture)</span>
+<span>Registry Status: Immutable</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== 5. PRIVATE COMMISSIONS & ADVISORY TAB ==================== -->
+<section class="mb-space-xl">
+<div class="border-b border-outline-variant pb-space-sm mb-space-lg flex flex-col md:flex-row md:items-end justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Guild Atelier Commissions</span>
+<h2 class="font-headline-md text-headline-md text-primary">Active Bespoke Commission</h2>
+</div>
+<div class="mt-2 md:mt-0 font-label-caps text-label-caps uppercase text-on-surface-variant">
+          Budget Allocated: <strong class="text-primary font-semibold">₹3,50,000 INR</strong>
+</div>
+</div>
+<!-- Commission Detail Panel -->
+<div class="border border-outline-variant bg-surface-container-lowest grid grid-cols-12 gap-0">
+<div class="col-span-12 lg:col-span-7 p-space-md lg:p-space-lg border-b lg:border-b-0 lg:border-r border-outline-variant">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">Commission #COMM-2025-04</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">In Production</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">
+            Bespoke 30-Piece Stoneware Dining Suite
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+            Hand-thrown with Mashiko riverbed clay, custom glazed with pine-ash and iron reduction. Collaboratively conceived for Eleanor Sterling’s residence with Master Potter <strong class="text-primary font-medium">Mei Lin Takahashi</strong>.
+          </p>
+<!-- Milestone Timeline -->
+<div class="space-y-4 mb-6">
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-primary">Milestone Trajectory</div>
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
+<!-- Step 1: Complete -->
+<div class="border-l-2 border-primary pl-3 py-1">
+<div class="font-label-caps text-[10px] text-secondary font-bold uppercase tracking-wider">Completed</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">1. Design Approved</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant">Sep 14, 2024</div>
+</div>
+<!-- Step 2: Complete -->
+<div class="border-l-2 border-primary pl-3 py-1">
+<div class="font-label-caps text-[10px] text-secondary font-bold uppercase tracking-wider">Completed</div>
+<div class="font-body-sm text-body-sm text-primary font-medium">2. Clay Preparation</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant">Oct 02, 2024</div>
+</div>
+<!-- Step 3: Current -->
+<div class="border-l-2 border-secondary bg-surface-container-low pl-3 py-1">
+<div class="font-label-caps text-[10px] text-secondary font-bold uppercase tracking-wider animate-pulse">In Progress</div>
+<div class="font-body-sm text-body-sm text-primary font-semibold">3. Wood Firing</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant">Current (Kiln Day 4)</div>
+</div>
+<!-- Step 4: Pending -->
+<div class="border-l-2 border-outline-variant pl-3 py-1 opacity-60">
+<div class="font-label-caps text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">Scheduled</div>
+<div class="font-body-sm text-body-sm text-primary">4. Final Delivery</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant">Dec 15, 2024</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-4 border-t border-outline-variant">
+<button class="bg-primary text-surface px-4 py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-200">
+              Message Master Artisan
+            </button>
+<button class="border border-outline text-primary px-4 py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container transition-colors duration-200">
+              Inspect Atelier Workstation Camera
+            </button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 p-space-md lg:p-space-lg flex flex-col justify-between bg-surface-container-low/40">
+<div>
+<div class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant mb-2">Artisan Workshop Ledger</div>
+<div class="relative h-48 border border-outline-variant overflow-hidden mb-4 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Artisan ceramic potter Mei Lin Takahashi shaping delicate raw earth stoneware clay vessels on a traditional pottery wheel in a sunlit wooden workshop studio in Mashiko Japan. Subtle dust motes floating in warm light beams with raw tactile ceramic bowls drying on shelves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvqg2CAjLOisLsebHIPXZxT6c8sr6ZA_X2qKhGn-I4hUjvGtL0ewXso4lFc1i6DPkHPKSbv-zNLZ6zQmT0_gBYQE0ZsF7sau9iEcCk10rXlvd3W02gZXdJM9gKJQhbcT9vlpnKiqePlUBCGlT4M8OFCC5-KwZzkKgXHQREFzu-oq02lat-XYrSkivhvnbcz7b8-RxXyXtox8Wichj5p4-Pd4uwitUCZVUlY2Vyfsg"/>
+<div class="absolute bottom-2 right-2 bg-surface/90 px-2 py-1 font-label-caps text-[9px] uppercase tracking-wider text-primary border border-outline-variant">
+                Live Studio Log • Mashiko
+              </div>
+</div>
+<div class="space-y-2 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span>Glaze Chemistry:</span>
+<span class="text-primary font-medium">Ash Reduction #9A</span>
+</div>
+<div class="flex justify-between">
+<span>Firing Temperature:</span>
+<span class="text-primary font-medium">1,280°C Verified</span>
+</div>
+<div class="flex justify-between">
+<span>Insured Escrow Account:</span>
+<span class="text-primary font-medium">₹3,50,000 Locked</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant text-[11px] text-on-surface-variant font-body-sm">
+            Payment handled via <em>Escrow Milestone Protocol</em>. Funds release automatically upon physical patron inspection in Mumbai.
+          </div>
+</div>
+</div>
+</section>
+<!-- ==================== 6. CURATED WISHLIST & VERNISSAGE RESERVE ==================== -->
+<section class="mb-space-xl">
+<div class="border-b border-outline-variant pb-space-sm mb-space-lg flex flex-col md:flex-row md:items-end justify-between">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">Tier 1 Vernissage Reserve</span>
+<span class="px-2 py-0.5 bg-secondary text-surface font-label-caps text-[9px] uppercase tracking-widest">48-Hour Early Access</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mt-1">Private Previews Before Public Salon</h2>
+</div>
+<div class="mt-2 md:mt-0 font-label-caps text-label-caps uppercase text-on-surface-variant">
+          Window Closes in: <span class="text-secondary font-bold">29h 14m 08s</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Vernissage Item 1 -->
+<article class="border border-outline-variant bg-surface-container-lowest flex flex-col justify-between group">
+<div>
+<div class="relative aspect-square border-b border-outline-variant overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Monolithic hand-carved porous travertine stone vase with sharp asymmetric brutalist grooves sitting in an austere, warm ivory minimalist interior. Warm shadows cast by morning sun, high-end gallery architecture aesthetics, and raw tactile mineral textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM4WVU4uR7KoIzx9SabHvXaW7-dhdiQPnMmX9sdnRba9V4I_Zdzx7O1sczmZJRiww_1PpdkpBHMdKVX-5MB6Fxdzox3Keq2ovkj9egleNy93dfcc0BjRvdqhqVL-zivZ1rY4_2qoZULomfw7fNy5L8muZrafyeEH21mJVxp8y73oUWB8FXB3cffnaKZ_5aEqHqzscoCh2BiaKhFQAe53WTgzmOz9ZrsZFbLUR6wUc"/>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-surface px-2 py-0.5 font-label-caps text-[10px] uppercase tracking-widest">
+                  Vernissage 01
+                </span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] uppercase tracking-wider text-primary">
+                  1 of 1 Unique Piece
+                </span>
+</div>
+</div>
+<div class="p-space-md">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Carved Roman Travertine</span>
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹1,45,000</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Monolith Vessel IV
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                By Mateo Rossi (Carrara). Hand-chiseled unpolished monolithic vessel. 18.4 kg dry weight.
+              </p>
+</div>
+</div>
+<div class="p-space-md pt-0 border-t border-outline-variant mt-2 flex flex-col gap-2">
+<button class="w-full bg-primary text-surface py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-200">
+              Acquire with 1-Click (Patron Escrow)
+            </button>
+<button class="w-full border border-outline text-primary py-2 font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container transition-colors duration-200">
+              Reserve with Advisory Desk
+            </button>
+</div>
+</article>
+<!-- Vernissage Item 2 -->
+<article class="border border-outline-variant bg-surface-container-lowest flex flex-col justify-between group">
+<div>
+<div class="relative aspect-square border-b border-outline-variant overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A masterwork Japanese Urushi lacquer box in intense deep vermilion red and obsidian black with meticulous 24k gold maki-e dust geometric waves. Pristine museum lighting reflections on ultra-glossy mirror finish lacquer surface, placed on raw untreated cedar timber." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuUZQC3HhDINzH3uGEWSXBfnpYbuKqlo6EKz0ME2wV8WLAtjlqSL6VHFALGvdxlESCiJV-1eNbmDQStZ_85fgR7MrrZlh4WkNqEp4ed47ETPNhsgoVdDK5-i2gI_BWY6iBT1mCzoH-SGFEQZ_QVQjgZ6ETP3c6nS-x8dXUCE6EY7zoWsZAoeOnZ743i4svHQaeVwFIQ2UufaOObGqnBt1hCijNE-qBuEtyJMTuZAY"/>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-surface px-2 py-0.5 font-label-caps text-[10px] uppercase tracking-widest">
+                  Vernissage 02
+                </span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] uppercase tracking-wider text-primary">
+                  Edition of 5
+                </span>
+</div>
+</div>
+<div class="p-space-md">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Urushi Lacquer &amp; 24K Gold</span>
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹2,80,000</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Kuroshio Casket
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                By Master Kenzo Shibata (Kanazawa). 120 layers of natural tree sap lacquer over aged Hinoki wood.
+              </p>
+</div>
+</div>
+<div class="p-space-md pt-0 border-t border-outline-variant mt-2 flex flex-col gap-2">
+<button class="w-full bg-primary text-surface py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-200">
+              Acquire with 1-Click (Patron Escrow)
+            </button>
+<button class="w-full border border-outline text-primary py-2 font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container transition-colors duration-200">
+              Reserve with Advisory Desk
+            </button>
+</div>
+</article>
+<!-- Vernissage Item 3 -->
+<article class="border border-outline-variant bg-surface-container-lowest flex flex-col justify-between group">
+<div>
+<div class="relative aspect-square border-b border-outline-variant overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Editorial close up of an artisan mouth-blown smoke grey borosilicate sculptural carafe with liquid bronze stopper details. Minimalistic warm gallery styling with refraction patterns on unpolished warm ivory surface, poetic and collectible luxury glassware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvcqnhL1sB173qxutw5Y2z-F41T2KileQo7a6etLk0hHAHk8PNTEt-NLies5uFnkKiI1nG0cjtGazXHwuHN-T6d-imZ8aTtn4-bIIoAV9boL6Yc1aBDnYI7N5UXd3AyEYeb691QSm2vAKWDRCQG_RE_E3yaHgLzt8Gi_oxvEPPHNqMRch2CPb3Lp15mQuGhYJfJqEiUqF-zGFx5gi5g8F1elNnkWYQEspUkuXu_oE"/>
+<div class="absolute top-3 left-3">
+<span class="bg-primary text-surface px-2 py-0.5 font-label-caps text-[10px] uppercase tracking-widest">
+                  Vernissage 03
+                </span>
+</div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-surface/90 border border-outline-variant px-2 py-0.5 font-label-caps text-[10px] uppercase tracking-wider text-primary">
+                  Edition of 8
+                </span>
+</div>
+</div>
+<div class="p-space-md">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Hand-Blown Glass &amp; Bronze</span>
+<span class="font-price-numeral text-price-numeral font-bold text-primary">₹68,000</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">
+                Ethereal Decanter &amp; Chime
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                By Astrid Lindqvist (Småland). Blown freeform without cast molds; acoustically tuned bronze top.
+              </p>
+</div>
+</div>
+<div class="p-space-md pt-0 border-t border-outline-variant mt-2 flex flex-col gap-2">
+<button class="w-full bg-primary text-surface py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-200">
+              Acquire with 1-Click (Patron Escrow)
+            </button>
+<button class="w-full border border-outline text-primary py-2 font-label-caps text-label-caps uppercase tracking-widest hover:bg-surface-container transition-colors duration-200">
+              Reserve with Advisory Desk
+            </button>
+</div>
+</article>
+</div>
+</section>
+<!-- ==================== 7. WHITE-GLOVE LOGISTICS DISPATCH ACCORDION ==================== -->
+<section class="mb-space-xl border-t border-outline-variant pt-space-lg">
+<div class="flex justify-between items-baseline mb-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Transit Integrity Protocols</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Archival Delivery Standards &amp; Escrow Guarantee</h2>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider hidden sm:inline">Certified Fine Art Logistics</span>
+</div>
+<div class="divide-y divide-outline-variant border-y border-outline-variant">
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center list-none">
+<span class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+              Climate-Regulated Hermetic Cask Specification
+            </span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-3 pb-2 text-body-md text-on-surface-variant max-w-4xl">
+            All original works crossing international or regional borders are sealed inside aerospace-grade Pelican Storm cases with calibrated silica buffers maintaining continuous 45%–52% relative humidity and continuous 20°C temperature. Shock monitors record g-force thresholds; any impact exceeding 4G triggers an automatic courier halt and patron consultation.
+          </div>
+</details>
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center list-none">
+<span class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+              Instant GST Input Tax Credit (ITC) Documentation &amp; Commercial Provenance
+            </span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-3 pb-2 text-body-md text-on-surface-variant max-w-4xl">
+            Invoices issued through the Patron Suite are digitally signed and reported directly to the GSTN ledger within 12 hours. Corporate and private patron filings reflect valid HSN/SAC codes (Artworks 9701, Functional Sculptures 6912) accompanied by statutory non-reproduction collector clauses.
+          </div>
+</details>
+<details class="group py-4 cursor-pointer">
+<summary class="flex justify-between items-center list-none">
+<span class="font-title-editorial text-title-editorial text-primary group-hover:text-secondary transition-colors">
+              Physical Dual-Chip NFC Seal Cryptography
+            </span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform duration-200" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="pt-3 pb-2 text-body-md text-on-surface-variant max-w-4xl">
+            The physical microchip embedded in each frame contains an asymmetric ECDSA secp256k1 keypair. Tapping any modern NFC smartphone triggers a zero-knowledge proof verification without requiring specialized app installations, instantly returning cryptographic confirmation of Eleanor Sterling’s current recorded title.
+          </div>
+</details>
+</div>
+</section>
+</main>
+<!-- ==================== PROVENANCE MODAL / CERTIFICATE OVERLAY ==================== -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/60" id="provenanceModal">
+<div class="bg-surface max-w-2xl w-full border border-outline-variant p-space-md sm:p-space-lg relative max-h-[921px] overflow-y-auto">
+<button class="absolute top-4 right-4 text-on-surface hover:text-secondary p-1" onclick="document.getElementById('provenanceModal').classList.add('hidden')">
+<span class="material-symbols-outlined text-[24px]" data-icon="close">close</span>
+</button>
+<div class="border-b border-outline-variant pb-4 mb-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest font-semibold">Live Hardware NFC Verification</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Cryptographic Provenance Record</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Solitude No. 07 • Helena Vance (Tokyo Atelier)</p>
+</div>
+<div class="space-y-4 font-body-sm text-body-sm mb-6">
+<div class="flex justify-between border-b border-outline-variant/60 pb-2">
+<span class="text-on-surface-variant">Asset Custodian:</span>
+<span class="text-primary font-medium">Eleanor Sterling (#8841)</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/60 pb-2">
+<span class="text-on-surface-variant">Physical NFC Tag Serial:</span>
+<span class="font-mono text-primary">04:A2:9B:F1:6C:88:91</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/60 pb-2">
+<span class="text-on-surface-variant">Physical Wax Seal Verification:</span>
+<span class="text-secondary font-semibold">Matched (Tokyo Guild Archive 2024-C)</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/60 pb-2">
+<span class="text-on-surface-variant">Invoice Settlement:</span>
+<span class="text-primary font-medium">₹1,18,000 INR (GST Cleared)</span>
+</div>
+<div class="flex flex-col border-b border-outline-variant/60 pb-2">
+<span class="text-on-surface-variant mb-1">Permanent Ledger Hash:</span>
+<span class="font-mono text-[11px] bg-surface-container p-2 text-primary break-all border border-outline-variant">
+            0x4b78912e987cfa908123bcde98721389aa71e98823bcaa12098745ea98129871
+          </span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-2 text-secondary font-label-caps text-label-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock">lock</span>
+<span>Tamper-Evident State: Sovereign</span>
+</div>
+<button class="bg-primary text-surface px-6 py-2.5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors" onclick="document.getElementById('provenanceModal').classList.add('hidden')">
+          Dismiss Record
+        </button>
+</div>
+</div>
+</div>
+<!-- ==================== FOOTER ==================== -->
+<!-- Conforms strictly to Shared Component: Footer with architectural editorial style -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-low mt-space-xl">
+<div class="w-full px-margin py-space-xl max-w-[1680px] mx-auto grid grid-cols-12 gap-gutter">
+<!-- Brand & Copyright Column -->
+<div class="col-span-12 lg:col-span-4 flex flex-col justify-between">
+<div>
+<div class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary mb-2">
+            INK &amp; CRAFT
+          </div>
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-semibold mb-4">
+            Curatorial Chamber &amp; Master Artisan Guild
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mb-6">
+            A sanctuary for deliberate material culture, museum-calibrated acquisition registries, and sovereign patron provenance.
+          </p>
+</div>
+<div class="space-y-2">
+<div class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            Razorpay Luxury Node Settlement Verified
+          </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+            © 2025 INK &amp; CRAFT Atelier &amp; Gallery. All rights reserved. Handcrafted authenticity certified.
+          </div>
+</div>
+</div>
+<!-- Links Column 1: Suite & Atelier -->
+<div class="col-span-6 sm:col-span-3 lg:col-span-2">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">
+          Patron Vault
+        </h4>
+<ul class="space-y-2.5">
+<li>
+<a class="text-primary font-body-sm underline underline-offset-4" href="#">
+              Patron Suite
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Guild Atelier Portal
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Provenance Registry
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Master Artisans
+            </a>
+</li>
+</ul>
+</div>
+<!-- Links Column 2: Materials & Services -->
+<div class="col-span-6 sm:col-span-3 lg:col-span-3">
+<h4 class="font-headline-sm text-headline-sm text-primary mb-4">
+          Curation &amp; Access
+        </h4>
+<ul class="space-y-2.5">
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Archival Materials
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Client Concierge
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Bespoke Commissions
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Terms of Provenance
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant font-body-sm hover:text-primary transition-colors duration-200" href="#">
+              Privacy Policy
+            </a>
+</li>
+</ul>
+</div>
+<!-- Concierge & Direct Channel -->
+<div class="col-span-12 sm:col-span-6 lg:col-span-3 border-t sm:border-t-0 sm:border-l border-outline-variant pt-6 sm:pt-0 sm:pl-gutter flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">
+            Private Concierge
+          </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+            For white-glove transport adjustments, vault insurance certification, or direct atelier commission escrow.
+          </p>
+<div class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-semibold mb-1">
+            Desk Direct: +91 (22) 8904-CRAFT
+          </div>
+<div class="font-body-sm text-body-sm text-secondary underline underline-offset-4">
+            concierge@inkandcraft.gallery
+          </div>
+</div>
+<div class="pt-6">
+<div class="font-label-caps text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Bespoke Vault Nodes</div>
+<div class="font-body-sm text-body-sm text-primary">Tokyo • Geneva • London • Mumbai</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INK &amp; CRAFT — Sovereign Treasury &amp; Currency Settlement Protocol</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed": "#ffdbd0",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed-dim": "#ffb59f",
+            "primary-fixed-dim": "#cec5c0",
+            "on-secondary-fixed": "#3a0a00",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#4d4540",
+            "surface-container-low": "#f5f3ef",
+            "on-secondary-container": "#772f18",
+            "on-primary-fixed-variant": "#4b4642",
+            "surface": "#fbf9f5",
+            "surface-container": "#efeeea",
+            "on-tertiary-fixed-variant": "#5b430a",
+            "inverse-primary": "#cec5c0",
+            "primary-fixed": "#eae1db",
+            "inverse-on-surface": "#f2f0ed",
+            "tertiary-fixed-dim": "#e6c27e",
+            "primary-container": "#1f1b18",
+            "error-container": "#ffdad6",
+            "tertiary": "#000000",
+            "tertiary-container": "#261900",
+            "on-tertiary-container": "#9e7f43",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fbf9f5",
+            "primary": "#000000",
+            "tertiary-fixed": "#ffdea4",
+            "on-primary-fixed": "#1f1b18",
+            "on-primary-container": "#8a827e",
+            "background": "#fbf9f5",
+            "on-secondary": "#ffffff",
+            "outline": "#7e756f",
+            "on-secondary-fixed-variant": "#793019",
+            "secondary": "#97472e",
+            "surface-container-high": "#eae8e4",
+            "on-tertiary-fixed": "#261900",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-variant": "#e4e2de",
+            "inverse-surface": "#30312e",
+            "error": "#ba1a1a",
+            "on-surface": "#1b1c1a",
+            "surface-dim": "#dbdad6",
+            "surface-tint": "#635d59",
+            "outline-variant": "#d0c4bd",
+            "surface-container-highest": "#e4e2de",
+            "secondary-container": "#fe997a",
+            "on-background": "#1b1c1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.75rem",
+            "space-xl": "6rem",
+            "space-xs": "0.25rem",
+            "gutter-sm": "1rem",
+            "space-lg": "3rem",
+            "margin": "4rem",
+            "margin-mobile": "1.25rem",
+            "gutter": "2rem",
+            "space-md": "1.5rem"
+          },
+          "fontFamily": {
+            "display-hero": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "price-numeral": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "title-editorial": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "display-hero": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "price-numeral": ["15px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+            "display-hero-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "title-editorial": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "500" }],
+            "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Architectural Custom Styling */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      font-size: 20px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f5f3ef;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d0c4bd;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #7e756f;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-surface">
+<!-- ================= TOP APP BAR (Shared Component Anchor) ================= -->
+<header class="w-full bg-surface border-b border-outline-variant sticky top-0 z-40">
+<div class="w-full px-gutter flex justify-between items-center h-20 max-w-[1680px] mx-auto">
+<!-- Brand Logo -->
+<div class="flex items-center space-x-6">
+<a class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary" href="#">
+          INK &amp; CRAFT
+        </a>
+<span class="hidden xl:inline-block font-label-caps text-label-caps uppercase tracking-widest text-outline border-l border-outline-variant pl-6">
+          Atelier &amp; Depository
+        </span>
+</div>
+<!-- Navigation Links (Editorial Desktop) -->
+<nav class="hidden lg:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Original Art</a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Handmade</a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Artists</a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Collections</a>
+<a class="text-on-surface-variant hover:text-primary font-label-caps tracking-widest uppercase transition-colors duration-200" href="#">Our Story</a>
+</nav>
+<!-- Trailing Currency Selector & Salon Actions -->
+<div class="flex items-center space-x-6">
+<!-- The Active Currency Hub Trigger -->
+<button class="flex items-center space-x-2 border border-primary px-3 py-1.5 bg-surface hover:bg-surface-container transition-colors duration-150 group">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-primary font-semibold">INR (₹)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant group-hover:text-primary">expand_more</span>
+</button>
+<a class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">
+          Bag (0)
+        </a>
+<div class="flex items-center space-x-3 border-l border-outline-variant pl-4">
+<button aria-label="Search Salon" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button aria-label="Archival Wishlist" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= EDITORIAL ARCHIVAL CANVAS & MODAL EXPERIENCE ================= -->
+<!-- Underlying Gallery Context Backdrop (Subtle Luxury Ambiance) -->
+<main class="flex-1 w-full max-w-[1680px] mx-auto px-margin-mobile md:px-margin py-8 md:py-12 relative">
+<!-- Modal Structural Stage (Planar Luxury Panel Layered directly in Canvas) -->
+<div class="border border-outline-variant bg-surface-container-lowest shadow-2xl relative overflow-hidden">
+<!-- Top Archival Protocol Ribbon -->
+<div class="bg-surface-container-low px-6 md:px-12 py-3 border-b border-outline-variant flex flex-wrap justify-between items-center gap-4">
+<div class="flex items-center space-x-3">
+<span class="w-1.5 h-1.5 bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant">
+            PROTOCOL REFERENCE: INK/TRSRY-SOV-2025/RBI-9701
+          </span>
+</div>
+<div class="flex items-center space-x-6 text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<span class="flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Razorpay Sovereign Luxury Node</span>
+</span>
+<span class="hidden md:inline-block text-outline-variant">•</span>
+<span class="hidden md:inline-block">Reserve Bank of India (RBI) Compliant</span>
+<span class="hidden md:inline-block text-outline-variant">•</span>
+<span class="hidden md:inline-block">HSN 9701 Archival Protocol</span>
+</div>
+</div>
+<!-- Editorial Header Section -->
+<div class="p-6 md:p-12 border-b border-outline-variant bg-surface">
+<div class="max-w-4xl">
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary block mb-2">
+            Archival Custody &amp; Financial Settlement
+          </span>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight mb-4">
+            Sovereign Treasury &amp; Currency Settlement Protocol
+          </h1>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+            Configure your acquisition denomination, institutional tax clearing jurisdiction, and bonded vault custodian. Every acquisition through the INK &amp; CRAFT depository is issued with an irrefragable Certificate of Provenance, registered serial ledger, and insured transit custody.
+          </p>
+</div>
+</div>
+<!-- Main Protocol Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Left 7-Columns: Denominations & Treasury Registry -->
+<div class="lg:col-span-7 p-6 md:p-12 border-b lg:border-b-0 lg:border-r border-outline-variant bg-surface space-y-10">
+<!-- Section 1: Sovereign Currencies -->
+<div>
+<div class="flex justify-between items-baseline mb-6 border-b border-outline-variant pb-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Sovereign Clearing Denominations</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select authorized clearing rail for institutional ledger entry</p>
+</div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">Real-Time Parity Active</span>
+</div>
+<!-- Currencies Grid -->
+<div class="space-y-3">
+<!-- Active Selection: INR -->
+<div class="p-5 border-2 border-primary bg-surface-container-low transition-all relative">
+<div class="absolute top-0 right-0 bg-primary text-surface px-3 py-1 font-label-caps text-label-caps tracking-widest uppercase flex items-center space-x-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Active Clearing Node</span>
+</div>
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-3">
+<span class="w-8 h-8 rounded-none border border-primary flex items-center justify-center font-display-hero text-xl text-primary bg-surface font-semibold">₹</span>
+<div>
+<h3 class="font-title-editorial text-title-editorial text-primary font-medium">Indian Rupee (INR — ₹)</h3>
+<p class="font-label-caps text-label-caps tracking-wider text-secondary uppercase">Domestic Primary Clearing Node (Mumbai / Bengaluru)</p>
+</div>
+</div>
+<span class="font-price-numeral text-price-numeral text-primary font-bold pr-36 hidden sm:block">Parity Anchor</span>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant grid grid-cols-1 md:grid-cols-2 gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-primary">account_balance</span>
+<span>Direct UPI &amp; RTGS Treasury Clearing</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-primary">credit_card</span>
+<span>0% No-Cost EMI (HDFC / Amex / ICICI)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-primary">receipt_long</span>
+<span>Full GST B2B Input Tax Credit (ITC)</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span>IRN e-Invoicing &amp; HSN 9701 Certified</span>
+</div>
+</div>
+</div>
+<!-- Other Currency Options -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+<!-- USD -->
+<button class="p-4 border border-outline-variant bg-surface hover:border-primary text-left transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-editorial text-lg text-primary font-medium group-hover:text-secondary transition-colors">US Dollar (USD — $)</span>
+<span class="font-price-numeral text-xs text-on-surface-variant">1 INR = $0.012 USD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      FedWire / SWIFT Clearing via Delaware Fine Art Custody Trust. Tax-deferred bonded storage eligible.
+                    </p>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center justify-between text-outline group-hover:text-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-wider">SWIFT: DELA-US-33</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</button>
+<!-- EUR -->
+<button class="p-4 border border-outline-variant bg-surface hover:border-primary text-left transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-editorial text-lg text-primary font-medium group-hover:text-secondary transition-colors">Euro (EUR — €)</span>
+<span class="font-price-numeral text-xs text-on-surface-variant">1 INR = €0.011 EUR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      SEPA Escrow via Geneva &amp; Paris Archival Freeports. VAT-exempt institutional transfer available.
+                    </p>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center justify-between text-outline group-hover:text-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-wider">SEPA: GENV-CH-12</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</button>
+<!-- GBP -->
+<button class="p-4 border border-outline-variant bg-surface hover:border-primary text-left transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-editorial text-lg text-primary font-medium group-hover:text-secondary transition-colors">British Pound (GBP — £)</span>
+<span class="font-price-numeral text-xs text-on-surface-variant">1 INR = £0.0094 GBP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      CHAPS &amp; Bank of England Escrow Node via Mayfair Vaults. Bespoke collector custody.
+                    </p>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center justify-between text-outline group-hover:text-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-wider">CHAPS: MAYF-LDN</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</button>
+<!-- JPY -->
+<button class="p-4 border border-outline-variant bg-surface hover:border-primary text-left transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-editorial text-lg text-primary font-medium group-hover:text-secondary transition-colors">Japanese Yen (JPY — ¥)</span>
+<span class="font-price-numeral text-xs text-on-surface-variant">1 INR = ¥1.85 JPY</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      Bank of Japan (BOJ) Guild Clearing for Kyoto &amp; Tokyo direct studio settlement.
+                    </p>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center justify-between text-outline group-hover:text-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-wider">BOJ: KYTO-ART</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</button>
+<!-- CHF -->
+<button class="p-4 border border-outline-variant bg-surface hover:border-primary text-left transition-all group flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-title-editorial text-lg text-primary font-medium group-hover:text-secondary transition-colors">Swiss Franc (CHF — ₣)</span>
+<span class="font-price-numeral text-xs text-on-surface-variant">1 INR = 0.0105 CHF</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      Zurich Sovereign Vault &amp; Alpine Fine Art Depository protocol for generational holding.
+                    </p>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center justify-between text-outline group-hover:text-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-wider">ZURICH-ALP-FREEPORT</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</button>
+<!-- CBDC Digital Rupee -->
+<button class="p-4 border border-outline-variant bg-surface hover:border-primary text-left transition-all group flex flex-col justify-between bg-surface-container-low/40">
+<div>
+<div class="flex justify-between items-center mb-2">
+<div class="flex items-center space-x-1.5">
+<span class="font-title-editorial text-lg text-primary font-medium group-hover:text-secondary transition-colors">Digital Rupee (e₹)</span>
+<span class="text-[10px] font-label-caps bg-surface text-secondary px-1.5 py-0.5 border border-outline-variant uppercase">CBDC</span>
+</div>
+<span class="font-price-numeral text-xs text-on-surface-variant">1:1 INR Sovereign</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+                      RBI-regulated Central Bank Digital Currency with on-chain cryptographic provenance verification.
+                    </p>
+</div>
+<div class="mt-3 pt-2 border-t border-surface-container flex items-center justify-between text-outline group-hover:text-primary">
+<span class="font-label-caps text-label-caps uppercase tracking-wider">RBI-CBDC-MULTISIG</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: Bonded Vault & White-Glove Dispatch Terminals -->
+<div class="pt-6 border-t border-outline-variant">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-2">Bonded Vault &amp; White-Glove Dispatch Terminals</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">Designate target custodial repository or bonded white-glove direct delivery</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Terminal 1: Active Domestic -->
+<label class="p-4 border-2 border-primary bg-surface-container-low cursor-pointer block relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-4 h-4 border border-on-surface flex items-center justify-center">
+<div class="w-2 h-2 bg-primary"></div>
+</div>
+<span class="font-title-editorial text-primary font-medium text-base">Domestic Sovereign Delivery</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pl-6">
+                  Worli / Alibaug / New Delhi White-Glove Cask. Temperature &amp; shock controlled.
+                </p>
+<div class="pl-6 mt-3 flex items-center space-x-2 text-secondary font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+<span>Estimated Transit: 24–48 Hours</span>
+</div>
+</label>
+<!-- Terminal 2: Geneva -->
+<label class="p-4 border border-outline-variant hover:border-primary bg-surface cursor-pointer block group transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-4 h-4 border border-outline flex items-center justify-center"></div>
+<span class="font-title-editorial text-primary group-hover:text-secondary font-medium text-base transition-colors">Geneva Freeport Transit Bond</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pl-6">
+                  Swiss Customs Bonded Area. Indefinite archival preservation and zero duty transit.
+                </p>
+<div class="pl-6 mt-3 flex items-center space-x-2 text-outline font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">security</span>
+<span>Custodial Air Courier</span>
+</div>
+</label>
+<!-- Terminal 3: Manhattan -->
+<label class="p-4 border border-outline-variant hover:border-primary bg-surface cursor-pointer block group transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-4 h-4 border border-outline flex items-center justify-center"></div>
+<span class="font-title-editorial text-primary group-hover:text-secondary font-medium text-base transition-colors">Manhattan Fine Art Depository</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pl-6">
+                  High-security museum vault node, Chelsea Gallery District. Institutional registrar receipt.
+                </p>
+<div class="pl-6 mt-3 flex items-center space-x-2 text-outline font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>Armored Dispatch</span>
+</div>
+</label>
+<!-- Terminal 4: Kyoto -->
+<label class="p-4 border border-outline-variant hover:border-primary bg-surface cursor-pointer block group transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-center space-x-2">
+<div class="w-4 h-4 border border-outline flex items-center justify-center"></div>
+<span class="font-title-editorial text-primary group-hover:text-secondary font-medium text-base transition-colors">Kyoto Atelier Custody Vault</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 pl-6">
+                  Direct master guild archival keeping in Higashiyama with cypress timber seal casing.
+                </p>
+<div class="pl-6 mt-3 flex items-center space-x-2 text-outline font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[14px]">spa</span>
+<span>Atelier Seal Ratified</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Right 5-Columns: Tax Jurisdictions, Live Conversion Preview & Settlement Ratification -->
+<div class="lg:col-span-5 p-6 md:p-12 bg-surface-container-low flex flex-col justify-between space-y-10">
+<div class="space-y-8">
+<!-- Section 3: Jurisdictional Tax & Entity Selector -->
+<div>
+<div class="border-b border-outline-variant pb-3 mb-6">
+<h2 class="font-headline-sm text-headline-sm text-primary">Jurisdictional Tax &amp; Invoicing</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Classify patron registry for tax credit or customs exemptions</p>
+</div>
+<!-- Entity Selector Pill Buttons -->
+<div class="grid grid-cols-2 gap-2 mb-6">
+<button class="py-2.5 px-3 bg-primary text-surface font-label-caps text-label-caps uppercase tracking-wider text-center border border-primary">
+                  Private Patron
+                </button>
+<button class="py-2.5 px-3 bg-surface text-primary hover:bg-surface-container font-label-caps text-label-caps uppercase tracking-wider text-center border border-outline-variant">
+                  Corporate / B2B GST
+                </button>
+</div>
+<!-- Jurisdiction Selection Form -->
+<div class="space-y-4">
+<div>
+<label class="block font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant mb-2">
+                    Tax Jurisdiction Directive
+                  </label>
+<select class="w-full bg-surface border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface font-body-md py-2.5 px-0 text-base">
+<option selected="">India — GST 12% under HSN 9701 (Form GSTR-1 &amp; ITC eligible)</option>
+<option>European Union — Margin Scheme &amp; Freeport Bonded Transfer</option>
+<option>United States — Delaware Freeport / Sales Tax Exemption Node</option>
+<option>United Kingdom — Artist's Resale Right (ARR) &amp; Import Duty Exemption</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant mb-2">
+                    GSTIN / Corporate Entity Tax ID (Optional for Private Patrons)
+                  </label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-primary font-body-sm py-2 px-0 placeholder:text-outline placeholder:text-body-sm tracking-wider uppercase" placeholder="27AAAAA0000A1Z5 / TAX REGISTRY" type="text"/>
+</div>
+</div>
+</div>
+<!-- Section 4: Live Parity Calculator Preview -->
+<div class="p-6 bg-surface border border-outline-variant">
+<div class="flex items-center justify-between border-b border-outline-variant pb-3 mb-4">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Live Salon Acquisition Sample</span>
+</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-outline">72H Guaranteed Parity</span>
+</div>
+<!-- Artwork Sample Reference -->
+<div class="flex items-center space-x-4 mb-5">
+<div class="w-14 h-14 bg-surface-container border border-outline-variant flex items-center justify-center shrink-0">
+<span class="font-title-editorial text-xs italic text-on-surface-variant">Solitude 07</span>
+</div>
+<div>
+<h4 class="font-title-editorial text-base text-primary font-medium">Solitude No. 07 (Archival Monotype)</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Artist: Hiroshi Takahashi • Unique Proof</p>
+</div>
+</div>
+<!-- Multi-Currency Parity Breakdown -->
+<div class="space-y-2.5 font-body-sm text-body-sm">
+<div class="flex justify-between items-center py-1 border-b border-surface-container">
+<span class="text-on-surface-variant">Cleared Nominal (INR):</span>
+<span class="font-price-numeral text-primary font-bold text-base">₹1,18,000.00</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-container text-on-surface-variant">
+<span>Equiv. US Dollar (USD):</span>
+<span class="font-price-numeral text-primary">$1,416.00</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-container text-on-surface-variant">
+<span>Equiv. Eurozone (EUR):</span>
+<span class="font-price-numeral text-primary">€1,310.00</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-surface-container text-on-surface-variant">
+<span>Equiv. Japanese Yen (JPY):</span>
+<span class="font-price-numeral text-primary">¥218,500</span>
+</div>
+<div class="flex justify-between items-center pt-2 text-xs text-outline">
+<span>Institutional Spread:</span>
+<span class="text-secondary font-medium">0.00% (Pure Sovereign Interbank)</span>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-outline-variant flex items-center space-x-2 text-[11px] text-on-surface-variant font-body-sm">
+<span class="material-symbols-outlined text-[15px] text-outline">info</span>
+<span>Locking this configuration secures prevailing rate for all ongoing salon acquisitions for 72 hours.</span>
+</div>
+</div>
+<!-- Trust Badges Architecture -->
+<div class="grid grid-cols-2 gap-3 text-on-surface-variant">
+<div class="p-3 border border-outline-variant bg-surface flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<div>
+<div class="font-label-caps text-[10px] uppercase font-bold text-primary">256-Bit Escrow</div>
+<div class="text-[10px] text-outline">Vault Protocol</div>
+</div>
+</div>
+<div class="p-3 border border-outline-variant bg-surface flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">account_balance</span>
+<div>
+<div class="font-label-caps text-[10px] uppercase font-bold text-primary">RBI Compliant</div>
+<div class="text-[10px] text-outline">Regulated Clearing</div>
+</div>
+</div>
+<div class="p-3 border border-outline-variant bg-surface flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">policy</span>
+<div>
+<div class="font-label-caps text-[10px] uppercase font-bold text-primary">Lloyd’s Underwritten</div>
+<div class="text-[10px] text-outline">100% Transit Bond</div>
+</div>
+</div>
+<div class="p-3 border border-outline-variant bg-surface flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">security</span>
+<div>
+<div class="font-label-caps text-[10px] uppercase font-bold text-primary">ISO 27001 Certified</div>
+<div class="text-[10px] text-outline">Custody Vaulting</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Ratification Controls -->
+<div class="pt-6 border-t border-outline-variant space-y-3">
+<button class="w-full bg-primary hover:bg-secondary text-surface py-4 px-space-md font-label-caps text-label-caps uppercase tracking-widest transition-colors duration-200 flex items-center justify-center space-x-2 group">
+<span>Confirm Settlement Currency &amp; Update Salon</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-full bg-transparent hover:bg-surface text-primary border border-outline-variant py-3 px-space-md font-label-caps text-label-caps uppercase tracking-wider transition-colors duration-150">
+              Reset to Default Domestic (INR ₹)
+            </button>
+<p class="text-center font-label-caps text-[10px] uppercase tracking-widest text-outline pt-2">
+              Ratification is binding for the current atelier session • Ledger signature will update in your client concierge
+            </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ================= EDITORIAL ARCHITECTURAL FOOTER (Shared Component Anchor) ================= -->
+<footer class="w-full border-t border-outline-variant bg-surface-container-low mt-auto">
+<div class="w-full px-margin py-space-xl max-w-[1680px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Brand & Authenticity Seal (Cols 1-4) -->
+<div class="md:col-span-4 space-y-4 pr-6">
+<span class="font-title-editorial text-title-editorial tracking-[0.2em] uppercase text-primary block">
+          INK &amp; CRAFT
+        </span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+          Archival atelier dedicated to original prints, monotypes, handmade heritage artifacts, and master craftspeople worldwide. Every acquisition recorded on irrevocable ledger provenance.
+        </p>
+<p class="font-body-sm text-body-sm text-outline pt-2">
+          © 2025 INK &amp; CRAFT Atelier &amp; Gallery. All rights reserved. Handcrafted authenticity certified.
+        </p>
+</div>
+<!-- Links Column 1 (Cols 5-7) -->
+<div class="md:col-span-3 space-y-3">
+<h5 class="font-label-caps text-label-caps uppercase tracking-wider text-primary mb-4 font-semibold">
+          Curatorial Repositories
+        </h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Curations</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Original Art Works</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Master Artisans</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Archival Materials</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Provenance Registry</a></li>
+</ul>
+</div>
+<!-- Links Column 2 (Cols 8-10) -->
+<div class="md:col-span-3 space-y-3">
+<h5 class="font-label-caps text-label-caps uppercase tracking-wider text-primary mb-4 font-semibold">
+          Institutional Concierge
+        </h5>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Studio Journal</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Client Concierge</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Bespoke Commissions</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Provenance</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Global Escrow & Custody Status (Cols 11-12) -->
+<div class="md:col-span-2 space-y-3 border-l border-outline-variant pl-4">
+<h5 class="font-label-caps text-label-caps uppercase tracking-wider text-primary mb-4 font-semibold">
+          Treasury Status
+        </h5>
+<div class="flex items-center space-x-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-[11px] uppercase tracking-wider text-primary">Node Operational</span>
+</div>
+<p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+          Settlement Gateway: Reserve Bank of India (RBI) Direct Fed &amp; Razorpay Luxury High-Value Escrow Node.
+        </p>
+<div class="pt-2">
+<span class="font-label-caps text-[10px] text-outline uppercase tracking-widest block">HSN Code 9701 Validated</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
